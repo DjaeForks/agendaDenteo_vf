@@ -1,0 +1,4 @@
+[2016-05-09 12:41:05] request.INFO: Matched route "users_homepage". {"route_parameters":{"_controller":"UsersBundle\\Controller\\UsersController::indexAction","_route":"users_homepage"},"request_uri":"http://localhost/"} []
+[2016-05-09 12:41:05] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
+[2016-05-09 12:51:35] request.INFO: Matched route "users_homepage". {"route_parameters":{"_controller":"UsersBundle\\Controller\\UsersController::indexAction","_route":"users_homepage"},"request_uri":"http://localhost/"} []
+[2016-05-09 12:51:39] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
