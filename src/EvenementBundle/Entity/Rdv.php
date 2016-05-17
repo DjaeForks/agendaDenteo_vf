@@ -28,6 +28,11 @@ class Rdv extends Evenement
     protected $rdvType;
 
     /**
+     * @ORM\ManyToOne(targetEntity="\PatientBundle\Entity\Patient", inversedBy="rdvs")
+     * @ORM\JoinColumn(name="patient_id", referencedColumnName="id")
+     */
+    protected $patient;
+    /**
      * @var int
      *
      * @ORM\Column(name="etat", type="integer")
@@ -99,5 +104,52 @@ class Rdv extends Evenement
     {
         return $this->description;
     }
-}
 
+    /**
+     * Set rdvType
+     *
+     * @param \EvenementBundle\Entity\RdvType $rdvType
+     *
+     * @return Rdv
+     */
+    public function setRdvType(\EvenementBundle\Entity\RdvType $rdvType = null)
+    {
+        $this->rdvType = $rdvType;
+
+        return $this;
+    }
+
+    /**
+     * Get rdvType
+     *
+     * @return \EvenementBundle\Entity\RdvType
+     */
+    public function getRdvType()
+    {
+        return $this->rdvType;
+    }
+
+    /**
+     * Set patient
+     *
+     * @param \PatientBundle\Entity\Patient $patient
+     *
+     * @return Rdv
+     */
+    public function setPatient(\PatientBundle\Entity\Patient $patient = null)
+    {
+        $this->patient = $patient;
+
+        return $this;
+    }
+
+    /**
+     * Get patient
+     *
+     * @return \PatientBundle\Entity\Patient
+     */
+    public function getPatient()
+    {
+        return $this->patient;
+    }
+}

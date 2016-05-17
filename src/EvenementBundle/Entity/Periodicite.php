@@ -32,4 +32,3 @@ class Periodicite
         return $this->id;
     }
 }
-

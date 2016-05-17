@@ -1,3 +1,11 @@
+evenement_rdv:
+    resource: "@EvenementBundle/Resources/config/routing/rdv.yml"
+    prefix:   /rdv
+
 evenement_homepage:
     path:     /
     defaults: { _controller: EvenementBundle:Default:index }
+
+agenda:
+    path:     /agenda
+    defaults: { _controller: EvenementBundle:Rdv:new }

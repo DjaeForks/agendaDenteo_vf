@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Rdv</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ rdv.id }}</td>
+            </tr>
+            <tr>
+                <th>Etat</th>
+                <td>{{ rdv.etat }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ rdv.description }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ rdv.titre }}</td>
+            </tr>
+            <tr>
+                <th>Datedebut</th>
+                <td>{% if rdv.dateDebut %}{{ rdv.dateDebut|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Datefin</th>
+                <td>{% if rdv.dateFin %}{{ rdv.dateFin|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('rdv_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('rdv_edit', { 'id': rdv.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

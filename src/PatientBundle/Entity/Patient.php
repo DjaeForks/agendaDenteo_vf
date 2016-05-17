@@ -22,13 +22,13 @@ class Patient
     private $id;
 
     /**
-     * @ORM\OneToMany(targetEntity="\EvenementBundle\Entity\Evenement", mappedBy="patient")
+     * @ORM\OneToMany(targetEntity="\EvenementBundle\Entity\Rdv", mappedBy="patient")
      */
-    protected $evenements;
+    protected $rdvs;
 
     public function __construct()
     {
-        $this->evenements = new ArrayCollection();
+        $this->rdvs = new ArrayCollection();
     }
 
     /**
@@ -227,5 +227,38 @@ class Patient
     {
         return $this->telFix;
     }
-}
 
+    /**
+     * Add evenement
+     *
+     * @param \EvenementBundle\Entity\Evenement $evenement
+     *
+     * @return Patient
+     */
+    public function addEvenement(\EvenementBundle\Entity\Evenement $evenement)
+    {
+        $this->evenements[] = $evenement;
+
+        return $this;
+    }
+
+    /**
+     * Remove evenement
+     *
+     * @param \EvenementBundle\Entity\Evenement $evenement
+     */
+    public function removeEvenement(\EvenementBundle\Entity\Evenement $evenement)
+    {
+        $this->evenements->removeElement($evenement);
+    }
+
+    /**
+     * Get evenements
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getEvenements()
+    {
+        return $this->evenements;
+    }
+}

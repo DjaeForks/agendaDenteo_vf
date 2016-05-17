@@ -32,4 +32,3 @@ class Rappel
         return $this->id;
     }
 }
-

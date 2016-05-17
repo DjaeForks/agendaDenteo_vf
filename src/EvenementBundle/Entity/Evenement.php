@@ -43,11 +43,7 @@ class Evenement
     protected $dateFin;
 
 
-    /**
-     * @ORM\ManyToOne(targetEntity="\PatientBundle\Entity\Patient", inversedBy="evenements")
-     * @ORM\JoinColumn(name="patient_id", referencedColumnName="id")
-     */
-    protected $patient;
+
 
     /**
      * Get id
@@ -130,5 +126,28 @@ class Evenement
     {
         return $this->dateFin;
     }
-}
 
+    /**
+     * Set patient
+     *
+     * @param \PatientBundle\Entity\Patient $patient
+     *
+     * @return Evenement
+     */
+    public function setPatient(\PatientBundle\Entity\Patient $patient = null)
+    {
+        $this->patient = $patient;
+
+        return $this;
+    }
+
+    /**
+     * Get patient
+     *
+     * @return \PatientBundle\Entity\Patient
+     */
+    public function getPatient()
+    {
+        return $this->patient;
+    }
+}

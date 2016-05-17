@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Rdv list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Etat</th>
+                <th>Description</th>
+                <th>Titre</th>
+                <th>Datedebut</th>
+                <th>Datefin</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for rdv in rdvs %}
+            <tr>
+                <td><a href="{{ path('rdv_show', { 'id': rdv.id }) }}">{{ rdv.id }}</a></td>
+                <td>{{ rdv.etat }}</td>
+                <td>{{ rdv.description }}</td>
+                <td>{{ rdv.titre }}</td>
+                <td>{% if rdv.dateDebut %}{{ rdv.dateDebut|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if rdv.dateFin %}{{ rdv.dateFin|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('rdv_show', { 'id': rdv.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('rdv_edit', { 'id': rdv.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('rdv_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -165,5 +165,38 @@ class RdvType
     {
         return $this->description;
     }
-}
 
+    /**
+     * Add rdv
+     *
+     * @param \EvenementBundle\Entity\Rdv $rdv
+     *
+     * @return RdvType
+     */
+    public function addRdv(\EvenementBundle\Entity\Rdv $rdv)
+    {
+        $this->rdvs[] = $rdv;
+
+        return $this;
+    }
+
+    /**
+     * Remove rdv
+     *
+     * @param \EvenementBundle\Entity\Rdv $rdv
+     */
+    public function removeRdv(\EvenementBundle\Entity\Rdv $rdv)
+    {
+        $this->rdvs->removeElement($rdv);
+    }
+
+    /**
+     * Get rdvs
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getRdvs()
+    {
+        return $this->rdvs;
+    }
+}

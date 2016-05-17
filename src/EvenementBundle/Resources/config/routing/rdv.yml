@@ -1,0 +1,24 @@
+rdv_index:
+    path:     /
+    defaults: { _controller: "EvenementBundle:Rdv:index" }
+    methods:  GET
+
+rdv_show:
+    path:     /{id}/show
+    defaults: { _controller: "EvenementBundle:Rdv:show" }
+    methods:  GET
+
+rdv_new:
+    path:     /new
+    defaults: { _controller: "EvenementBundle:Rdv:new" }
+    methods:  [GET, POST]
+
+rdv_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EvenementBundle:Rdv:edit" }
+    methods:  [GET, POST]
+
+rdv_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EvenementBundle:Rdv:delete" }
+    methods:  DELETE
