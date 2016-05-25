@@ -24,20 +24,20 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_389198f453244bfb95da244cf10241cf09ab7353d6029bf270dd01883202edf9 = $this->env->getExtension("native_profiler");
-        $__internal_389198f453244bfb95da244cf10241cf09ab7353d6029bf270dd01883202edf9->enter($__internal_389198f453244bfb95da244cf10241cf09ab7353d6029bf270dd01883202edf9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "EvenementBundle:Default:Agenda.html.twig"));
+        $__internal_dcfb23db73fc902cc74220c853ed5a9e9376a6632ce3ee904aff9d112aa0427f = $this->env->getExtension("native_profiler");
+        $__internal_dcfb23db73fc902cc74220c853ed5a9e9376a6632ce3ee904aff9d112aa0427f->enter($__internal_dcfb23db73fc902cc74220c853ed5a9e9376a6632ce3ee904aff9d112aa0427f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "EvenementBundle:Default:Agenda.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_389198f453244bfb95da244cf10241cf09ab7353d6029bf270dd01883202edf9->leave($__internal_389198f453244bfb95da244cf10241cf09ab7353d6029bf270dd01883202edf9_prof);
+        $__internal_dcfb23db73fc902cc74220c853ed5a9e9376a6632ce3ee904aff9d112aa0427f->leave($__internal_dcfb23db73fc902cc74220c853ed5a9e9376a6632ce3ee904aff9d112aa0427f_prof);
 
     }
 
     // line 2
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_161e99af5e1ec9dd8abd8f2d65d4b60161a14d1936d1d65a53e850a8ca2ca7e3 = $this->env->getExtension("native_profiler");
-        $__internal_161e99af5e1ec9dd8abd8f2d65d4b60161a14d1936d1d65a53e850a8ca2ca7e3->enter($__internal_161e99af5e1ec9dd8abd8f2d65d4b60161a14d1936d1d65a53e850a8ca2ca7e3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_713931e939e98bb70ce55aaaf26de0a3cee6367f9851a55f64c5732a3a55eeec = $this->env->getExtension("native_profiler");
+        $__internal_713931e939e98bb70ce55aaaf26de0a3cee6367f9851a55f64c5732a3a55eeec->enter($__internal_713931e939e98bb70ce55aaaf26de0a3cee6367f9851a55f64c5732a3a55eeec_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 3
         echo "    <link rel=\"stylesheet\" href=\"";
@@ -52,15 +52,15 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
     </style>
 ";
         
-        $__internal_161e99af5e1ec9dd8abd8f2d65d4b60161a14d1936d1d65a53e850a8ca2ca7e3->leave($__internal_161e99af5e1ec9dd8abd8f2d65d4b60161a14d1936d1d65a53e850a8ca2ca7e3_prof);
+        $__internal_713931e939e98bb70ce55aaaf26de0a3cee6367f9851a55f64c5732a3a55eeec->leave($__internal_713931e939e98bb70ce55aaaf26de0a3cee6367f9851a55f64c5732a3a55eeec_prof);
 
     }
 
     // line 9
     public function block_content($context, array $blocks = array())
     {
-        $__internal_970f1fa47ef52594dd06ca9cb1eac36a003f9e08264f92cb30eb3a67f18f6d89 = $this->env->getExtension("native_profiler");
-        $__internal_970f1fa47ef52594dd06ca9cb1eac36a003f9e08264f92cb30eb3a67f18f6d89->enter($__internal_970f1fa47ef52594dd06ca9cb1eac36a003f9e08264f92cb30eb3a67f18f6d89_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_0925294eb408ed568f5d50fcfe782b146c02e8e992b71c50262c37fc52e12318 = $this->env->getExtension("native_profiler");
+        $__internal_0925294eb408ed568f5d50fcfe782b146c02e8e992b71c50262c37fc52e12318->enter($__internal_0925294eb408ed568f5d50fcfe782b146c02e8e992b71c50262c37fc52e12318_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 10
         echo "
@@ -185,15 +185,15 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 
 ";
         
-        $__internal_970f1fa47ef52594dd06ca9cb1eac36a003f9e08264f92cb30eb3a67f18f6d89->leave($__internal_970f1fa47ef52594dd06ca9cb1eac36a003f9e08264f92cb30eb3a67f18f6d89_prof);
+        $__internal_0925294eb408ed568f5d50fcfe782b146c02e8e992b71c50262c37fc52e12318->leave($__internal_0925294eb408ed568f5d50fcfe782b146c02e8e992b71c50262c37fc52e12318_prof);
 
     }
 
     // line 131
     public function block_rdvForm($context, array $blocks = array())
     {
-        $__internal_f4f633f7e2f4bb08eec2772d26c8c68808c1b6d30884052bac6bd0f8bee6bb37 = $this->env->getExtension("native_profiler");
-        $__internal_f4f633f7e2f4bb08eec2772d26c8c68808c1b6d30884052bac6bd0f8bee6bb37->enter($__internal_f4f633f7e2f4bb08eec2772d26c8c68808c1b6d30884052bac6bd0f8bee6bb37_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "rdvForm"));
+        $__internal_b6e2fe6b987fc477f9b70582fe76f6a18dfe1e5282e52071f79299d959fbe354 = $this->env->getExtension("native_profiler");
+        $__internal_b6e2fe6b987fc477f9b70582fe76f6a18dfe1e5282e52071f79299d959fbe354->enter($__internal_b6e2fe6b987fc477f9b70582fe76f6a18dfe1e5282e52071f79299d959fbe354_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "rdvForm"));
 
         // line 132
         echo "
@@ -310,15 +310,15 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 
 ";
         
-        $__internal_f4f633f7e2f4bb08eec2772d26c8c68808c1b6d30884052bac6bd0f8bee6bb37->leave($__internal_f4f633f7e2f4bb08eec2772d26c8c68808c1b6d30884052bac6bd0f8bee6bb37_prof);
+        $__internal_b6e2fe6b987fc477f9b70582fe76f6a18dfe1e5282e52071f79299d959fbe354->leave($__internal_b6e2fe6b987fc477f9b70582fe76f6a18dfe1e5282e52071f79299d959fbe354_prof);
 
     }
 
     // line 210
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_b04effcfb1b07c75fbce9484648ae6333941e82fd81240f0f122b47df023f9fb = $this->env->getExtension("native_profiler");
-        $__internal_b04effcfb1b07c75fbce9484648ae6333941e82fd81240f0f122b47df023f9fb->enter($__internal_b04effcfb1b07c75fbce9484648ae6333941e82fd81240f0f122b47df023f9fb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_5685841d8e63d076325e7aeb3dddefd7cee7e43b9b300f4e2247334524e01ad2 = $this->env->getExtension("native_profiler");
+        $__internal_5685841d8e63d076325e7aeb3dddefd7cee7e43b9b300f4e2247334524e01ad2->enter($__internal_5685841d8e63d076325e7aeb3dddefd7cee7e43b9b300f4e2247334524e01ad2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         // line 211
         echo "    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js\"></script>
@@ -433,23 +433,33 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 
             var deplacerRdvAndMemo = function (event, delta, revertFunc, jsEvent, ui, view) {
 
-                var now = moment();
-                var start = moment(event.start).format('DD-MM-YYYY');
-                var startH = moment(event.start).format('HH:mm');
-                var end = moment(event.end).format('DD-MM-YYYY');
-                var endH = moment(event.end).format('HH:mm');
-                event.oldStart = null;
-                event.oldEnd = null;
+                \$.confirm({
+                    title: 'Confirmation',
+                    theme: 'black',
+                    confirmButton: 'Deplacer',
+                    cancelButton: 'Annuler',
+                    content: 'Vous voulez vraiment deplacer ce Rendez-vous ?',
+                    confirm: function () {
+                        var now = moment();
+                        var start = moment(event.start).format('DD-MM-YYYY');
+                        var startH = moment(event.start).format('HH:mm');
+                        var end = moment(event.end).format('DD-MM-YYYY');
+                        var endH = moment(event.end).format('HH:mm');
+                        event.oldStart = null;
+                        event.oldEnd = null;
 
-                \$.ajax({
-                    type: 'get',
-                    url: 'http://localhost/denteo2/web/app_dev.php/drop' + '/' + event.id + '/' + start + '/' + startH + '/' + end + '/' + endH,
-                    success: function (data) {
-                       //\$.growl.notice({ message: \"Votre Rdv a été Deplacer\" });
-                        \$.growl({ title: \"Success\", message: \"Votre Rdv a été Déplacer avec success!\" });
-                        \$('#calendar').fullCalendar('refrechEvents');
+                        \$.ajax({
+                            type: 'get',
+                            url: 'http://localhost/denteo2/web/app_dev.php/drop' + '/' + event.id + '/' + start + '/' + startH + '/' + end + '/' + endH,
+                            success: function (data) {
+                                //\$.growl.notice({ message: \"Votre Rdv a été Deplacer\" });
+                                \$.growl({title: \"Success\", message: \"Votre Rdv a été Déplacer avec success!\"});
+                                \$('#calendar').fullCalendar('refrechEvents');
+                            }
+                        })
                     }
-                })
+                });
+
 
             }
 
@@ -480,7 +490,7 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
                 },
                 defaultView: 'agendaWeek',
                 events: '";
-        // line 354
+        // line 364
         echo $this->env->getExtension('routing')->getPath("load_events");
         echo "',
                 editable: true,
@@ -509,19 +519,29 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
                 eventClick: function (calEvent, jsEvent, view) {
                     \$('#myModal').modal().show();
                     \$('#details').html('Titre :' + calEvent.title + '<br/>' + 'Date de Debut: ' + moment(calEvent.start).format('DD-MM-YYYY h:mm') + '<br/> Heure de Fin: ' + moment(calEvent.end).format('DD-MM-YYYY h:mm'));
-                    \$('#supprimerModal').click(function () {
-                        \$.ajax({
-                            type: 'get',
-                            url: 'http://localhost/denteo2/web/app_dev.php/deleted' + '/' + calEvent.id,
-                            // url: Routing.generate('deleteRdv', {id: calEvent.id}),
-                            success: function (data) {
-                                //supprimer le rdv du calendrier
-                                \$('#calendar').fullCalendar('removeEvents', calEvent.id);
-                                \$.growl.notice({message: \"Suppression Avec Succes :)\"});
-                                \$('#calendar').fullCalendar('refrechEvents');
 
+                    \$('#supprimerModal').click(function () {
+                        \$.confirm({
+                            title: 'Confirmation',
+                            theme: 'black',
+                            confirmButton: 'Supprimer',
+                            cancelButton: 'Annuler',
+                            content: 'Vous voulez vraiment Supprimer ce Rendez-vous ?',
+                            confirm: function (){
+                                \$.ajax({
+                                    type: 'get',
+                                    url: 'http://localhost/denteo2/web/app_dev.php/deleted' + '/' + calEvent.id,
+                                    // url: Routing.generate('deleteRdv', {id: calEvent.id}),
+                                    success: function (data) {
+                                        //supprimer le rdv du calendrier
+                                        \$('#calendar').fullCalendar('removeEvents', calEvent.id);
+                                        \$.growl({title: \"Success\", message: \"Votre Rdv a été bien Supprimer \"});
+                                        \$('#calendar').fullCalendar('refrechEvents');
+
+                                    }
+                                })
                             }
-                        })
+                        });
                     })
                     \$('#modalModifier').click(function () {
                         if (!sidebar.hasClass('control-sidebar-open')
@@ -619,7 +639,7 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 
 ";
         
-        $__internal_b04effcfb1b07c75fbce9484648ae6333941e82fd81240f0f122b47df023f9fb->leave($__internal_b04effcfb1b07c75fbce9484648ae6333941e82fd81240f0f122b47df023f9fb_prof);
+        $__internal_5685841d8e63d076325e7aeb3dddefd7cee7e43b9b300f4e2247334524e01ad2->leave($__internal_5685841d8e63d076325e7aeb3dddefd7cee7e43b9b300f4e2247334524e01ad2_prof);
 
     }
 
@@ -635,7 +655,7 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 
     public function getDebugInfo()
     {
-        return array (  484 => 354,  347 => 220,  343 => 219,  338 => 217,  333 => 215,  327 => 212,  324 => 211,  318 => 210,  298 => 196,  285 => 186,  279 => 183,  270 => 177,  266 => 176,  253 => 166,  247 => 163,  240 => 159,  233 => 155,  228 => 153,  223 => 151,  216 => 147,  199 => 132,  193 => 131,  66 => 10,  60 => 9,  48 => 4,  43 => 3,  37 => 2,  11 => 1,);
+        return array (  494 => 364,  347 => 220,  343 => 219,  338 => 217,  333 => 215,  327 => 212,  324 => 211,  318 => 210,  298 => 196,  285 => 186,  279 => 183,  270 => 177,  266 => 176,  253 => 166,  247 => 163,  240 => 159,  233 => 155,  228 => 153,  223 => 151,  216 => 147,  199 => 132,  193 => 131,  66 => 10,  60 => 9,  48 => 4,  43 => 3,  37 => 2,  11 => 1,);
     }
 }
 /* {% extends '::layout.html.twig' %}*/
@@ -945,23 +965,33 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 /* */
 /*             var deplacerRdvAndMemo = function (event, delta, revertFunc, jsEvent, ui, view) {*/
 /* */
-/*                 var now = moment();*/
-/*                 var start = moment(event.start).format('DD-MM-YYYY');*/
-/*                 var startH = moment(event.start).format('HH:mm');*/
-/*                 var end = moment(event.end).format('DD-MM-YYYY');*/
-/*                 var endH = moment(event.end).format('HH:mm');*/
-/*                 event.oldStart = null;*/
-/*                 event.oldEnd = null;*/
+/*                 $.confirm({*/
+/*                     title: 'Confirmation',*/
+/*                     theme: 'black',*/
+/*                     confirmButton: 'Deplacer',*/
+/*                     cancelButton: 'Annuler',*/
+/*                     content: 'Vous voulez vraiment deplacer ce Rendez-vous ?',*/
+/*                     confirm: function () {*/
+/*                         var now = moment();*/
+/*                         var start = moment(event.start).format('DD-MM-YYYY');*/
+/*                         var startH = moment(event.start).format('HH:mm');*/
+/*                         var end = moment(event.end).format('DD-MM-YYYY');*/
+/*                         var endH = moment(event.end).format('HH:mm');*/
+/*                         event.oldStart = null;*/
+/*                         event.oldEnd = null;*/
 /* */
-/*                 $.ajax({*/
-/*                     type: 'get',*/
-/*                     url: 'http://localhost/denteo2/web/app_dev.php/drop' + '/' + event.id + '/' + start + '/' + startH + '/' + end + '/' + endH,*/
-/*                     success: function (data) {*/
-/*                        //$.growl.notice({ message: "Votre Rdv a été Deplacer" });*/
-/*                         $.growl({ title: "Success", message: "Votre Rdv a été Déplacer avec success!" });*/
-/*                         $('#calendar').fullCalendar('refrechEvents');*/
+/*                         $.ajax({*/
+/*                             type: 'get',*/
+/*                             url: 'http://localhost/denteo2/web/app_dev.php/drop' + '/' + event.id + '/' + start + '/' + startH + '/' + end + '/' + endH,*/
+/*                             success: function (data) {*/
+/*                                 //$.growl.notice({ message: "Votre Rdv a été Deplacer" });*/
+/*                                 $.growl({title: "Success", message: "Votre Rdv a été Déplacer avec success!"});*/
+/*                                 $('#calendar').fullCalendar('refrechEvents');*/
+/*                             }*/
+/*                         })*/
 /*                     }*/
-/*                 })*/
+/*                 });*/
+/* */
 /* */
 /*             }*/
 /* */
@@ -1018,19 +1048,29 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 /*                 eventClick: function (calEvent, jsEvent, view) {*/
 /*                     $('#myModal').modal().show();*/
 /*                     $('#details').html('Titre :' + calEvent.title + '<br/>' + 'Date de Debut: ' + moment(calEvent.start).format('DD-MM-YYYY h:mm') + '<br/> Heure de Fin: ' + moment(calEvent.end).format('DD-MM-YYYY h:mm'));*/
-/*                     $('#supprimerModal').click(function () {*/
-/*                         $.ajax({*/
-/*                             type: 'get',*/
-/*                             url: 'http://localhost/denteo2/web/app_dev.php/deleted' + '/' + calEvent.id,*/
-/*                             // url: Routing.generate('deleteRdv', {id: calEvent.id}),*/
-/*                             success: function (data) {*/
-/*                                 //supprimer le rdv du calendrier*/
-/*                                 $('#calendar').fullCalendar('removeEvents', calEvent.id);*/
-/*                                 $.growl.notice({message: "Suppression Avec Succes :)"});*/
-/*                                 $('#calendar').fullCalendar('refrechEvents');*/
 /* */
+/*                     $('#supprimerModal').click(function () {*/
+/*                         $.confirm({*/
+/*                             title: 'Confirmation',*/
+/*                             theme: 'black',*/
+/*                             confirmButton: 'Supprimer',*/
+/*                             cancelButton: 'Annuler',*/
+/*                             content: 'Vous voulez vraiment Supprimer ce Rendez-vous ?',*/
+/*                             confirm: function (){*/
+/*                                 $.ajax({*/
+/*                                     type: 'get',*/
+/*                                     url: 'http://localhost/denteo2/web/app_dev.php/deleted' + '/' + calEvent.id,*/
+/*                                     // url: Routing.generate('deleteRdv', {id: calEvent.id}),*/
+/*                                     success: function (data) {*/
+/*                                         //supprimer le rdv du calendrier*/
+/*                                         $('#calendar').fullCalendar('removeEvents', calEvent.id);*/
+/*                                         $.growl({title: "Success", message: "Votre Rdv a été bien Supprimer "});*/
+/*                                         $('#calendar').fullCalendar('refrechEvents');*/
+/* */
+/*                                     }*/
+/*                                 })*/
 /*                             }*/
-/*                         })*/
+/*                         });*/
 /*                     })*/
 /*                     $('#modalModifier').click(function () {*/
 /*                         if (!sidebar.hasClass('control-sidebar-open')*/

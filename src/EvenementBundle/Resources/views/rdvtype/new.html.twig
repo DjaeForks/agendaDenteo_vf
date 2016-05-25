@@ -23,7 +23,7 @@
                     <h3 class="box-title -align-center">Formulaire d'Ajout :</h3>
                 </div>
                 {{ form_start(form , { 'attr': {'class': 'form-horizontal'} }) }}
-                <div  class="box-body">
+                <div class="box-body">
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-2 control-label">Titre :</label>
                         <div class="col-sm-4">
@@ -65,7 +65,7 @@
             <span>  <img id="imgLoading" src="{{ asset('icones/chargement.gif') }}" width="25%" height="25%"/></span>
             <!--    <span class="lite-text-shadow" >Chargement du calendrier</span> -->
         </div>
-        <div class="box-body" >
+        <div class="box-body">
             <table id="example2" class="table table-bordered  -align-center table-hover">
                 <thead style="background-color: #28f0ea;">
                 <tr>
@@ -79,7 +79,7 @@
                 <tbody>
                 {% for item in rdvTypes %}
                     <tr id="{{ item.id }}">
-                        <td style="color: {{ item.couleur }};" >{{ item.titre }}</td>
+                        <td style="color: {{ item.couleur }};">{{ item.titre }}</td>
 
 
                         <td>{{ item.duree }}</td>
@@ -114,37 +114,43 @@
     <script>
 
 
-
         $(function () {
 
             $('#loading').hide();
 
 
             $('.delete').on('click', function () {
-                var id = $(this).attr('id').replace('delete_', '');
-                console.log('id : ' + id);
-                confirm('Vous voulez vraiment supprimer ??');
-                $.ajax({
-                    type: 'GET',
-                      url: 'http://localhost/denteo2/web/app_dev.php/rdvType/delete/' + id,
-                    //url: Routing.generate('rdvtype_delete', { id: idd }),
-                    beforeSend: function () {
-                        /*
-                         $('#imgLoading').attr('src', "{{ asset('icones/chargement.gif') }}");
-                         */
-                        $('#imgLoading').show();
-                    },
-                    success: function (data) {
-                        $('tr#' + id).remove();
-                        //$.growl.notice({ message: "Suppression Avec Succes :)" });
-                        $.growl({ title: "Success", message: "Votre Rdv a été bien Supprimer" });
-                        $('#loading').hide();
 
-                    }
+                $.confirm({
+                    theme: 'black'
                 });
-
-
             });
+            /*
+             $('.delete').on('click', function () {
+             var id = $(this).attr('id').replace('delete_', '');
+             console.log('id : ' + id);
+             confirm('Vous voulez vraiment supprimer ??');
+             $.ajax({
+             type: 'GET',
+             url: 'http://localhost/denteo2/web/app_dev.php/rdvType/delete/' + id,
+             //url: Routing.generate('rdvtype_delete', { id: idd }),
+             beforeSend: function () {
+             /!*
+             $('#imgLoading').attr('src', "{{ asset('icones/chargement.gif') }}");
+             *!/
+             $('#imgLoading').show();
+             },
+             success: function (data) {
+             $('tr#' + id).remove();
+             //$.growl.notice({ message: "Suppression Avec Succes :)" });
+             $.growl({ title: "Success", message: "Votre Rdv a été bien Supprimer" });
+             $('#loading').hide();
+
+             }
+             });
+
+
+             });*/
 
 
             $('#example2').DataTable({

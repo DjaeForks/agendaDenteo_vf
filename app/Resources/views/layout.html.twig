@@ -27,6 +27,9 @@
     <link rel="stylesheet" href="{{ asset("plugins/colorpicker/bootstrap-colorpicker.min.css") }}">
     <!--Growl-->
     <link rel="stylesheet" href="{{ asset('plugins/growl/jquery.growl.css') }}">
+    <!--jqueryConfirm-->
+    <link rel="stylesheet" href="{{ asset('jqueryConfirm/dist/jquery-confirm.min.css') }}">
+
     <!-- jQuery 2.1.4 -->
     <script src="{{ asset("plugins/jQuery/jQuery-2.1.4.min.js") }}"></script>
     <!-- Bootstrap 3.3.5 -->
@@ -62,6 +65,12 @@
     <script src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
     <!--Growl-->
     <script src="{{ asset('plugins/growl/jquery.growl.js') }}" type="text/javascript"></script>
+    <!--jqueryConfirm-->
+
+    <script src="{{ asset('jqueryConfirm/dist/jquery-confirm.min.js') }}" type="text/javascript"></script>
+
+
+
 
 
     <![endif]-->
@@ -262,9 +271,14 @@
                     </ul>
 
                 <li>
-                    <a href="../calendar.html">
+                    <a href="{{ path('allRdvs') }}">
                         <i class="fa fa-calendar"></i> <span>Calendar</span>
                         <small class="label pull-right bg-red">3</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ path('rdvtype_new') }}">
+                        <i class="fa fa-tasks"></i> <span>Types Rendez-Vous</span>
                     </a>
                 </li>
 

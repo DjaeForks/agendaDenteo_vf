@@ -23,20 +23,20 @@ class __TwigTemplate_cec7f1782d2d324cf15eea26c00350dcf8beadb94019ba13d0fdc6fb5a4
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_644ed4dc1243f33571880da5f147f87ec736541b08646cd5d014c82a33d929f2 = $this->env->getExtension("native_profiler");
-        $__internal_644ed4dc1243f33571880da5f147f87ec736541b08646cd5d014c82a33d929f2->enter($__internal_644ed4dc1243f33571880da5f147f87ec736541b08646cd5d014c82a33d929f2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "EvenementBundle:rdvtype:new.html.twig"));
+        $__internal_522cf1708f485468194c8d12afd68da6cd946b8bc76b06d5b1795e5a3a1596be = $this->env->getExtension("native_profiler");
+        $__internal_522cf1708f485468194c8d12afd68da6cd946b8bc76b06d5b1795e5a3a1596be->enter($__internal_522cf1708f485468194c8d12afd68da6cd946b8bc76b06d5b1795e5a3a1596be_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "EvenementBundle:rdvtype:new.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_644ed4dc1243f33571880da5f147f87ec736541b08646cd5d014c82a33d929f2->leave($__internal_644ed4dc1243f33571880da5f147f87ec736541b08646cd5d014c82a33d929f2_prof);
+        $__internal_522cf1708f485468194c8d12afd68da6cd946b8bc76b06d5b1795e5a3a1596be->leave($__internal_522cf1708f485468194c8d12afd68da6cd946b8bc76b06d5b1795e5a3a1596be_prof);
 
     }
 
     // line 2
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_bf6a3c153383bcf6eb50658db28a96ba3a451652d967353a2afe1f196a9e56b7 = $this->env->getExtension("native_profiler");
-        $__internal_bf6a3c153383bcf6eb50658db28a96ba3a451652d967353a2afe1f196a9e56b7->enter($__internal_bf6a3c153383bcf6eb50658db28a96ba3a451652d967353a2afe1f196a9e56b7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_abf8214b1f82a33ff002aca520620c94cf7c32faf42c6755ae7cd389ace09892 = $this->env->getExtension("native_profiler");
+        $__internal_abf8214b1f82a33ff002aca520620c94cf7c32faf42c6755ae7cd389ace09892->enter($__internal_abf8214b1f82a33ff002aca520620c94cf7c32faf42c6755ae7cd389ace09892_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 3
         echo "
@@ -51,15 +51,15 @@ class __TwigTemplate_cec7f1782d2d324cf15eea26c00350dcf8beadb94019ba13d0fdc6fb5a4
     </style>
 ";
         
-        $__internal_bf6a3c153383bcf6eb50658db28a96ba3a451652d967353a2afe1f196a9e56b7->leave($__internal_bf6a3c153383bcf6eb50658db28a96ba3a451652d967353a2afe1f196a9e56b7_prof);
+        $__internal_abf8214b1f82a33ff002aca520620c94cf7c32faf42c6755ae7cd389ace09892->leave($__internal_abf8214b1f82a33ff002aca520620c94cf7c32faf42c6755ae7cd389ace09892_prof);
 
     }
 
     // line 14
     public function block_content($context, array $blocks = array())
     {
-        $__internal_99e485795a70cdc296c5927a7303db5dc8c2a902c57211d2fd979b59ff72918b = $this->env->getExtension("native_profiler");
-        $__internal_99e485795a70cdc296c5927a7303db5dc8c2a902c57211d2fd979b59ff72918b->enter($__internal_99e485795a70cdc296c5927a7303db5dc8c2a902c57211d2fd979b59ff72918b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_96096819f063ade3788db000b2e495dd810e3b18d55bb48e5bf2e06e2a442af4 = $this->env->getExtension("native_profiler");
+        $__internal_96096819f063ade3788db000b2e495dd810e3b18d55bb48e5bf2e06e2a442af4->enter($__internal_96096819f063ade3788db000b2e495dd810e3b18d55bb48e5bf2e06e2a442af4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 15
         echo "
@@ -76,7 +76,7 @@ class __TwigTemplate_cec7f1782d2d324cf15eea26c00350dcf8beadb94019ba13d0fdc6fb5a4
         // line 25
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start', array("attr" => array("class" => "form-horizontal")));
         echo "
-                <div  class=\"box-body\">
+                <div class=\"box-body\">
                     <div class=\"form-group\">
                         <label for=\"inputEmail3\" class=\"col-sm-2 control-label\">Titre :</label>
                         <div class=\"col-sm-4\">
@@ -134,7 +134,7 @@ class __TwigTemplate_cec7f1782d2d324cf15eea26c00350dcf8beadb94019ba13d0fdc6fb5a4
         echo "\" width=\"25%\" height=\"25%\"/></span>
             <!--    <span class=\"lite-text-shadow\" >Chargement du calendrier</span> -->
         </div>
-        <div class=\"box-body\" >
+        <div class=\"box-body\">
             <table id=\"example2\" class=\"table table-bordered  -align-center table-hover\">
                 <thead style=\"background-color: #28f0ea;\">
                 <tr>
@@ -158,7 +158,7 @@ class __TwigTemplate_cec7f1782d2d324cf15eea26c00350dcf8beadb94019ba13d0fdc6fb5a4
                         <td style=\"color: ";
             // line 82
             echo twig_escape_filter($this->env, $this->getAttribute($context["item"], "couleur", array()), "html", null, true);
-            echo ";\" >";
+            echo ";\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["item"], "titre", array()), "html", null, true);
             echo "</td>
 
@@ -212,20 +212,19 @@ class __TwigTemplate_cec7f1782d2d324cf15eea26c00350dcf8beadb94019ba13d0fdc6fb5a4
 
 ";
         
-        $__internal_99e485795a70cdc296c5927a7303db5dc8c2a902c57211d2fd979b59ff72918b->leave($__internal_99e485795a70cdc296c5927a7303db5dc8c2a902c57211d2fd979b59ff72918b_prof);
+        $__internal_96096819f063ade3788db000b2e495dd810e3b18d55bb48e5bf2e06e2a442af4->leave($__internal_96096819f063ade3788db000b2e495dd810e3b18d55bb48e5bf2e06e2a442af4_prof);
 
     }
 
     // line 112
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_6fa707feee0cc4c4ca0e93d0a00c5d7e5f215834af88908696475f1594474b79 = $this->env->getExtension("native_profiler");
-        $__internal_6fa707feee0cc4c4ca0e93d0a00c5d7e5f215834af88908696475f1594474b79->enter($__internal_6fa707feee0cc4c4ca0e93d0a00c5d7e5f215834af88908696475f1594474b79_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_ab74fedd76b496142665166de2317a2f13259b6c765a7d625ed00bb9624f8bb7 = $this->env->getExtension("native_profiler");
+        $__internal_ab74fedd76b496142665166de2317a2f13259b6c765a7d625ed00bb9624f8bb7->enter($__internal_ab74fedd76b496142665166de2317a2f13259b6c765a7d625ed00bb9624f8bb7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         // line 113
         echo "
     <script>
-
 
 
         \$(function () {
@@ -234,33 +233,40 @@ class __TwigTemplate_cec7f1782d2d324cf15eea26c00350dcf8beadb94019ba13d0fdc6fb5a4
 
 
             \$('.delete').on('click', function () {
-                var id = \$(this).attr('id').replace('delete_', '');
-                console.log('id : ' + id);
-                confirm('Vous voulez vraiment supprimer ??');
-                \$.ajax({
-                    type: 'GET',
-                      url: 'http://localhost/denteo2/web/app_dev.php/rdvType/delete/' + id,
-                    //url: Routing.generate('rdvtype_delete', { id: idd }),
-                    beforeSend: function () {
-                        /*
-                         \$('#imgLoading').attr('src', \"";
-        // line 133
+
+                \$.confirm({
+                    theme: 'black'
+                });
+            });
+            /*
+             \$('.delete').on('click', function () {
+             var id = \$(this).attr('id').replace('delete_', '');
+             console.log('id : ' + id);
+             confirm('Vous voulez vraiment supprimer ??');
+             \$.ajax({
+             type: 'GET',
+             url: 'http://localhost/denteo2/web/app_dev.php/rdvType/delete/' + id,
+             //url: Routing.generate('rdvtype_delete', { id: idd }),
+             beforeSend: function () {
+             /!*
+             \$('#imgLoading').attr('src', \"";
+        // line 139
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("icones/chargement.gif"), "html", null, true);
         echo "\");
-                         */
-                        \$('#imgLoading').show();
-                    },
-                    success: function (data) {
-                        \$('tr#' + id).remove();
-                        //\$.growl.notice({ message: \"Suppression Avec Succes :)\" });
-                        \$.growl({ title: \"Success\", message: \"Votre Rdv a été bien Supprimer\" });
-                        \$('#loading').hide();
+             *!/
+             \$('#imgLoading').show();
+             },
+             success: function (data) {
+             \$('tr#' + id).remove();
+             //\$.growl.notice({ message: \"Suppression Avec Succes :)\" });
+             \$.growl({ title: \"Success\", message: \"Votre Rdv a été bien Supprimer\" });
+             \$('#loading').hide();
 
-                    }
-                });
+             }
+             });
 
 
-            });
+             });*/
 
 
             \$('#example2').DataTable({
@@ -301,7 +307,7 @@ class __TwigTemplate_cec7f1782d2d324cf15eea26c00350dcf8beadb94019ba13d0fdc6fb5a4
     </script>
 ";
         
-        $__internal_6fa707feee0cc4c4ca0e93d0a00c5d7e5f215834af88908696475f1594474b79->leave($__internal_6fa707feee0cc4c4ca0e93d0a00c5d7e5f215834af88908696475f1594474b79_prof);
+        $__internal_ab74fedd76b496142665166de2317a2f13259b6c765a7d625ed00bb9624f8bb7->leave($__internal_ab74fedd76b496142665166de2317a2f13259b6c765a7d625ed00bb9624f8bb7_prof);
 
     }
 
@@ -317,7 +323,7 @@ class __TwigTemplate_cec7f1782d2d324cf15eea26c00350dcf8beadb94019ba13d0fdc6fb5a4
 
     public function getDebugInfo()
     {
-        return array (  248 => 133,  226 => 113,  220 => 112,  203 => 100,  192 => 95,  187 => 93,  181 => 90,  174 => 88,  168 => 85,  160 => 82,  155 => 81,  151 => 80,  133 => 65,  121 => 57,  112 => 48,  103 => 42,  94 => 36,  85 => 30,  77 => 25,  65 => 15,  59 => 14,  42 => 3,  36 => 2,  11 => 1,);
+        return array (  254 => 139,  226 => 113,  220 => 112,  203 => 100,  192 => 95,  187 => 93,  181 => 90,  174 => 88,  168 => 85,  160 => 82,  155 => 81,  151 => 80,  133 => 65,  121 => 57,  112 => 48,  103 => 42,  94 => 36,  85 => 30,  77 => 25,  65 => 15,  59 => 14,  42 => 3,  36 => 2,  11 => 1,);
     }
 }
 /* {% extends '::layout.html.twig' %}*/
@@ -345,7 +351,7 @@ class __TwigTemplate_cec7f1782d2d324cf15eea26c00350dcf8beadb94019ba13d0fdc6fb5a4
 /*                     <h3 class="box-title -align-center">Formulaire d'Ajout :</h3>*/
 /*                 </div>*/
 /*                 {{ form_start(form , { 'attr': {'class': 'form-horizontal'} }) }}*/
-/*                 <div  class="box-body">*/
+/*                 <div class="box-body">*/
 /*                     <div class="form-group">*/
 /*                         <label for="inputEmail3" class="col-sm-2 control-label">Titre :</label>*/
 /*                         <div class="col-sm-4">*/
@@ -387,7 +393,7 @@ class __TwigTemplate_cec7f1782d2d324cf15eea26c00350dcf8beadb94019ba13d0fdc6fb5a4
 /*             <span>  <img id="imgLoading" src="{{ asset('icones/chargement.gif') }}" width="25%" height="25%"/></span>*/
 /*             <!--    <span class="lite-text-shadow" >Chargement du calendrier</span> -->*/
 /*         </div>*/
-/*         <div class="box-body" >*/
+/*         <div class="box-body">*/
 /*             <table id="example2" class="table table-bordered  -align-center table-hover">*/
 /*                 <thead style="background-color: #28f0ea;">*/
 /*                 <tr>*/
@@ -401,7 +407,7 @@ class __TwigTemplate_cec7f1782d2d324cf15eea26c00350dcf8beadb94019ba13d0fdc6fb5a4
 /*                 <tbody>*/
 /*                 {% for item in rdvTypes %}*/
 /*                     <tr id="{{ item.id }}">*/
-/*                         <td style="color: {{ item.couleur }};" >{{ item.titre }}</td>*/
+/*                         <td style="color: {{ item.couleur }};">{{ item.titre }}</td>*/
 /* */
 /* */
 /*                         <td>{{ item.duree }}</td>*/
@@ -436,37 +442,43 @@ class __TwigTemplate_cec7f1782d2d324cf15eea26c00350dcf8beadb94019ba13d0fdc6fb5a4
 /*     <script>*/
 /* */
 /* */
-/* */
 /*         $(function () {*/
 /* */
 /*             $('#loading').hide();*/
 /* */
 /* */
 /*             $('.delete').on('click', function () {*/
-/*                 var id = $(this).attr('id').replace('delete_', '');*/
-/*                 console.log('id : ' + id);*/
-/*                 confirm('Vous voulez vraiment supprimer ??');*/
-/*                 $.ajax({*/
-/*                     type: 'GET',*/
-/*                       url: 'http://localhost/denteo2/web/app_dev.php/rdvType/delete/' + id,*/
-/*                     //url: Routing.generate('rdvtype_delete', { id: idd }),*/
-/*                     beforeSend: function () {*/
-/*                         /**/
-/*                          $('#imgLoading').attr('src', "{{ asset('icones/chargement.gif') }}");*/
-/*                          *//* */
-/*                         $('#imgLoading').show();*/
-/*                     },*/
-/*                     success: function (data) {*/
-/*                         $('tr#' + id).remove();*/
-/*                         //$.growl.notice({ message: "Suppression Avec Succes :)" });*/
-/*                         $.growl({ title: "Success", message: "Votre Rdv a été bien Supprimer" });*/
-/*                         $('#loading').hide();*/
 /* */
-/*                     }*/
+/*                 $.confirm({*/
+/*                     theme: 'black'*/
 /*                 });*/
-/* */
-/* */
 /*             });*/
+/*             /**/
+/*              $('.delete').on('click', function () {*/
+/*              var id = $(this).attr('id').replace('delete_', '');*/
+/*              console.log('id : ' + id);*/
+/*              confirm('Vous voulez vraiment supprimer ??');*/
+/*              $.ajax({*/
+/*              type: 'GET',*/
+/*              url: 'http://localhost/denteo2/web/app_dev.php/rdvType/delete/' + id,*/
+/*              //url: Routing.generate('rdvtype_delete', { id: idd }),*/
+/*              beforeSend: function () {*/
+/*              /!**/
+/*              $('#imgLoading').attr('src', "{{ asset('icones/chargement.gif') }}");*/
+/*              *!/*/
+/*              $('#imgLoading').show();*/
+/*              },*/
+/*              success: function (data) {*/
+/*              $('tr#' + id).remove();*/
+/*              //$.growl.notice({ message: "Suppression Avec Succes :)" });*/
+/*              $.growl({ title: "Success", message: "Votre Rdv a été bien Supprimer" });*/
+/*              $('#loading').hide();*/
+/* */
+/*              }*/
+/*              });*/
+/* */
+/* */
+/*              });*//* */
 /* */
 /* */
 /*             $('#example2').DataTable({*/

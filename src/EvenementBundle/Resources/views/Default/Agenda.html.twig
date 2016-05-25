@@ -305,23 +305,33 @@
 
             var deplacerRdvAndMemo = function (event, delta, revertFunc, jsEvent, ui, view) {
 
-                var now = moment();
-                var start = moment(event.start).format('DD-MM-YYYY');
-                var startH = moment(event.start).format('HH:mm');
-                var end = moment(event.end).format('DD-MM-YYYY');
-                var endH = moment(event.end).format('HH:mm');
-                event.oldStart = null;
-                event.oldEnd = null;
+                $.confirm({
+                    title: 'Confirmation',
+                    theme: 'black',
+                    confirmButton: 'Deplacer',
+                    cancelButton: 'Annuler',
+                    content: 'Vous voulez vraiment deplacer ce Rendez-vous ?',
+                    confirm: function () {
+                        var now = moment();
+                        var start = moment(event.start).format('DD-MM-YYYY');
+                        var startH = moment(event.start).format('HH:mm');
+                        var end = moment(event.end).format('DD-MM-YYYY');
+                        var endH = moment(event.end).format('HH:mm');
+                        event.oldStart = null;
+                        event.oldEnd = null;
 
-                $.ajax({
-                    type: 'get',
-                    url: 'http://localhost/denteo2/web/app_dev.php/drop' + '/' + event.id + '/' + start + '/' + startH + '/' + end + '/' + endH,
-                    success: function (data) {
-                       //$.growl.notice({ message: "Votre Rdv a été Deplacer" });
-                        $.growl({ title: "Success", message: "Votre Rdv a été Déplacer avec success!" });
-                        $('#calendar').fullCalendar('refrechEvents');
+                        $.ajax({
+                            type: 'get',
+                            url: 'http://localhost/denteo2/web/app_dev.php/drop' + '/' + event.id + '/' + start + '/' + startH + '/' + end + '/' + endH,
+                            success: function (data) {
+                                //$.growl.notice({ message: "Votre Rdv a été Deplacer" });
+                                $.growl({title: "Success", message: "Votre Rdv a été Déplacer avec success!"});
+                                $('#calendar').fullCalendar('refrechEvents');
+                            }
+                        })
                     }
-                })
+                });
+
 
             }
 
@@ -378,20 +388,28 @@
                 eventClick: function (calEvent, jsEvent, view) {
                     $('#myModal').modal().show();
                     $('#details').html('Titre :' + calEvent.title + '<br/>' + 'Date de Debut: ' + moment(calEvent.start).format('DD-MM-YYYY h:mm') + '<br/> Heure de Fin: ' + moment(calEvent.end).format('DD-MM-YYYY h:mm'));
-                    $('#supprimerModal').click(function () {
-                        $.ajax({
-                            type: 'get',
-                            url: 'http://localhost/denteo2/web/app_dev.php/deleted' + '/' + calEvent.id,
-                            // url: Routing.generate('deleteRdv', {id: calEvent.id}),
-                            success: function (data) {
-                                //supprimer le rdv du calendrier
-                                $('#calendar').fullCalendar('removeEvents', calEvent.id);
-                                //$.growl.notice({message: "Suppression Avec Succes :)"});
-                                $.growl({ title: "Success", message: "Votre Rdv a été bien Supprimer " });
-                                $('#calendar').fullCalendar('refrechEvents');
 
+                    $('#supprimerModal').click(function () {
+                        $.confirm({
+                            title: 'Confirmation',
+                            theme: 'black',
+                            confirmButton: 'Supprimer',
+                            cancelButton: 'Annuler',
+                            content: 'Vous voulez vraiment Supprimer ce Rendez-vous ?',
+                            confirm: function (){
+                                $.ajax({
+                                    type: 'get',
+                                    url: 'http://localhost/denteo2/web/app_dev.php/deleted' + '/' + calEvent.id,
+                                    // url: Routing.generate('deleteRdv', {id: calEvent.id}),
+                                    success: function (data) {
+                                        //supprimer le rdv du calendrier
+                                        $('#calendar').fullCalendar('removeEvents', calEvent.id);
+                                        $.growl({title: "Success", message: "Votre Rdv a été bien Supprimer "});
+                                        $('#calendar').fullCalendar('refrechEvents');
+                                    }
+                                })
                             }
-                        })
+                        });
                     })
                     $('#modalModifier').click(function () {
                         if (!sidebar.hasClass('control-sidebar-open')
