@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Delimiteur list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Debut</th>
+                <th>Fin</th>
+                <th>Blockage</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for delimiteur in delimiteurs %}
+            <tr>
+                <td><a href="{{ path('delimiteur_show', { 'id': delimiteur.id }) }}">{{ delimiteur.id }}</a></td>
+                <td>{% if delimiteur.debut %}{{ delimiteur.debut|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if delimiteur.fin %}{{ delimiteur.fin|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ delimiteur.blockage }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('delimiteur_show', { 'id': delimiteur.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('delimiteur_edit', { 'id': delimiteur.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('delimiteur_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

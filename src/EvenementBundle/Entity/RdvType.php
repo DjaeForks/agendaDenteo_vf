@@ -23,6 +23,12 @@ class RdvType
     private $id;
 
     /**
+     * @ORM\ManyToOne(targetEntity="UsersBundle\Entity\User", inversedBy="rdvTypes")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     */
+    protected $user;
+
+    /**
      * @ORM\OneToMany(targetEntity="Rdv", mappedBy="rdvType")
      */
     protected $rdvs;
@@ -198,5 +204,11 @@ class RdvType
     public function getRdvs()
     {
         return $this->rdvs;
+    }
+
+    public function __toString()
+    {
+        // TODO: Implement __toString() method.
+        return $this->titre.' ('.$this->duree.')';
     }
 }

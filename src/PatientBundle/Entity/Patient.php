@@ -3,6 +3,7 @@
 namespace PatientBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Patient
@@ -22,7 +23,13 @@ class Patient
     private $id;
 
     /**
-     * @ORM\OneToMany(targetEntity="\EvenementBundle\Entity\Rdv", mappedBy="patient")
+     * @ORM\ManyToOne(targetEntity="UsersBundle\Entity\User", inversedBy="patients")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     */
+    protected $user;
+
+    /**
+     * @ORM\OneToMany(targetEntity="EvenementBundle\Entity\Rdv", mappedBy="patient")
      */
     protected $rdvs;
 
@@ -261,4 +268,11 @@ class Patient
     {
         return $this->evenements;
     }
+
+    public function __toString()
+    {
+        // TODO: Implement __toString() method.
+        return $this->getNom().' '.$this->getPrenom();
+    }
+
 }

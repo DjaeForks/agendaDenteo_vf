@@ -4,9 +4,19 @@ namespace EvenementBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use DateTime;
 use EvenementBundle\Entity\Rdv;
 use EvenementBundle\Form\RdvType;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Symfony\Component\HttpFoundation\Response;
+use UsersBundle\Entity\User;
+use Symfony\Component\Security\Core\SecurityContext;
+use FOS\UserBundle\FOSUserEvents;
+use FOS\UserBundle\Event\GetResponseUserEvent;
+use FOS\UserBundle\Model\UserInterface;
 
 /**
  * Rdv controller.
@@ -35,29 +45,112 @@ class RdvController extends Controller
      */
     public function newAction(Request $request)
     {
+
+
+    }
+
+    /**
+     * Creates a new Rdv entity.
+     *
+     */
+    public function newRdvAction(Request $request)
+    {
         $rdv = new Rdv();
         $form = $this->createForm('EvenementBundle\Form\MRdvType', $rdv);
         $form->handleRequest($request);
         $em = $this->getDoctrine()->getManager();
-        $entitys = $em->getRepository('EvenementBundle:Rdv')->findAll();
+
         if ($form->isSubmitted() && $form->isValid()) {
 
             $em->persist($rdv);
             $em->flush();
 
-            return $this->redirectToRoute('EvenementBundle:Default:Agenda.html.twig', array(
-                'id' => $rdv->getId(),
-                'entitys'=>$entitys,
-                'form' => $form->createView(),
-                ));
         }
 
-        return $this->render('EvenementBundle:Default:Agenda.html.twig', array(
-            'rdv' => $rdv,
-            'entitys'=>$entitys,
-            'form' => $form->createView(),
-        ));
+
     }
+
+
+    public function chargeEventsAction(){
+
+        $em = $this->getDoctrine()->getManager();
+        $connectedUser = $this->getUser();
+        $events = $this->get('calendar')->loadUserEvents($connectedUser);
+        $jasonEvents = $this->get('calendar')->eventsToCalendar($events);
+        return new JsonResponse($jasonEvents);
+    }
+
+    public  function allRdvsAction(Request $request){
+        $rdv = new Rdv();
+        $form = $this->createForm('EvenementBundle\Form\MRdvType', $rdv);
+        $form->handleRequest($request);
+        $em = $this->getDoctrine()->getManager();
+        $entitys = $em->getRepository('EvenementBundle:Rdv')->findAll();
+        $this->get('security.token_storage')->getToken()->getUser();
+        $editForm = $this->createForm('EvenementBundle\Form\MRdvType', $rdv);
+        $response = new JsonResponse();
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em->persist($rdv);
+            $em->flush();
+            $entitys = $em->getRepository('EvenementBundle:Rdv')->findAll();
+
+
+        }
+            return $this->render('EvenementBundle:Default:Agenda.html.twig', array(
+                'entitys' => $entitys,
+                'form' => $form->createView(),
+                'editForm' => $editForm->createView(),
+            ));
+
+    }
+
+    public function dropAction($id,$start,$startH,$end,$endH){
+        $em = $this->getDoctrine()->getManager();
+        $rdv = $em->getRepository('EvenementBundle:Rdv')->find($id);
+        $rdv->setDateDebut(new DateTime($start.' '.$startH));
+        $rdv->setDateFin(new DateTime($end.' '.$endH));
+        $em->flush();
+        return new Response('OK');
+    }
+
+    public function editerAction($id,Request $request){
+
+        $em = $this->getDoctrine()->getManager();
+        $rdv = $em->getRepository('EvenementBundle:Rdv')->find($id);
+
+            //$rdv->setDateDebut(new DateTime($form['m_rdv[dateDebut]']->getData()));
+           // $rdv->setDateFin(new DateTime($form['m_rdv[dateFin]']->getData()));
+
+        $editForm = $this->createForm('EvenementBundle\Form\MRdvType', $rdv);
+        $editForm->handleRequest($request);
+        if ($editForm->isSubmitted() && $editForm->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $rdv->setTitre($editForm->get('m_rdv[titre]')->getData());
+            $rdv->setDescription($editForm->get('m_rdv[description]')->getData());
+            $em->flush();
+
+            return new Response('OK');
+
+        }
+
+            //$rdv->setTitre($request->request->get('titreEdit'));
+            //$rdv->setDescription($request->request->get('descriptionEdit'));
+       // $em->persist($rdv);
+            //$em->flush();
+
+        return new Response('OK');
+    }
+
+    public function deletedAction($id){
+        $em = $this->getDoctrine()->getManager();
+        $rdv = $em->getRepository('EvenementBundle:Rdv')->find($id);
+        $em->remove($rdv);
+        $em->flush();
+        return new Response('OK');
+    }
+
+
+
 
     /**
      * Finds and displays a Rdv entity.
@@ -130,5 +223,20 @@ class RdvController extends Controller
             ->setMethod('DELETE')
             ->getForm()
         ;
+    }
+
+    /**
+     * Creates a form to delete a Rdv entity.
+     *
+     * @param Rdv $rdv The Rdv entity
+     *
+     * @return \Symfony\Component\Form\Form The form
+     */
+    private function createEdiForm(Rdv $rdv)
+    {
+        return $this->createFormBuilder()
+            ->setAction($this->generateUrl('rdv_delete', array('id' => $rdv->getId())))
+            ->getForm()
+            ;
     }
 }

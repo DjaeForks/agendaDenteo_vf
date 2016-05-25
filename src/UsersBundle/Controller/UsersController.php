@@ -8,6 +8,6 @@ class UsersController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('EventBundle:Resources:views:Default:calendar.html.twig');
+
     }
 }

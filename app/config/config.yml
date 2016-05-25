@@ -3,7 +3,6 @@ imports:
     - { resource: security.yml }
     - { resource: services.yml }
     - { resource: "@UsersBundle/Resources/config/services.yml" }
-    - { resource: "@EventBundle/Resources/config/services.yml" }
     - { resource: "@EvenementBundle/Resources/config/services.yml" }
     - { resource: "@PatientBundle/Resources/config/services.yml" }
 

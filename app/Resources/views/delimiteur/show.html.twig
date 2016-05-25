@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Delimiteur</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ delimiteur.id }}</td>
+            </tr>
+            <tr>
+                <th>Debut</th>
+                <td>{% if delimiteur.debut %}{{ delimiteur.debut|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Fin</th>
+                <td>{% if delimiteur.fin %}{{ delimiteur.fin|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Blockage</th>
+                <td>{{ delimiteur.blockage }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('delimiteur_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('delimiteur_edit', { 'id': delimiteur.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

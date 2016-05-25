@@ -2,3 +2,7 @@ services:
 #    evenement.example:
 #        class: EvenementBundle\Example
 #        arguments: ["@service_id", "plain_value", %parameter%]
+
+    calendar:
+            class: EvenementBundle\Service\CalendarService
+            arguments: [ @doctrine.orm.entity_manager ]

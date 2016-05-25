@@ -114,65 +114,39 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'PatientBundle\\Controller\\DefaultController::indexAction',  '_route' => 'patient_homepage',);
         }
 
-        if (0 === strpos($pathinfo, '/rdv')) {
-            // rdv_index
-            if (rtrim($pathinfo, '/') === '/rdv') {
-                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
-                    $allow = array_merge($allow, array('GET', 'HEAD'));
-                    goto not_rdv_index;
-                }
-
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'rdv_index');
-                }
-
-                return array (  '_controller' => 'EvenementBundle\\Controller\\RdvController::indexAction',  '_route' => 'rdv_index',);
-            }
-            not_rdv_index:
-
-            // rdv_show
-            if (preg_match('#^/rdv/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
-                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
-                    $allow = array_merge($allow, array('GET', 'HEAD'));
-                    goto not_rdv_show;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'rdv_show')), array (  '_controller' => 'EvenementBundle\\Controller\\RdvController::showAction',));
-            }
-            not_rdv_show:
-
-            // rdv_new
-            if ($pathinfo === '/rdv/new') {
+        if (0 === strpos($pathinfo, '/rdvType')) {
+            // rdvtype_new
+            if ($pathinfo === '/rdvType/new') {
                 if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
                     $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
-                    goto not_rdv_new;
+                    goto not_rdvtype_new;
                 }
 
-                return array (  '_controller' => 'EvenementBundle\\Controller\\RdvController::newAction',  '_route' => 'rdv_new',);
+                return array (  '_controller' => 'EvenementBundle\\Controller\\RdvTypeController::newAction',  '_route' => 'rdvtype_new',);
             }
-            not_rdv_new:
+            not_rdvtype_new:
 
-            // rdv_edit
-            if (preg_match('#^/rdv/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+            // rdvtype_edit
+            if (preg_match('#^/rdvType/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
                 if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
                     $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
-                    goto not_rdv_edit;
+                    goto not_rdvtype_edit;
                 }
 
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'rdv_edit')), array (  '_controller' => 'EvenementBundle\\Controller\\RdvController::editAction',));
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'rdvtype_edit')), array (  '_controller' => 'EvenementBundle\\Controller\\RdvTypeController::editAction',));
             }
-            not_rdv_edit:
+            not_rdvtype_edit:
 
-            // rdv_delete
-            if (preg_match('#^/rdv/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
-                if ($this->context->getMethod() != 'DELETE') {
-                    $allow[] = 'DELETE';
-                    goto not_rdv_delete;
+            // rdvtype_delete
+            if (0 === strpos($pathinfo, '/rdvType/delete') && preg_match('#^/rdvType/delete/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_rdvtype_delete;
                 }
 
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'rdv_delete')), array (  '_controller' => 'EvenementBundle\\Controller\\RdvController::deleteAction',));
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'rdvtype_delete')), array (  '_controller' => 'EvenementBundle\\Controller\\RdvTypeController::deleteAction',));
             }
-            not_rdv_delete:
+            not_rdvtype_delete:
 
         }
 
@@ -182,7 +156,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return $this->redirect($pathinfo.'/', 'evenement_homepage');
             }
 
-            return array (  '_controller' => 'EvenementBundle\\Controller\\DefaultController::indexAction',  '_route' => 'evenement_homepage',);
+            return array (  '_controller' => 'EvenementBundle\\Controller\\RdvController::allRdvsAction',  '_route' => 'evenement_homepage',);
         }
 
         // agenda
@@ -190,85 +164,47 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'EvenementBundle\\Controller\\RdvController::newAction',  '_route' => 'agenda',);
         }
 
-        if (0 === strpos($pathinfo, '/task')) {
-            // task_index
-            if (rtrim($pathinfo, '/') === '/task') {
-                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
-                    $allow = array_merge($allow, array('GET', 'HEAD'));
-                    goto not_task_index;
-                }
+        // new
+        if ($pathinfo === '/new') {
+            return array (  '_controller' => 'EvenementBundle\\Controller\\RdvController::newRdvAction',  '_route' => 'new',);
+        }
 
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'task_index');
-                }
+        // allRdvs
+        if ($pathinfo === '/all') {
+            return array (  '_controller' => 'EvenementBundle\\Controller\\RdvController::allRdvsAction',  '_route' => 'allRdvs',);
+        }
 
-                return array (  '_controller' => 'EventBundle\\Controller\\TaskController::indexAction',  '_route' => 'task_index',);
+        if (0 === strpos($pathinfo, '/d')) {
+            // drop
+            if (0 === strpos($pathinfo, '/drop') && preg_match('#^/drop(?:/(?P<id>[^/]++)(?:/(?P<start>[^/]++)(?:/(?P<startH>[^/]++)(?:/(?P<end>[^/]++)(?:/(?P<endH>[^/]++))?)?)?)?)?$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'drop')), array (  '_controller' => 'EvenementBundle\\Controller\\RdvController::dropAction',  'id' => 1,  'start' => 2,  'startH' => 3,  'end' => 4,  'endH' => 5,));
             }
-            not_task_index:
 
-            // task_show
-            if (preg_match('#^/task/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
-                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
-                    $allow = array_merge($allow, array('GET', 'HEAD'));
-                    goto not_task_show;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'task_show')), array (  '_controller' => 'EventBundle\\Controller\\TaskController::showAction',));
+            // deleteRdv
+            if (0 === strpos($pathinfo, '/deleted') && preg_match('#^/deleted(?:/(?P<id>[^/]++))?$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'deleteRdv')), array (  '_controller' => 'EvenementBundle\\Controller\\RdvController::deletedAction',  'id' => 1,));
             }
-            not_task_show:
-
-            // task_new
-            if ($pathinfo === '/task/new') {
-                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
-                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
-                    goto not_task_new;
-                }
-
-                return array (  '_controller' => 'EventBundle\\Controller\\TaskController::newAction',  '_route' => 'task_new',);
-            }
-            not_task_new:
-
-            // task_edit
-            if (preg_match('#^/task/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
-                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
-                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
-                    goto not_task_edit;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'task_edit')), array (  '_controller' => 'EventBundle\\Controller\\TaskController::editAction',));
-            }
-            not_task_edit:
-
-            // task_delete
-            if (preg_match('#^/task/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
-                if ($this->context->getMethod() != 'DELETE') {
-                    $allow[] = 'DELETE';
-                    goto not_task_delete;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'task_delete')), array (  '_controller' => 'EventBundle\\Controller\\TaskController::deleteAction',));
-            }
-            not_task_delete:
 
         }
 
-        // event_homepage
-        if (rtrim($pathinfo, '/') === '') {
-            if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'event_homepage');
-            }
-
-            return array (  '_controller' => 'EventBundle\\Controller\\TaskController::newAction',  '_route' => 'event_homepage',);
+        // selectRdv
+        if (0 === strpos($pathinfo, '/select') && preg_match('#^/select(?:/(?P<id>[^/]++))?$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'selectRdv')), array (  '_controller' => 'EvenementBundle\\Controller\\RdvController::getSelectedAction',  'id' => 1,));
         }
 
-        // show_task
-        if (preg_match('#^/(?P<id>[^/]++)/showT$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'show_task')), array (  '_controller' => 'EventBundle\\Controller\\TaskController::showJsonAction',));
+        // updateRdv
+        if (0 === strpos($pathinfo, '/rdv_modif') && preg_match('#^/rdv_modif(?:/(?P<id>[^/]++))?$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'updateRdv')), array (  '_controller' => 'EvenementBundle\\Controller\\RdvController::editerAction',  'id' => 1,));
         }
 
-        // edit_task
-        if (preg_match('#^/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'edit_task')), array (  '_controller' => 'EventBundle\\Controller\\TaskController::editAction',));
+        // addDel
+        if (0 === strpos($pathinfo, '/addDel') && preg_match('#^/addDel(?:/(?P<start>[^/]++)(?:/(?P<startH>[^/]++)(?:/(?P<end>[^/]++)(?:/(?P<endH>[^/]++))?)?)?)?$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'addDel')), array (  '_controller' => 'EvenementBundle\\Controller\\DelimiteurController::addDelAction',  'start' => 1,  'startH' => 2,  'end' => 3,  'endH' => 4,));
+        }
+
+        // load_events
+        if ($pathinfo === '/load') {
+            return array (  '_controller' => 'EvenementBundle\\Controller\\RdvController::chargeEventsAction',  '_route' => 'load_events',);
         }
 
         // users_homepage
@@ -466,13 +402,9 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
         not_fos_user_change_password:
 
-        // homepage
-        if (rtrim($pathinfo, '/') === '') {
-            if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'homepage');
-            }
-
-            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
+        // fos_js_routing_js
+        if (0 === strpos($pathinfo, '/js/routing') && preg_match('#^/js/routing(?:\\.(?P<_format>js|json))?$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_js_routing_js')), array (  '_controller' => 'fos_js_routing.controller:indexAction',  '_format' => 'js',));
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

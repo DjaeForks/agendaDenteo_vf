@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="rdv")
  * @ORM\Entity(repositoryClass="EvenementBundle\Repository\RdvRepository")
  */
-class Rdv extends Evenement
+class Rdv
 {
     /**
      * @var int
@@ -19,7 +19,7 @@ class Rdv extends Evenement
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
 
     /**
      * @ORM\ManyToOne(targetEntity="RdvType", inversedBy="Rdvs")
@@ -28,10 +28,24 @@ class Rdv extends Evenement
     protected $rdvType;
 
     /**
+     * @ORM\ManyToOne(targetEntity="UsersBundle\Entity\User", inversedBy="Rdvs")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     */
+    protected $user;
+
+    /**
      * @ORM\ManyToOne(targetEntity="\PatientBundle\Entity\Patient", inversedBy="rdvs")
      * @ORM\JoinColumn(name="patient_id", referencedColumnName="id")
      */
     protected $patient;
+
+    /**
+     *@ORM\ManyToOne(targetEntity="PeriodiciteRdv", inversedBy="rdvs",cascade={"persist","remove"})
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="PERIODICITE_ID", referencedColumnName="id",nullable = true)
+     * })
+     */
+    private $periodicite;
     /**
      * @var int
      *
@@ -45,6 +59,42 @@ class Rdv extends Evenement
      * @ORM\Column(name="description", type="string", length=255)
      */
     private $description;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="titre", type="string", length=255)
+     */
+    protected $titre;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="dateDebut", type="datetime")
+     */
+    protected $dateDebut;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="dateFin", type="datetime")
+     */
+    protected $dateFin;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="className", type="string", length=255)
+     */
+    protected $className;
+
+    /**
+     * Rdv constructor.
+     * @param string $className
+     */
+    public function __construct()
+    {
+        $this->className = 'Rdv';
+    }
 
 
     /**
@@ -144,6 +194,74 @@ class Rdv extends Evenement
     }
 
     /**
+     * @return string
+     */
+    public function getTitre()
+    {
+        return $this->titre;
+    }
+
+    /**
+     * @param string $titre
+     */
+    public function setTitre($titre)
+    {
+        $this->titre = $titre;
+    }
+
+    /**
+     * @return string
+     */
+    public function getClassName()
+    {
+        return $this->className;
+    }
+
+    /**
+     * @param string $className
+     */
+    public function setClassName($className)
+    {
+        $this->className = $className;
+    }
+
+
+
+    /**
+     * @return \DateTime
+     */
+    public function getDateDebut()
+    {
+        return $this->dateDebut;
+    }
+
+    /**
+     * @param \DateTime $dateDebut
+     */
+    public function setDateDebut($dateDebut)
+    {
+        $this->dateDebut = $dateDebut;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getDateFin()
+    {
+        return $this->dateFin;
+    }
+
+    /**
+     * @param \DateTime $dateFin
+     */
+    public function setDateFin($dateFin)
+    {
+        $this->dateFin = $dateFin;
+    }
+
+
+
+    /**
      * Get patient
      *
      * @return \PatientBundle\Entity\Patient
@@ -151,5 +269,19 @@ class Rdv extends Evenement
     public function getPatient()
     {
         return $this->patient;
+    }
+
+    public function toArray(){
+        $rdv = array();
+        $rdv['id']=$this->id;
+        $rdv['name']=$this->titre;
+        $rdv['dateDebut']=$this->dateDebut->format('Y-m-d H:i:s');
+        $rdv['dateFin']=$this->dateFin->format('Y-m-d H:i:s');
+        $rdv['etat']=$this->etat;
+        $rdv['patient']=$this->patient;
+        $rdv['rdvType']=$this->rdvType;
+
+
+        return $rdv;
     }
 }

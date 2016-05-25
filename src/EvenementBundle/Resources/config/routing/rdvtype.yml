@@ -1,0 +1,14 @@
+rdvtype_new:
+    path:     /new
+    defaults: { _controller: "EvenementBundle:RdvType:new" }
+    methods:  [GET, POST]
+
+rdvtype_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EvenementBundle:RdvType:edit" }
+    methods:  [GET, POST]
+
+rdvtype_delete:
+    path:     /delete/{id}
+    defaults: { _controller: "EvenementBundle:RdvType:delete" }
+    methods:  GET

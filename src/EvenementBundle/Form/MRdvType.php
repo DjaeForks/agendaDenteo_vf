@@ -15,13 +15,13 @@ class MRdvType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('etat')
-            ->add('description')
-            ->add('titre')
-            ->add('dateDebut', 'datetime')
-            ->add('dateFin', 'datetime')
             ->add('rdvType')
             ->add('patient')
+            ->add('description')
+            ->add('titre')
+            ->add('dateDebut','datetime',array('widget'=>'single_text'))
+            ->add('dateFin','datetime',array('widget'=>'single_text'))
+
         ;
     }
     

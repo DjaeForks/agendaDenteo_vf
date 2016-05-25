@@ -1,0 +1,142 @@
+.control-sidebar {
+    overflow-x: hidden !important;
+    overflow-y: scroll !important;
+    background-color: #0c0c0c;
+    color: white;
+    opacity: 0.9;
+    height: 100%;
+}
+
+.control-sidebar-open {
+    color: white;
+    overflow-x: hidden !important;
+    overflow-y: scroll !important;
+}
+
+.modal-dialog {
+    opacity: 0.9;
+
+}
+.wizard-steps {
+    display: block;
+    list-style: none outside none;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+.wizard-steps li {
+    display: block;
+    float: left;
+    max-width: 25%;
+    min-width: 50%;
+    text-align: center;
+    padding-left: 0;
+}
+.wizard-steps li:before {
+    border-top: 6px solid #55606E;
+    content: "";
+    display: block;
+    font-size: 0;
+    overflow: hidden;
+    position: relative;
+    top: 13px;
+    right: 1px;
+    width: 100%;
+    z-index: 1;
+}
+.wizard-steps li:first-child:before {
+    left: 50%;
+    max-width: 50%;
+}
+.wizard-steps li:last-child:before {
+    max-width: 50%;
+    width: 50%;
+}
+.wizard-steps li.complete .step {
+    background-color: #0aa699;
+    padding: 1px 6px;
+    border: 4px solid #55606e;
+}
+.wizard-steps li .step {
+    background-color: #d1dade;
+    border-radius: 32px 32px 32px 32px;
+    color: #ffffff;
+    display: inline;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 12px;
+    padding: 4px 9px;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    transition: all 0.2s linear 0s;
+}
+.wizard-steps li .step i {
+    font-size: 10px;
+    font-weight: normal;
+    position: relative;
+    top: -1.5px;
+}
+.wizard-steps li .title {
+    color: #B1BCC5;
+    display: block;
+    font-size: 13px;
+    line-height: 15px;
+    max-width: 100%;
+    position: relative;
+    table-layout: fixed;
+    text-align: center;
+    top: 20px;
+    word-wrap: break-word;
+    z-index: 104;
+}
+.wizard-steps a:hover,
+.wizard-steps a:active,
+.wizard-steps a:focus {
+    text-decoration: none;
+}
+.wizard-steps li.active .step,
+.wizard-steps li.active.complete .step {
+    background-color: #0090d9;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    font-size: 16px;
+}
+.wizard-steps li.complete .title,
+.wizard-steps li.active .title {
+    color: #2B3D53;
+}
+.step-content {
+    margin-left: 60px;
+    margin-top: 40px;
+}
+.step-content .step-pane {
+    display: none;
+    min-height: 267px;
+}
+.step-content .active {
+    display: block;
+}
+.wizard-actions {
+    display: block;
+    list-style: none outside none;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+.wizard-actions li {
+    display: inline;
+}
+.tab-content {
+    overflow: auto;
+    position: relative;
+    z-index: 10;
+    background-color: #ffffff;
+    overflow: hidden;
+    margin-bottom: 18px;
+}
+.tab-content.transparent {
+    background-color: transparent;
+}

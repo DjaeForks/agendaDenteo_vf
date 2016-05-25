@@ -2,6 +2,9 @@
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset("plugins/fullcalendar/fullcalendar.min.css") }}">
     <link rel="stylesheet" href="{{ asset("plugins/fullcalendar/fullcalendar.print.css") }}" media="print">
+    <style>
+
+    </style>
 {% endblock %}
 {% block content %}
 
@@ -23,7 +26,7 @@
             <div class="col-md-3">
                 <div class="box box-solid">
                     <div class="box-header with-border">
-                        <h4 class="box-title">Draggable Events</h4>
+                        <h4 class="box-title">Les types Rdvs</h4>
                     </div>
                     <div class="box-body">
                         <!-- the events -->
@@ -40,7 +43,7 @@
                 </div><!-- /. box -->
                 <div class="box box-solid">
                     <div class="box-header with-border">
-                        <h3 class="box-title">Create Event</h3>
+                        <h3 class="box-title">Proposer un type de Rdv</h3>
                     </div>
                     <div class="box-body">
                         <div class="btn-group" style="width: 100%; margin-bottom: 10px;">
@@ -82,6 +85,7 @@
             </div><!-- /.col -->
         </div><!-- /.row -->
     </section><!-- /.content -->
+    <!-- Control Sidebar -->
 
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" data-toggle="modal" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
@@ -92,12 +96,28 @@
                     <h4 class="modal-title" id="myModalLabel">Modal title</h4>
                 </div>
                 <div class="modal-body">
+                    <p id="details"></p>
+                    <button class="btn btn-primary" id="modalModifier" data-dismiss="modal">Modifier</button>
 
-                    {{ form_start(form) }}
-                    
+                    <button class="btn btn-primary" id="supprimerModal" data-dismiss="modal">Supprimer</button>
+                </div>
 
+                <div class="modal-footer">
 
-                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalDelimiteur" tabindex="-1" role="dialog" data-toggle="modal"
+         aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <p id="detailsD"></p>
+                    <button class="btn btn-primary" id="addDelimiteur" data-dismiss="modal">Nouveau Délimiteur</button>
+
+                    <button class="btn btn-primary" id="supprimerDelimiteur" data-dismiss="modal">Fermer</button>
                 </div>
 
                 <div class="modal-footer">
@@ -108,6 +128,84 @@
     </div>
 
 {% endblock content %}
+{% block rdvForm %}
+
+    <div id="rootwizard" class="col-md-12">
+        <div class="form-wizard-steps">
+            <ul class="wizard-steps">
+                <li class="" data-target="#step1"><a href="#tab1" data-toggle="tab"> <span class="step">1</span>
+                        <span class="title">Basic information</span> </a></li>
+                <li data-target="#step2" class=""><a href="#tab2" data-toggle="tab"> <span class="step">2</span>
+                        <span class="title">Account information</span> </a></li>
+
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="tab-content transparent">
+            <div class="tab-pane" id="tab1"><br>
+                <h4 class="semi-bold">Step 1 - <span class="light">Basic Information</span></h4>
+                {{ form_start(form,{'attr': {'id':'addRdv'} }) }}
+                <div class="row">
+                    <div class='col-sm-6 col-md-offset-3 form-group'>
+                        <label>Type de Rendez-Vous</label>
+                        {{ form_widget(form.rdvType,{'attr': {'class':'form-control input-sm'} }) }}
+                        <label>Patient</label>
+                        {{ form_widget(form.patient,{'attr': {'class':'form-control input-sm'} }) }}
+                        <label>Date et Heure de Debut</label>
+                        {{ form_widget(form.dateDebut,{'attr': {'class':'form-control input-sm'} }) }}
+
+
+                        <label>Heure de Fin</label>
+                        {{ form_widget(form.dateFin,{'attr': {'class':'form-control input-sm'} }) }}
+
+
+                        <label>Titre</label>
+                        {{ form_widget(form.titre,{'attr': {'class':'form-control input-sm'} }) }}
+
+                        <label>Description</label>
+                        {{ form_widget(form.description,{'attr': {'class':'form-control input-sm'} }) }}<br/>
+
+
+                        <button type="submit" id="btnSubmit" class="btn btn-primary">Ajouter</button>
+                        <button type="button" id="close" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                    </div>
+                </div>
+
+
+                {{ form_end(form) }}
+                {{ form_start(editForm,{'attr': {'id':'editRdv'} }) }}
+                <div class="row">
+                    <div class='col-sm-6 col-md-offset-3 form-group'>
+
+
+                        <label>Titre</label>
+                        {{ form_widget(editForm.titre,{'attr': {'class':'form-control input-sm'} }) }}
+
+                        <label>Description</label>
+                        {{ form_widget(editForm.description,{'attr': {'class':'form-control input-sm'} }) }}<br/>
+
+
+                        <button type="submit" id="btnModif" class="btn btn-warning">Modifier</button>
+                        <button type="button" id="close" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                    </div>
+                </div>
+
+
+                {{ form_end(editForm) }}
+            </div>
+
+            <div class="tab-pane" id="tab2"><br>
+                <h4 class="semi-bold">Step 2 - <span class="light">Account Information</span></h4>
+
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock rdvForm %}
 
 {% block javascripts %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
@@ -119,12 +217,26 @@
     <script src="{{ asset("plugins/colorpicker/bootstrap-colorpicker.min.js") }}"></script>
     <!-- bootstrap time picker -->
     <script src="{{ asset("plugins/timepicker/bootstrap-timepicker.min.js") }}"></script>
-
+    <script src="{{ asset("plugins/fullcalendar/lib/moment.min.js") }}"></script>
     <script>
         $(function () {
+            $('#btnSubmit').click(function () {
+                $('form').submit(function () {
+                    $.ajax({
+                        type: 'GET',
+                        url: 'http://localhost/taskPerson/web/app_dev.php/all',
+                        success: function (data) {
+                            $('#calendar').fullCalendar('refrechEvents');
+                        }
+                    })
+                })
 
-            /* initialize the external events
-             -----------------------------------------------------------------*/
+            })
+
+
+            $('#close').click(function () {
+                sidebar.removeClass('control-sidebar-open');
+            })
 
 
             function ini_events(ele) {
@@ -150,178 +262,188 @@
                 });
             }
 
+            //Sauvgarder les dates anciennes
+            var saveOldDragInfo = function (event, jsEvent, ui, view) {
+                event.oldStart = event.start;
+                event.oldEnd = event.End;
+            }
+
+            function calendarSlotDuration() {
+                var slot = calendarOptions.slotDuration.split(':');
+                return moment.duration({
+                    seconds: slot[2],
+                    minutes: slot[1],
+                    hours: slot[0]
+                });
+            }
+
+
+            var selectComplete = function (start, end, jsEvent, view) {
+                var now = moment();
+                var temp = moment(end);
+                start = moment(start).format('DD-MM-YYYY HH:mm');
+                var startH = moment(start).format('HH:mm');
+                end = moment(end).format('DD-MM-YYYY HH:mm');
+                var endH = moment(end).format('HH:mm');
+                var duration = moment.duration(temp.subtract(start));
+                var warningMsg = (now.isAfter(end) && !now.isSame(end)) ? '<strong><span>Attention Vous Avez séléctionné une ancienne date</span></strong>' : '';
+                $('#modalDelimiteur').modal().show();
+                $('#detailsD').html('L\'intervalle que vous avez choisi est: ' + '<br/>' +
+                        'Du: ' + moment(start).format('DD-MM-YYYY h:mm') + 'br/' +
+                        'A: ' + moment(end).format('DD-MM-YYYY h:mm') + '<br/>');
+                $('#addDelimiteur').click(function () {
+                    $.ajax({
+                        type: 'get',
+                        url: 'http://localhost/taskPerson/web/app_dev.php/addDel' + '/' + start + '/' + startH + '/' + end + '/' + endH,
+                        success: function (data) {
+                            $('#calendar').fullCalendar('refrechEvents');
+                        }
+                    })
+                })
+
+            }
+
             var deplacerRdvAndMemo = function (event, delta, revertFunc, jsEvent, ui, view) {
 
                 var now = moment();
-                var start = event.start.format('DD-MM-YYYY');
-                var startH = event.start.format('HH:mm');
-                var endH = (event.end != null) ? event.end.format('HH:mm') : null;
-                var oldStart = event.oldStart.format('DD-MM-YYYY');
-                var oldStartH = event.oldStart.format('HH:mm');
-                var oldEndH = (event.end != null) ? event.oldEnd.format('HH:mm') : null;
+                var start = moment(event.start).format('DD-MM-YYYY');
+                var startH = moment(event.start).format('HH:mm');
+                var end = moment(event.end).format('DD-MM-YYYY');
+                var endH = moment(event.end).format('HH:mm');
                 event.oldStart = null;
                 event.oldEnd = null;
-                if (event.className.toString() === 'memo') { // memo
 
-                    if (event.start.hasTime()) {
-                        $.modal.alert('Un message doit toujours être placer dans la ligne des messages');
-                        revertFunc();
-                    } else {
-                        var msg = 'Voulez-vous vraiment déplacer cet info ?';
-                        if (now.isAfter(event.start) && !now.isSame(event.start)) {
-                            msg = 'Voulez-vous vraiment déplacer cet info vers une ancienne date ?'
-                        }
-                        $.modal.confirm(
-                                msg,
-                                function () {
-                                    $.ajax({
-                                        type: 'get',
-                                        url: Routing.generate('agenda_memo_drop', {id: event.id, start1: start, startH: startH}),
-                                        success: function (data) {
-                                            notify('Message déplacé!', 'Date de déplacement :' + start, {groupSimilar: false});
-                                            if (event.periodique)
-                                                $('#calendar').fullCalendar('refetchEvents');
-                                        }
-                                    });
-                                },
-                                function ()
-                                {
-                                    revertFunc();
-                                }
-                        );
+                $.ajax({
+                    type: 'get',
+                    url: 'http://localhost/denteo2/web/app_dev.php/drop' + '/' + event.id + '/' + start + '/' + startH + '/' + end + '/' + endH,
+                    success: function (data) {
+                       //$.growl.notice({ message: "Votre Rdv a été Deplacer" });
+                        $.growl({ title: "Success", message: "Votre Rdv a été Déplacer avec success!" });
+                        $('#calendar').fullCalendar('refrechEvents');
                     }
+                })
 
-                } else { // rdv
-                    if (!event.start.hasTime()) {
-                        $.modal.alert('Cette case est réservée pour les infos seulement');
-                        revertFunc();
-                    } else {
-                        $.modal.confirm(
-                                'Voulez-vous vraiment déplacer ce rendez-vous du <strong>' + oldStart + '</strong> de <strong>' + oldStartH + '</strong> à <strong>' + oldEndH + '</strong> vers le <strong>' + start + '</strong> de <strong>' + startH + '</strong> à <strong>' + endH + '</strong>',
-                                function () {
-                                    $.ajax({
-                                        type: 'get',
-                                        url: Routing.generate('drop', {id: event.id, start: start, startH: startH, endH: endH}),
-                                        success: function (data) {
-                                            notify('Rendez-Vous déplacé!', 'Date de dépalcement :' + start + '<br>' + 'Heure début: ' + startH + '<br>' + 'Heure fin: ' + endH, {groupSimilar: false});
-                                            if (event.periodique)
-                                                $('#calendar').fullCalendar('refetchEvents');
-                                        }
-                                    });
-                                },
-                                function () {
-                                    revertFunc();
-                                }
-                        );
-                        $('.modal-buttons>button.button.blue-gradient.glossy.mid-margin-left').text('Comfirmer');
-                    }
-
-                }
             }
 
-            // ini_events($('#external-events div.external-event'));
 
-            /* initialize the calendar
-             -----------------------------------------------------------------*/
-            //Date for the calendar events (dummy data)
+            //Get the object
+            var _this = this;
+            //Update options
+            var o = $.AdminLTE.options.controlSidebarOptions;
+            //Get the sidebar
+            var sidebar = $(o.selector);
+
+
             var date = new Date();
             var d = date.getDate(),
                     m = date.getMonth(),
                     y = date.getFullYear();
+
             $('#calendar').fullCalendar({
                 header: {
                     left: 'prev,next today',
                     center: 'title',
-                    right: 'month,agendaWeek,agendaDay'
+                    right: 'agendaWeek,agendaDay'
                 },
                 buttonText: {
                     today: 'today',
-                    month: 'month',
                     week: 'week',
                     day: 'day'
                 },
-                //Random default events
-                events: [
-                    {% for entity in entitys %}
-                    {
-                        id: {{ entity.id }},
-                        title: '{{ entity.titre }}',
-
-
-                        start: new Date('{{ entity.dateDebut|date('Y-m-d H:i:s') }}'),
-                        end: new Date('{{ entity.dateFin|date('Y-m-d H:i:s') }}'),
-
-                    }{{ loop.last ? '' : ',' }}
-                    {% endfor %}
-                ],
+                defaultView: 'agendaWeek',
+                events: '{{ path('load_events') }}',
                 editable: true,
+                axisFormat: 'HH:mm',
+                lazyFetching: true,
+                minTime: '08:00',
+                maxTime: '19:00',
                 droppable: true, // this allows things to be dropped onto the calendar !!!
+
                 dayClick: function (date, jsEvent, view) {
 
+                    $('#m_rdv_dateDebut').val(date.format('YYYY-MM-DD h:mm'));
+                    if (!sidebar.hasClass('control-sidebar-open')
+                            && !$('body').hasClass('control-sidebar-open')) {
+                        //Open the sidebar
+                        sidebar.addClass('control-sidebar-open');
+                        $('#editRdv').hide();
+                        $('#addRdv').show();
+                    } else {
 
-                   // $('#myModal').modal().show();
-                    //$('#task_dateDebut').val(date.format('DD-MM-YYYY h:mm'));
-
-
-                },
-
-                eventClick: function (event,date, jsEvent, view) {
-
-                },
-                eventDrop: function( event, delta){
-                    $.ajax({
-                        type: 'POST',
-                        url: Routing.generate('edit_task', {id: event.id}),
-                        success: function (data) {
-                            console.log(data.etat);
-                            $('#calendar').fullCalendar('getView', event);
-                        }
-                    });
-                },
-                eventMouseover: function( event, jsEvent, view ) {
-                    $this.popover({html:true,title:event.title,placement:'top',container:'body'}).popover('show');
-                },
-                eventRender: function (event, element) {
-                    element.popover({
-                        title: event.name,
-                        placement: 'right',
-
-                    });
-                },
-                drop: function (date, allDay) { // this function is called when something is dropped
-
-                    // retrieve the dropped element's stored Event Object
-                    var originalEventObject = $(this).data('eventObject');
-
-                    // we need to copy it, so that multiple events don't have a reference to the same object
-                    var copiedEventObject = $.extend({}, originalEventObject);
-
-                    // assign it the date that was reported
-                    copiedEventObject.start = date;
-                    copiedEventObject.allDay = allDay;
-                    copiedEventObject.backgroundColor = $(this).css("background-color");
-                    copiedEventObject.borderColor = $(this).css("border-color");
-                    $.ajax({
-                        url: Routing.generate('annulation', {id: copiedEventObject}), // on donne l'URL du fichier de traitement
-                        type: "POST", // la requête est de type POST
-                        data: "phraseusuelle=" + phraseusuelle + "&entete=" + entete + "&myEntete=" + myEntete + "&myAlert=" + myAlert + "&clientAlert=" + clientAlert + "&report=" + report, // et on envoie nos données
-
-                        success: function (data) {
-                            $('#calendar').fullCalendar('removeEvents', eventId);
-                        }
-                    });
-                    // render the event on the calendar
-                    // the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
-                    $('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
-
-
-                    // is the "remove after drop" checkbox checked?
-                    if ($('#drop-remove').is(':checked')) {
-                        // if so, remove the element from the "Draggable Events" list
-                        $(this).remove();
                     }
 
-                }
+
+                },
+
+                eventClick: function (calEvent, jsEvent, view) {
+                    $('#myModal').modal().show();
+                    $('#details').html('Titre :' + calEvent.title + '<br/>' + 'Date de Debut: ' + moment(calEvent.start).format('DD-MM-YYYY h:mm') + '<br/> Heure de Fin: ' + moment(calEvent.end).format('DD-MM-YYYY h:mm'));
+                    $('#supprimerModal').click(function () {
+                        $.ajax({
+                            type: 'get',
+                            url: 'http://localhost/denteo2/web/app_dev.php/deleted' + '/' + calEvent.id,
+                            // url: Routing.generate('deleteRdv', {id: calEvent.id}),
+                            success: function (data) {
+                                //supprimer le rdv du calendrier
+                                $('#calendar').fullCalendar('removeEvents', calEvent.id);
+                                //$.growl.notice({message: "Suppression Avec Succes :)"});
+                                $.growl({ title: "Success", message: "Votre Rdv a été bien Supprimer " });
+                                $('#calendar').fullCalendar('refrechEvents');
+
+                            }
+                        })
+                    })
+                    $('#modalModifier').click(function () {
+                        if (!sidebar.hasClass('control-sidebar-open')
+                                && !$('body').hasClass('control-sidebar-open')) {
+                            //Open the sidebar
+
+                            sidebar.addClass('control-sidebar-open');
+
+                            $('#editRdv').show();
+                            $('#addRdv').hide();
+
+                            $('#m_rdv_dateDebut').val(moment(calEvent.start).format('DD-MM-YYYY h:mm'));
+                            $('#m_rdv_dateFin').val(moment(calEvent.end).format('DD-MM-YYYY h:mm'));
+                            $('#m_rdv_titre').val(calEvent.title);
+                            $('#btnModif').click(function () {
+                                $.ajax({
+                                    type: 'get',
+                                    url: 'http://localhost/taskPerson/web/app_dev.php/select' + '/' + calEvent.id,
+                                    success: function (data) {
+                                        $('#calendar').fullCalendar('refrech');
+                                    }
+                                })
+                            })
+
+                        } else {
+
+                        }
+                        $('#btnModif').click(function () {
+                            $.ajax({
+                                type: 'get',
+                                url: 'http://localhost/taskPerson/web/app_dev.php/rdv_modif',
+                                success: function (data) {
+                                    $('#calendar').fullCalendar('refrech');
+                                }
+                            })
+                        })
+
+                    })
+                },
+                eventDrop: deplacerRdvAndMemo,
+                eventDragStop: saveOldDragInfo,
+                eventReceive: function (event) {
+
+                },
+                eventMouseover: function (event, jsEvent, view) {
+                },
+                eventRender: function (event, element) {
+                },
+                drop: function (date, allDay) {
+                },
+                selectable: true,
+                selectHelper: true,
             });
 
             /* ADDING EVENTS */
@@ -362,6 +484,7 @@
                 $("#new-event").val("");
             });
         });
+
     </script>
 
 {% endblock %}

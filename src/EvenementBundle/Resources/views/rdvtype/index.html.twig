@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>RdvType list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Duree</th>
+                <th>Couleur</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for rdvType in rdvTypes %}
+            <tr>
+                <td><a href="{{ path('rdvtype_show', { 'id': rdvType.id }) }}">{{ rdvType.id }}</a></td>
+                <td>{{ rdvType.titre }}</td>
+                <td>{{ rdvType.duree }}</td>
+                <td>{{ rdvType.couleur }}</td>
+                <td>{{ rdvType.description }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('rdvtype_show', { 'id': rdvType.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('rdvtype_edit', { 'id': rdvType.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('rdvtype_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

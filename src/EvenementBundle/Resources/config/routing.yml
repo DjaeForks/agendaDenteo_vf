@@ -1,11 +1,47 @@
 evenement_rdv:
+    resource: "@EvenementBundle/Resources/config/routing/rdvType.yml"
+    prefix:   /rdvType
+
+evenement_rdv:
     resource: "@EvenementBundle/Resources/config/routing/rdv.yml"
     prefix:   /rdv
 
 evenement_homepage:
     path:     /
-    defaults: { _controller: EvenementBundle:Default:index }
+    defaults: { _controller: EvenementBundle:Rdv:allRdvs }
 
 agenda:
     path:     /agenda
     defaults: { _controller: EvenementBundle:Rdv:new }
+new:
+    path:     /new
+    defaults: { _controller: EvenementBundle:Rdv:newRdv }
+
+allRdvs:
+    path:     /all
+    defaults: { _controller: EvenementBundle:Rdv:allRdvs }
+drop:
+    path:     /drop/{id}/{start}/{startH}/{end}/{endH}
+    defaults: { _controller: EvenementBundle:Rdv:drop,id: 1,start: 2,startH: 3,end: 4,endH: 5}
+    options:
+        expose: true
+deleteRdv:
+    path:     /deleted/{id}
+    defaults: { _controller: EvenementBundle:Rdv:deleted,id: 1 }
+
+selectRdv:
+    path:     /select/{id}
+    defaults: { _controller: EvenementBundle:Rdv:getSelected,id: 1 }
+updateRdv:
+    path:     /rdv_modif/{id}
+    defaults: { _controller: EvenementBundle:Rdv:editer,id: 1 }
+
+addDel:
+    path:     /addDel/{start}/{startH}/{end}/{endH}
+    defaults: { _controller: EvenementBundle:Delimiteur:addDel,start: 1,startH: 2,end: 3,endH: 4}
+    options:
+        expose: true
+
+load_events:
+    path:     /load
+    defaults: { _controller: EvenementBundle:Rdv:chargeEvents }
