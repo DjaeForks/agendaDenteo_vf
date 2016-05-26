@@ -3,7 +3,20 @@
     <link rel="stylesheet" href="{{ asset("plugins/fullcalendar/fullcalendar.min.css") }}">
     <link rel="stylesheet" href="{{ asset("plugins/fullcalendar/fullcalendar.print.css") }}" media="print">
     <style>
+        #loading{
 
+            position: fixed;
+            top: 55px;
+            left: 0;
+            right: 0;
+            margin-left: 45%;
+            margin-right: auto;
+            width: 15%;
+
+            text-align: center;
+            z-index: 3;
+
+        }
     </style>
 {% endblock %}
 {% block content %}
@@ -74,6 +87,10 @@
                 </div>
             </div><!-- /.col -->
             <div class="col-md-9">
+                <div id="loading" class=" " >
+                    <span >   <img src="{{asset('icons/482.gif')}}" width="25%" height="25%" /> </span>
+                    <!--    <span class="lite-text-shadow" >Chargement du calendrier</span> -->
+                </div>
                 <div class="box box-primary">
                     <div class="box-body no-padding">
                         <!-- THE CALENDAR -->
@@ -335,6 +352,25 @@
 
             }
 
+            var calendarLoadingEvent = function (isLoading, view) {
+                if (isLoading) {
+                    console.log('is loading...');
+                    $('#loading').show();
+                    timedFunction = window.setInterval(function () {
+                        //var text = $('#loading span').text();
+                        //var count = (text.match(/\./g) || []).length;
+                        //var newText = count > 2 ? text.substring(0, text.length - 3) : text + '.';
+                        var newText = '  <span >   <img src="{{asset('icons/482.gif')}}" width="25%" height="25%" /> </span> ';
+                        $('#loading span').replaceWith(newText);
+                    }, 400)
+                } else {
+                    console.log('finish loading');
+                    $('#loading').hide();
+                    window.clearInterval(timedFunction);
+
+                }
+            }
+
 
             //Get the object
             var _this = this;
@@ -451,6 +487,7 @@
                 },
                 eventDrop: deplacerRdvAndMemo,
                 eventDragStop: saveOldDragInfo,
+                loading: calendarLoadingEvent,
                 eventReceive: function (event) {
 
                 },
