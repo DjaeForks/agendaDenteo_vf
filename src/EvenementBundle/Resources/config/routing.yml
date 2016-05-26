@@ -6,6 +6,10 @@ evenement_rdv:
     resource: "@EvenementBundle/Resources/config/routing/rdv.yml"
     prefix:   /rdv
 
+evenement_rdv:
+    resource: "@EvenementBundle/Resources/config/routing/configuration.yml"
+    prefix:   /configuration
+
 evenement_homepage:
     path:     /
     defaults: { _controller: EvenementBundle:Rdv:allRdvs }
@@ -45,3 +49,9 @@ addDel:
 load_events:
     path:     /load
     defaults: { _controller: EvenementBundle:Rdv:chargeEvents }
+
+configuration_edit:
+    path:     /configuration/edit/{id}
+    defaults: { _controller: EvenementBundle:Configuration:edit }
+    methods:  [GET, POST]
+

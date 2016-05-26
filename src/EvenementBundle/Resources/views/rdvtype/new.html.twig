@@ -49,7 +49,8 @@
                         </div>
                     </div>
 
-                    <input id="addBtn" type="submit" class="btn btn-info btn-cons pull-right" value="Ajouter"/>
+                    <input id="addBtn" title="koko"
+                           type="submit" class="btn btn-info btn-cons pull-right" value="Ajouter"/>
                 </div>
                 {#<div class="box-footer">
 
@@ -90,9 +91,10 @@
                         <td>{{ item.description }}</td>
 
                         <td style="text-align: center ;">
-                            <a title="Supprimer" id="delete_{{ item.id }}"
-                               data-toggle="tooltip" data-placement="top" class="glyphicon glyphicon-trash delete"></a>
-                            <a data-toggle="tooltip" data-placement="top" id="{{ item.id }}" title="modifier"
+                            <a id="delete_{{ item.id }}" class="glyphicon glyphicon-trash delete"
+                               data-toggle="tooltip"  title="Supprimer"
+                            ></a>
+                            <a   id="{{ item.id }}" title="modifier"
                                class="glyphicon glyphicon-pencil edit"></a>
                         </td>
                     </tr>
@@ -116,6 +118,8 @@
 
         $(function () {
 
+            $('[data-toggle="tooltip"]').tooltip();
+            $('.koko').tooltipster();
             $('#loading').hide();
 
 

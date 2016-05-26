@@ -19,8 +19,8 @@ class __TwigTemplate_5658027c339ac29811cd7833d43249c55697fc36bf9da41231be3f6ab8e
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_6dccbb6c51b83897352b112534253adeca2599af70e7f8814fe85e80f0e350c7 = $this->env->getExtension("native_profiler");
-        $__internal_6dccbb6c51b83897352b112534253adeca2599af70e7f8814fe85e80f0e350c7->enter($__internal_6dccbb6c51b83897352b112534253adeca2599af70e7f8814fe85e80f0e350c7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::layout.html.twig"));
+        $__internal_65ca61fb1b9bad384d7ea7deb671e4bea0954821d2c258e4dfb78b71f402b86c = $this->env->getExtension("native_profiler");
+        $__internal_65ca61fb1b9bad384d7ea7deb671e4bea0954821d2c258e4dfb78b71f402b86c->enter($__internal_65ca61fb1b9bad384d7ea7deb671e4bea0954821d2c258e4dfb78b71f402b86c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::layout.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -83,15 +83,40 @@ class __TwigTemplate_5658027c339ac29811cd7833d43249c55697fc36bf9da41231be3f6ab8e
         // line 31
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("jqueryConfirm/dist/jquery-confirm.min.css"), "html", null, true);
         echo "\">
+    <!-- bootstrap time picker -->
+    <link href=\"";
+        // line 33
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("plugins/timepicker/bootstrap-timepicker.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\" type=\"text/css\" />
+    <!-- bootstrap clock picker -->
+    <link href=\"";
+        // line 35
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("plugins/boostrap-clockpicker/bootstrap-clockpicker.min.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\" type=\"text/css\" media=\"screen\"/>
+    <!--Select-->
+    <link href=\"";
+        // line 37
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("plugins/select2/select2.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\" type=\"text/css\" media=\"screen\"/>
+    <link href=\"";
+        // line 38
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("plugins/iCheck/all.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\" type=\"text/css\" />
+    <!--Tooltipster-->
+    <link href=\"";
+        // line 40
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("tooltipster-master/css/tooltipster.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\" type=\"text/css\" />
+
 
     <!-- jQuery 2.1.4 -->
     <script src=\"";
-        // line 34
+        // line 44
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("plugins/jQuery/jQuery-2.1.4.min.js"), "html", null, true);
         echo "\"></script>
     <!-- Bootstrap 3.3.5 -->
     <script src=\"";
-        // line 36
+        // line 46
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bootstrap/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <!-- Latest compiled and minified JavaScript -->
@@ -100,98 +125,128 @@ class __TwigTemplate_5658027c339ac29811cd7833d43249c55697fc36bf9da41231be3f6ab8e
             crossorigin=\"anonymous\"></script>
     <!-- SlimScroll -->
     <script src=\"";
-        // line 42
+        // line 52
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("plugins/slimScroll/jquery.slimscroll.min.js"), "html", null, true);
         echo "\"></script>
     <!-- FastClick -->
     <script src=\"";
-        // line 44
+        // line 54
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("plugins/fastclick/fastclick.min.js"), "html", null, true);
         echo "\"></script>
     <!-- AdminLTE App -->
     <script src=\"";
-        // line 46
+        // line 56
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/js/app.min.js"), "html", null, true);
         echo "\"></script>
     <!-- AdminLTE for demo purposes -->
     <script src=\"";
-        // line 48
+        // line 58
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/js/demo.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 49
+        // line 59
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("plugins/iCheck/icheck.min.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\"
             src=\"";
-        // line 51
+        // line 61
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("plugins/bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 52
+        // line 62
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("plugins/bootstrap-datetimepicker/src/js/transition.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 53
+        // line 63
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("plugins/bootstrap-datetimepicker/src/js/collapse.js"), "html", null, true);
         echo "\"></script>
-    <script type=\"text/javascript\" src=\"";
-        // line 54
+    <script type=\"text/javascript\"
+            src=\"";
+        // line 65
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("plugins/boostrap-form-wizard/jquery.bootstrap.wizard.min.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 55
+        // line 66
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("Datetimepicker/jquery.datetimepicker.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 56
+        // line 67
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("JSCalander/lib/moment.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"https://code.jquery.com/ui/1.11.4/jquery-ui.min.js\"></script>
     <!-- DataTables -->
     <script src=\"";
-        // line 59
+        // line 70
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("plugins/datatables/jquery.dataTables.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 60
+        // line 71
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("plugins/datatables/dataTables.bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <!-- bootstrap color picker -->
     <script src=\"";
-        // line 62
+        // line 73
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("plugins/colorpicker/bootstrap-colorpicker.min.js"), "html", null, true);
         echo "\"></script>
     <!--JsRouting-->
     <script src=\"";
-        // line 64
+        // line 75
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/fosjsrouting/js/router.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 65
+        // line 76
         echo $this->env->getExtension('routing')->getPath("fos_js_routing_js", array("callback" => "fos.Router.setData"));
         echo "\"></script>
     <!--Growl-->
     <script src=\"";
-        // line 67
+        // line 78
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("plugins/growl/jquery.growl.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
     <!--jqueryConfirm-->
-
     <script src=\"";
-        // line 70
+        // line 80
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("jqueryConfirm/dist/jquery-confirm.min.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
-
-
+    <!-- bootstrap time picker -->
+    <script src=\"";
+        // line 82
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("plugins/timepicker/bootstrap-timepicker.min.js"), "html", null, true);
+        echo "\"></script>
+    <!-- bootstrap clock picker -->
+    <script src=\"";
+        // line 84
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("plugins/boostrap-clockpicker/bootstrap-clockpicker.min.js"), "html", null, true);
+        echo "\" type=\"text/javascript\"></script>
+    <!--Select-->
+    <script src=\"";
+        // line 86
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("plugins/select2/select2.min.js"), "html", null, true);
+        echo "\" type=\"text/javascript\"></script>
+    <script src=\"";
+        // line 87
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("plugins/iCheck/icheck.min.js"), "html", null, true);
+        echo "\" type=\"text/javascript\"></script>
+    <script src=\"";
+        // line 88
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("plugins/iCheck/icheck.js"), "html", null, true);
+        echo "\" type=\"text/javascript\"></script>
+    <!--Tooltipster-->
+    <script src=\"";
+        // line 90
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("tooltipster-master/js/jquery.tooltipster.min.js"), "html", null, true);
+        echo "\" type=\"text/javascript\"></script>
+    <script src=\"";
+        // line 91
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("plugins/developr/developr.tooltip.js"), "html", null, true);
+        echo "\"></script>
 
 
 
     <![endif]-->
     ";
-        // line 77
+        // line 96
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 79
+        // line 98
         echo "</head>
 <body class=\"hold-transition skin-blue fixed sidebar-mini\">
 <!-- Site wrapper -->
@@ -231,7 +286,7 @@ class __TwigTemplate_5658027c339ac29811cd7833d43249c55697fc36bf9da41231be3f6ab8e
                                         <a href=\"#\">
                                             <div class=\"pull-left\">
                                                 <img src=\"";
-        // line 117
+        // line 136
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/img/user2-160x160.jpg"), "html", null, true);
         echo "\"
                                                      class=\"img-circle\" alt=\"User Image\">
@@ -306,7 +361,7 @@ class __TwigTemplate_5658027c339ac29811cd7833d43249c55697fc36bf9da41231be3f6ab8e
                     <li class=\"dropdown user user-menu\">
                         <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">
                             <img src=\"";
-        // line 189
+        // line 208
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/img/user2-160x160.jpg"), "html", null, true);
         echo "\" class=\"user-image\" alt=\"User Image\">
                             <span class=\"hidden-xs\">Adnane</span>
@@ -315,7 +370,7 @@ class __TwigTemplate_5658027c339ac29811cd7833d43249c55697fc36bf9da41231be3f6ab8e
                             <!-- User image -->
                             <li class=\"user-header\">
                                 <img src=\"";
-        // line 195
+        // line 214
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/img/user2-160x160.jpg"), "html", null, true);
         echo "\" class=\"img-circle\"
                                      alt=\"User Image\">
@@ -366,7 +421,7 @@ class __TwigTemplate_5658027c339ac29811cd7833d43249c55697fc36bf9da41231be3f6ab8e
             <div class=\"user-panel\">
                 <div class=\"pull-left image\">
                     <img src=\"";
-        // line 243
+        // line 262
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/img/user2-160x160.jpg"), "html", null, true);
         echo "\" class=\"img-circle\" alt=\"User Image\">
                 </div>
@@ -400,7 +455,7 @@ class __TwigTemplate_5658027c339ac29811cd7833d43249c55697fc36bf9da41231be3f6ab8e
 
                 <li>
                     <a href=\"";
-        // line 274
+        // line 293
         echo $this->env->getExtension('routing')->getPath("allRdvs");
         echo "\">
                         <i class=\"fa fa-calendar\"></i> <span>Calendar</span>
@@ -409,7 +464,7 @@ class __TwigTemplate_5658027c339ac29811cd7833d43249c55697fc36bf9da41231be3f6ab8e
                 </li>
                 <li>
                     <a href=\"";
-        // line 280
+        // line 299
         echo $this->env->getExtension('routing')->getPath("rdvtype_new");
         echo "\">
                         <i class=\"fa fa-tasks\"></i> <span>Types Rendez-Vous</span>
@@ -431,9 +486,9 @@ class __TwigTemplate_5658027c339ac29811cd7833d43249c55697fc36bf9da41231be3f6ab8e
         <section class=\"content\">
 
             ";
-        // line 299
+        // line 318
         $this->displayBlock('content', $context, $blocks);
-        // line 301
+        // line 320
         echo "
         </section><!-- /.content -->
     </div><!-- /.content-wrapper -->
@@ -446,9 +501,9 @@ class __TwigTemplate_5658027c339ac29811cd7833d43249c55697fc36bf9da41231be3f6ab8e
     <aside class=\"control-sidebar \">
         <!-- Create the tabs -->
         ";
-        // line 312
+        // line 331
         $this->displayBlock('rdvForm', $context, $blocks);
-        // line 315
+        // line 334
         echo "
 
     </aside><!-- /.control-sidebar -->
@@ -467,60 +522,60 @@ class __TwigTemplate_5658027c339ac29811cd7833d43249c55697fc36bf9da41231be3f6ab8e
 </html>
 ";
         
-        $__internal_6dccbb6c51b83897352b112534253adeca2599af70e7f8814fe85e80f0e350c7->leave($__internal_6dccbb6c51b83897352b112534253adeca2599af70e7f8814fe85e80f0e350c7_prof);
+        $__internal_65ca61fb1b9bad384d7ea7deb671e4bea0954821d2c258e4dfb78b71f402b86c->leave($__internal_65ca61fb1b9bad384d7ea7deb671e4bea0954821d2c258e4dfb78b71f402b86c_prof);
 
     }
 
     // line 7
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_d4aa78210f351553ed40ec58e0ca8d92fc34be2feafa5581b399ac89e1a7263c = $this->env->getExtension("native_profiler");
-        $__internal_d4aa78210f351553ed40ec58e0ca8d92fc34be2feafa5581b399ac89e1a7263c->enter($__internal_d4aa78210f351553ed40ec58e0ca8d92fc34be2feafa5581b399ac89e1a7263c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_212e2f403beb534232a98967020983af539652e0b769f748d7decd0f25dd5183 = $this->env->getExtension("native_profiler");
+        $__internal_212e2f403beb534232a98967020983af539652e0b769f748d7decd0f25dd5183->enter($__internal_212e2f403beb534232a98967020983af539652e0b769f748d7decd0f25dd5183_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 8
         echo "    ";
         
-        $__internal_d4aa78210f351553ed40ec58e0ca8d92fc34be2feafa5581b399ac89e1a7263c->leave($__internal_d4aa78210f351553ed40ec58e0ca8d92fc34be2feafa5581b399ac89e1a7263c_prof);
+        $__internal_212e2f403beb534232a98967020983af539652e0b769f748d7decd0f25dd5183->leave($__internal_212e2f403beb534232a98967020983af539652e0b769f748d7decd0f25dd5183_prof);
 
     }
 
-    // line 77
+    // line 96
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_0e30d95db2898b9c3fa5f60541cb8badaab5839cef6cef0bc8d374e480f124c8 = $this->env->getExtension("native_profiler");
-        $__internal_0e30d95db2898b9c3fa5f60541cb8badaab5839cef6cef0bc8d374e480f124c8->enter($__internal_0e30d95db2898b9c3fa5f60541cb8badaab5839cef6cef0bc8d374e480f124c8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_304aeb22b3e2715614910a9de1919cf838e74af76b5e0832696d265bcf012663 = $this->env->getExtension("native_profiler");
+        $__internal_304aeb22b3e2715614910a9de1919cf838e74af76b5e0832696d265bcf012663->enter($__internal_304aeb22b3e2715614910a9de1919cf838e74af76b5e0832696d265bcf012663_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 78
+        // line 97
         echo "    ";
         
-        $__internal_0e30d95db2898b9c3fa5f60541cb8badaab5839cef6cef0bc8d374e480f124c8->leave($__internal_0e30d95db2898b9c3fa5f60541cb8badaab5839cef6cef0bc8d374e480f124c8_prof);
+        $__internal_304aeb22b3e2715614910a9de1919cf838e74af76b5e0832696d265bcf012663->leave($__internal_304aeb22b3e2715614910a9de1919cf838e74af76b5e0832696d265bcf012663_prof);
 
     }
 
-    // line 299
+    // line 318
     public function block_content($context, array $blocks = array())
     {
-        $__internal_0d79da213092332daad7165dce5537b9f2c7a5789bb5d53580b2f1289d9eca26 = $this->env->getExtension("native_profiler");
-        $__internal_0d79da213092332daad7165dce5537b9f2c7a5789bb5d53580b2f1289d9eca26->enter($__internal_0d79da213092332daad7165dce5537b9f2c7a5789bb5d53580b2f1289d9eca26_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_89b2e784a03683edc643db6c0c823032a1373bfc42f7c2346156e6720fd7d898 = $this->env->getExtension("native_profiler");
+        $__internal_89b2e784a03683edc643db6c0c823032a1373bfc42f7c2346156e6720fd7d898->enter($__internal_89b2e784a03683edc643db6c0c823032a1373bfc42f7c2346156e6720fd7d898_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-        // line 300
+        // line 319
         echo "            ";
         
-        $__internal_0d79da213092332daad7165dce5537b9f2c7a5789bb5d53580b2f1289d9eca26->leave($__internal_0d79da213092332daad7165dce5537b9f2c7a5789bb5d53580b2f1289d9eca26_prof);
+        $__internal_89b2e784a03683edc643db6c0c823032a1373bfc42f7c2346156e6720fd7d898->leave($__internal_89b2e784a03683edc643db6c0c823032a1373bfc42f7c2346156e6720fd7d898_prof);
 
     }
 
-    // line 312
+    // line 331
     public function block_rdvForm($context, array $blocks = array())
     {
-        $__internal_3275c3967d352a15ef67ba39c886b41c47b685a774fe353f9318db6e6833b0a3 = $this->env->getExtension("native_profiler");
-        $__internal_3275c3967d352a15ef67ba39c886b41c47b685a774fe353f9318db6e6833b0a3->enter($__internal_3275c3967d352a15ef67ba39c886b41c47b685a774fe353f9318db6e6833b0a3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "rdvForm"));
+        $__internal_a133e9b11abb1bd39179e365b27116091488bc422e4ff673f0774af5c3212dad = $this->env->getExtension("native_profiler");
+        $__internal_a133e9b11abb1bd39179e365b27116091488bc422e4ff673f0774af5c3212dad->enter($__internal_a133e9b11abb1bd39179e365b27116091488bc422e4ff673f0774af5c3212dad_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "rdvForm"));
 
-        // line 313
+        // line 332
         echo "
         ";
         
-        $__internal_3275c3967d352a15ef67ba39c886b41c47b685a774fe353f9318db6e6833b0a3->leave($__internal_3275c3967d352a15ef67ba39c886b41c47b685a774fe353f9318db6e6833b0a3_prof);
+        $__internal_a133e9b11abb1bd39179e365b27116091488bc422e4ff673f0774af5c3212dad->leave($__internal_a133e9b11abb1bd39179e365b27116091488bc422e4ff673f0774af5c3212dad_prof);
 
     }
 
@@ -536,7 +591,7 @@ class __TwigTemplate_5658027c339ac29811cd7833d43249c55697fc36bf9da41231be3f6ab8e
 
     public function getDebugInfo()
     {
-        return array (  520 => 313,  514 => 312,  507 => 300,  501 => 299,  494 => 78,  488 => 77,  481 => 8,  475 => 7,  452 => 315,  450 => 312,  437 => 301,  435 => 299,  413 => 280,  404 => 274,  370 => 243,  319 => 195,  310 => 189,  235 => 117,  195 => 79,  193 => 77,  183 => 70,  177 => 67,  172 => 65,  168 => 64,  163 => 62,  158 => 60,  154 => 59,  148 => 56,  144 => 55,  140 => 54,  136 => 53,  132 => 52,  128 => 51,  123 => 49,  119 => 48,  114 => 46,  109 => 44,  104 => 42,  95 => 36,  90 => 34,  84 => 31,  79 => 29,  74 => 27,  69 => 25,  64 => 23,  60 => 22,  54 => 19,  50 => 18,  41 => 12,  36 => 9,  34 => 7,  26 => 1,);
+        return array (  575 => 332,  569 => 331,  562 => 319,  556 => 318,  549 => 97,  543 => 96,  536 => 8,  530 => 7,  507 => 334,  505 => 331,  492 => 320,  490 => 318,  468 => 299,  459 => 293,  425 => 262,  374 => 214,  365 => 208,  290 => 136,  250 => 98,  248 => 96,  240 => 91,  236 => 90,  231 => 88,  227 => 87,  223 => 86,  218 => 84,  213 => 82,  208 => 80,  203 => 78,  198 => 76,  194 => 75,  189 => 73,  184 => 71,  180 => 70,  174 => 67,  170 => 66,  166 => 65,  161 => 63,  157 => 62,  153 => 61,  148 => 59,  144 => 58,  139 => 56,  134 => 54,  129 => 52,  120 => 46,  115 => 44,  108 => 40,  103 => 38,  99 => 37,  94 => 35,  89 => 33,  84 => 31,  79 => 29,  74 => 27,  69 => 25,  64 => 23,  60 => 22,  54 => 19,  50 => 18,  41 => 12,  36 => 9,  34 => 7,  26 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -570,6 +625,16 @@ class __TwigTemplate_5658027c339ac29811cd7833d43249c55697fc36bf9da41231be3f6ab8e
 /*     <link rel="stylesheet" href="{{ asset('plugins/growl/jquery.growl.css') }}">*/
 /*     <!--jqueryConfirm-->*/
 /*     <link rel="stylesheet" href="{{ asset('jqueryConfirm/dist/jquery-confirm.min.css') }}">*/
+/*     <!-- bootstrap time picker -->*/
+/*     <link href="{{ asset('plugins/timepicker/bootstrap-timepicker.css') }}" rel="stylesheet" type="text/css" />*/
+/*     <!-- bootstrap clock picker -->*/
+/*     <link href="{{ asset('plugins/boostrap-clockpicker/bootstrap-clockpicker.min.css') }}" rel="stylesheet" type="text/css" media="screen"/>*/
+/*     <!--Select-->*/
+/*     <link href="{{ asset('plugins/select2/select2.css') }}" rel="stylesheet" type="text/css" media="screen"/>*/
+/*     <link href="{{ asset('plugins/iCheck/all.css') }}" rel="stylesheet" type="text/css" />*/
+/*     <!--Tooltipster-->*/
+/*     <link href="{{ asset('tooltipster-master/css/tooltipster.css') }}" rel="stylesheet" type="text/css" />*/
+/* */
 /* */
 /*     <!-- jQuery 2.1.4 -->*/
 /*     <script src="{{ asset("plugins/jQuery/jQuery-2.1.4.min.js") }}"></script>*/
@@ -592,7 +657,8 @@ class __TwigTemplate_5658027c339ac29811cd7833d43249c55697fc36bf9da41231be3f6ab8e
 /*             src="{{ asset('plugins/bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js') }}"></script>*/
 /*     <script type="text/javascript" src="{{ asset('plugins/bootstrap-datetimepicker/src/js/transition.js') }}"></script>*/
 /*     <script type="text/javascript" src="{{ asset('plugins/bootstrap-datetimepicker/src/js/collapse.js') }}"></script>*/
-/*     <script type="text/javascript" src="{{ asset('plugins/boostrap-form-wizard/jquery.bootstrap.wizard.min.js') }}"></script>*/
+/*     <script type="text/javascript"*/
+/*             src="{{ asset('plugins/boostrap-form-wizard/jquery.bootstrap.wizard.min.js') }}"></script>*/
 /*     <script type="text/javascript" src="{{ asset('Datetimepicker/jquery.datetimepicker.js') }}"></script>*/
 /*     <script type="text/javascript" src="{{ asset('JSCalander/lib/moment.min.js') }}"></script>*/
 /*     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>*/
@@ -607,10 +673,18 @@ class __TwigTemplate_5658027c339ac29811cd7833d43249c55697fc36bf9da41231be3f6ab8e
 /*     <!--Growl-->*/
 /*     <script src="{{ asset('plugins/growl/jquery.growl.js') }}" type="text/javascript"></script>*/
 /*     <!--jqueryConfirm-->*/
-/* */
 /*     <script src="{{ asset('jqueryConfirm/dist/jquery-confirm.min.js') }}" type="text/javascript"></script>*/
-/* */
-/* */
+/*     <!-- bootstrap time picker -->*/
+/*     <script src="{{ asset("plugins/timepicker/bootstrap-timepicker.min.js") }}"></script>*/
+/*     <!-- bootstrap clock picker -->*/
+/*     <script src="{{ asset('plugins/boostrap-clockpicker/bootstrap-clockpicker.min.js') }}" type="text/javascript"></script>*/
+/*     <!--Select-->*/
+/*     <script src="{{ asset('plugins/select2/select2.min.js') }}" type="text/javascript"></script>*/
+/*     <script src="{{ asset('plugins/iCheck/icheck.min.js') }}" type="text/javascript"></script>*/
+/*     <script src="{{ asset('plugins/iCheck/icheck.js') }}" type="text/javascript"></script>*/
+/*     <!--Tooltipster-->*/
+/*     <script src="{{ asset('tooltipster-master/js/jquery.tooltipster.min.js') }}" type="text/javascript"></script>*/
+/*     <script src="{{asset('plugins/developr/developr.tooltip.js')}}"></script>*/
 /* */
 /* */
 /* */

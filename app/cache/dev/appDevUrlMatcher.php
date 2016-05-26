@@ -207,6 +207,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'EvenementBundle\\Controller\\RdvController::chargeEventsAction',  '_route' => 'load_events',);
         }
 
+        // configuration_edit
+        if (0 === strpos($pathinfo, '/configuration/edit') && preg_match('#^/configuration/edit/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                goto not_configuration_edit;
+            }
+
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'configuration_edit')), array (  '_controller' => 'EvenementBundle\\Controller\\ConfigurationController::editAction',));
+        }
+        not_configuration_edit:
+
         // users_homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {
