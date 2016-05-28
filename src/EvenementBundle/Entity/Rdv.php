@@ -284,4 +284,52 @@ class Rdv
 
         return $rdv;
     }
+
+    /**
+     * Set user
+     *
+     * @param \UsersBundle\Entity\User $user
+     *
+     * @return Rdv
+     */
+    public function setUser(\UsersBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \UsersBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * Set periodicite
+     *
+     * @param \EvenementBundle\Entity\PeriodiciteRdv $periodicite
+     *
+     * @return Rdv
+     */
+    public function setPeriodicite(\EvenementBundle\Entity\PeriodiciteRdv $periodicite = null)
+    {
+        $this->periodicite = $periodicite;
+
+        return $this;
+    }
+
+    /**
+     * Get periodicite
+     *
+     * @return \EvenementBundle\Entity\PeriodiciteRdv
+     */
+    public function getPeriodicite()
+    {
+        return $this->periodicite;
+    }
 }

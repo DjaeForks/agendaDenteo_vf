@@ -30,14 +30,15 @@
     <!--jqueryConfirm-->
     <link rel="stylesheet" href="{{ asset('jqueryConfirm/dist/jquery-confirm.min.css') }}">
     <!-- bootstrap time picker -->
-    <link href="{{ asset('plugins/timepicker/bootstrap-timepicker.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('plugins/timepicker/bootstrap-timepicker.css') }}" rel="stylesheet" type="text/css"/>
     <!-- bootstrap clock picker -->
-    <link href="{{ asset('plugins/boostrap-clockpicker/bootstrap-clockpicker.min.css') }}" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="{{ asset('plugins/boostrap-clockpicker/bootstrap-clockpicker.min.css') }}" rel="stylesheet"
+          type="text/css" media="screen"/>
     <!--Select-->
     <link href="{{ asset('plugins/select2/select2.css') }}" rel="stylesheet" type="text/css" media="screen"/>
-    <link href="{{ asset('plugins/iCheck/all.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('plugins/iCheck/all.css') }}" rel="stylesheet" type="text/css"/>
     <!--Tooltipster-->
-    <link href="{{ asset('tooltipster-master/css/tooltipster.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('tooltipster-master/css/tooltipster.css') }}" rel="stylesheet" type="text/css"/>
 
 
     <!-- jQuery 2.1.4 -->
@@ -81,15 +82,15 @@
     <!-- bootstrap time picker -->
     <script src="{{ asset("plugins/timepicker/bootstrap-timepicker.min.js") }}"></script>
     <!-- bootstrap clock picker -->
-    <script src="{{ asset('plugins/boostrap-clockpicker/bootstrap-clockpicker.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('plugins/boostrap-clockpicker/bootstrap-clockpicker.min.js') }}"
+            type="text/javascript"></script>
     <!--Select-->
     <script src="{{ asset('plugins/select2/select2.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('plugins/iCheck/icheck.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('plugins/iCheck/icheck.js') }}" type="text/javascript"></script>
     <!--Tooltipster-->
     <script src="{{ asset('tooltipster-master/js/jquery.tooltipster.min.js') }}" type="text/javascript"></script>
-    <script src="{{asset('plugins/developr/developr.tooltip.js')}}"></script>
-
+    <script src="{{ asset('plugins/developr/developr.tooltip.js') }}"></script>
 
 
     <![endif]-->
@@ -298,6 +299,11 @@
                 <li>
                     <a href="{{ path('rdvtype_new') }}">
                         <i class="fa fa-tasks"></i> <span>Types Rendez-Vous</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ path('configuration_edit', { 'id': 1 }) }}">
+                        <i class="fa fa-cog"></i> <span>Configuration</span>
                     </a>
                 </li>
 

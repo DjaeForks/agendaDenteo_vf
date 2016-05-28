@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="{{ asset("plugins/fullcalendar/fullcalendar.min.css") }}">
     <link rel="stylesheet" href="{{ asset("plugins/fullcalendar/fullcalendar.print.css") }}" media="print">
     <style>
-        #loading{
+        #loading {
 
             position: fixed;
             top: 55px;
@@ -80,15 +80,17 @@
                         <div class="input-group">
                             <input id="new-event" type="text" class="form-control" placeholder="Event Title">
                             <div class="input-group-btn">
-                                <button id="add-new-event" type="button" class="btn btn-primary btn-flat">Add</button>
+                                <button id="add-new-event" type="button" title='koko'
+                                        class="toooltip btn btn-primary btn-flat">Add
+                                </button>
                             </div><!-- /btn-group -->
                         </div><!-- /input-group -->
                     </div>
                 </div>
             </div><!-- /.col -->
             <div class="col-md-9">
-                <div id="loading" class=" " >
-                    <span >   <img src="{{asset('icons/482.gif')}}" width="25%" height="25%" /> </span>
+                <div id="loading" class=" ">
+                    <span>   <img src="{{ asset('icons/hamid.gif') }}" width="25%" height="25%"/> </span>
                     <!--    <span class="lite-text-shadow" >Chargement du calendrier</span> -->
                 </div>
                 <div class="box box-primary">
@@ -227,6 +229,7 @@
 {% block javascripts %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
     <script src="{{ asset("plugins/fullcalendar/fullcalendar.min.js") }}"></script>
+    <script src="{{ asset("JSCalander/lang/lang-all.js") }}"></script>
     <!-- date-range-picker -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
     <script src="{{ asset("plugins/daterangepicker/daterangepicker.js") }}"></script>
@@ -237,18 +240,18 @@
     <script src="{{ asset("plugins/fullcalendar/lib/moment.min.js") }}"></script>
     <script>
         $(function () {
-            $('#btnSubmit').click(function () {
-                $('form').submit(function () {
-                    $.ajax({
-                        type: 'GET',
-                        url: 'http://localhost/taskPerson/web/app_dev.php/all',
-                        success: function (data) {
-                            $('#calendar').fullCalendar('refrechEvents');
-                        }
-                    })
-                })
+            /* $('#btnSubmit').click(function () {
+             $('form').submit(function () {
+             $.ajax({
+             type: 'GET',
+             url: 'http://localhost/taskPerson/web/app_dev.php/all',
+             success: function (data) {
+             $('#calendar').fullCalendar('refrechEvents');
+             }
+             })
+             })
 
-            })
+             })*/
 
 
             $('#close').click(function () {
@@ -346,6 +349,9 @@
                                 $('#calendar').fullCalendar('refrechEvents');
                             }
                         })
+                    },
+                    cancel: function(){
+                        revertFunc();
                     }
                 });
 
@@ -357,10 +363,7 @@
                     console.log('is loading...');
                     $('#loading').show();
                     timedFunction = window.setInterval(function () {
-                        //var text = $('#loading span').text();
-                        //var count = (text.match(/\./g) || []).length;
-                        //var newText = count > 2 ? text.substring(0, text.length - 3) : text + '.';
-                        var newText = '  <span >   <img src="{{asset('icons/482.gif')}}" width="25%" height="25%" /> </span> ';
+                        var newText = '  <span >   <img src="{{ asset('icons/hamid.gif') }}" width="25%" height="25%" /> </span> ';
                         $('#loading span').replaceWith(newText);
                     }, 400)
                 } else {
@@ -398,16 +401,37 @@
                 },
                 //theme: true ,
                 //isRTL: true ,
-                weekends: false ,
+                //weekends: false,
                 defaultView: 'agendaWeek',
                 events: '{{ path('load_events') }}',
                 editable: true,
                 axisFormat: 'HH:mm',
                 lazyFetching: true,
-                minTime: '08:00',
-                maxTime: '19:00',
-                droppable: true, // this allows things to be dropped onto the calendar !!!
+                firstDay: {{ myConfiguration.firstDay }},
 
+                //weekNumbers:{{ myConfiguration.weeksNumber }} ,
+                minTime: '{{ myConfiguration.dateDeb|date('h:i') }}',
+                // maxTime: '{{ myConfiguration.dateFin|date('h:i') }}',
+                maxTime: '18:00',
+                slotDuration: '00:{{ myConfiguration.creneau }}:00',
+                droppable: true, // this allows things to be dropped onto the calendar !!!
+                //aspectRatio: 2,
+                {% if(myConfiguration.weeksNumber) %}
+                weekNumbers: true,
+                {% else %}
+                weekNumbers: false,
+                {% endif %}
+                eventTextColor: 'black',
+                eventBackgroundColor: '#00c0ef',
+                {% if myConfiguration.lang == 'anglais' %}
+                lang: 'en',
+                {% elseif myConfiguration.lang == 'francais' %}
+                lang: 'fr',
+                {% else %}
+                lang: 'ar',
+                {% endif %}
+                columnFormat: 'dddd D/M',
+                weekNumberTitle: 'week N°',
                 dayClick: function (date, jsEvent, view) {
 
                     $('#m_rdv_dateDebut').val(date.format('YYYY-MM-DD h:mm'));
@@ -435,7 +459,7 @@
                             confirmButton: 'Supprimer',
                             cancelButton: 'Annuler',
                             content: 'Vous voulez vraiment Supprimer ce Rendez-vous ?',
-                            confirm: function (){
+                            confirm: function () {
                                 $.ajax({
                                     type: 'get',
                                     url: 'http://localhost/denteo2/web/app_dev.php/deleted' + '/' + calEvent.id,
@@ -495,8 +519,20 @@
 
                 },
                 eventMouseover: function (event, jsEvent, view) {
+                    console.log(event.titre);
+                    console.log(event.id);
+                    console.log(event.description);
+                    console.log(event.dateFin);
+
                 },
                 eventRender: function (event, element) {
+                    element.tooltipster({
+                        contentAsHTML: true,
+                        animation: 'fade',
+                        delay: 200,
+                        content: $('<strong>Titre :   </strong>'+event.title+'</br><strong>Description :   </strong>'+event.description+'</br><strong>Type : ------</strong></br><strong>Date Debut : </strong>'+event.start.format('DD-MM-YYYY h:mm')+'</br><strong>Date Fin :   </strong>'+event.end.format('DD-MM-YYYY h:mm')+'')
+                    })
+
                 },
                 drop: function (date, allDay) {
                 },
@@ -541,6 +577,8 @@
                 //Remove event from text input
                 $("#new-event").val("");
             });
+
+
         });
 
     </script>

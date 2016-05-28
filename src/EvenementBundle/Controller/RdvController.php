@@ -24,30 +24,7 @@ use FOS\UserBundle\Model\UserInterface;
  */
 class RdvController extends Controller
 {
-    /**
-     * Lists all Rdv entities.
-     *
-     */
-    public function indexAction()
-    {
-        $em = $this->getDoctrine()->getManager();
 
-        $rdvs = $em->getRepository('EvenementBundle:Rdv')->findAll();
-
-        return $this->render('rdv/index.html.twig', array(
-            'rdvs' => $rdvs,
-        ));
-    }
-
-    /**
-     * Creates a new Rdv entity.
-     *
-     */
-    public function newAction(Request $request)
-    {
-
-
-    }
 
     /**
      * Creates a new Rdv entity.
@@ -55,13 +32,12 @@ class RdvController extends Controller
      */
     public function newRdvAction(Request $request)
     {
+
         $rdv = new Rdv();
         $form = $this->createForm('EvenementBundle\Form\MRdvType', $rdv);
         $form->handleRequest($request);
         $em = $this->getDoctrine()->getManager();
-
         if ($form->isSubmitted() && $form->isValid()) {
-
             $em->persist($rdv);
             $em->flush();
 
@@ -71,7 +47,8 @@ class RdvController extends Controller
     }
 
 
-    public function chargeEventsAction(){
+    public function chargeEventsAction()
+    {
 
         $em = $this->getDoctrine()->getManager();
         $connectedUser = $this->getUser();
@@ -80,46 +57,52 @@ class RdvController extends Controller
         return new JsonResponse($jasonEvents);
     }
 
-    public  function allRdvsAction(Request $request){
+    public function allRdvsAction(Request $request)
+    {
+
         $rdv = new Rdv();
         $form = $this->createForm('EvenementBundle\Form\MRdvType', $rdv);
         $form->handleRequest($request);
         $em = $this->getDoctrine()->getManager();
-        $entitys = $em->getRepository('EvenementBundle:Rdv')->findAll();
-        $this->get('security.token_storage')->getToken()->getUser();
+
+        $connectedUser = $this->getUser();
+        $rdv->setUser($connectedUser);
+        $idConfiguration = $connectedUser->getConfiguration();
+        $myConfiguration = $em->getRepository('EvenementBundle:Configuration')->find($idConfiguration);
+
         $editForm = $this->createForm('EvenementBundle\Form\MRdvType', $rdv);
-        $response = new JsonResponse();
+
+
         if ($form->isSubmitted() && $form->isValid()) {
             $em->persist($rdv);
             $em->flush();
-            $entitys = $em->getRepository('EvenementBundle:Rdv')->findAll();
-
-
         }
-            return $this->render('EvenementBundle:Default:Agenda.html.twig', array(
-                'entitys' => $entitys,
-                'form' => $form->createView(),
-                'editForm' => $editForm->createView(),
-            ));
+        return $this->render('EvenementBundle:Default:Agenda.html.twig', array(
+            'form' => $form->createView(),
+            'editForm' => $editForm->createView(),
+            'myConfiguration'=>$myConfiguration,
+        ));
 
     }
 
-    public function dropAction($id,$start,$startH,$end,$endH){
+    public function dropAction($id, $start, $startH, $end, $endH)
+    {
         $em = $this->getDoctrine()->getManager();
         $rdv = $em->getRepository('EvenementBundle:Rdv')->find($id);
-        $rdv->setDateDebut(new DateTime($start.' '.$startH));
-        $rdv->setDateFin(new DateTime($end.' '.$endH));
+        $rdv->setDateDebut(new DateTime($start . ' ' . $startH));
+        $rdv->setDateFin(new DateTime($end . ' ' . $endH));
         $em->flush();
         return new Response('OK');
     }
 
-    public function editerAction($id,Request $request){
+    public function editerAction($id, Request $request)
+    {
 
         $em = $this->getDoctrine()->getManager();
         $rdv = $em->getRepository('EvenementBundle:Rdv')->find($id);
 
-            //$rdv->setDateDebut(new DateTime($form['m_rdv[dateDebut]']->getData()));
-           // $rdv->setDateFin(new DateTime($form['m_rdv[dateFin]']->getData()));
+        //$rdv->setDateDebut(new DateTime($form['m_rdv[dateDebut]']->getData()));
+        // $rdv->setDateFin(new DateTime($form['m_rdv[dateFin]']->getData()));
 
         $editForm = $this->createForm('EvenementBundle\Form\MRdvType', $rdv);
         $editForm->handleRequest($request);
@@ -133,23 +116,22 @@ class RdvController extends Controller
 
         }
 
-            //$rdv->setTitre($request->request->get('titreEdit'));
-            //$rdv->setDescription($request->request->get('descriptionEdit'));
-       // $em->persist($rdv);
-            //$em->flush();
+        //$rdv->setTitre($request->request->get('titreEdit'));
+        //$rdv->setDescription($request->request->get('descriptionEdit'));
+        // $em->persist($rdv);
+        //$em->flush();
 
         return new Response('OK');
     }
 
-    public function deletedAction($id){
+    public function deletedAction($id)
+    {
         $em = $this->getDoctrine()->getManager();
         $rdv = $em->getRepository('EvenementBundle:Rdv')->find($id);
         $em->remove($rdv);
         $em->flush();
         return new Response('OK');
     }
-
-
 
 
     /**
@@ -221,8 +203,7 @@ class RdvController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('rdv_delete', array('id' => $rdv->getId())))
             ->setMethod('DELETE')
-            ->getForm()
-        ;
+            ->getForm();
     }
 
     /**
@@ -236,7 +217,6 @@ class RdvController extends Controller
     {
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('rdv_delete', array('id' => $rdv->getId())))
-            ->getForm()
-            ;
+            ->getForm();
     }
 }
