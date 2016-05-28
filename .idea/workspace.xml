@@ -2,52 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c1ede49-85e3-4396-bc23-ee7d68262477" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/icons/hamid.gif" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/icons/482.gif" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/taskPerson.iml" afterPath="$PROJECT_DIR$/.idea/taskPerson.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/layout.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/0d/5b5b435d4576656e656d656e7442756e646c655c436f6e74726f6c6c65725c526476436f6e74726f6c6c6572405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/0d/5b5b435d4576656e656d656e7442756e646c655c436f6e74726f6c6c65725c526476436f6e74726f6c6c6572405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/14/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476236765744461746546696e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/14/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476236765744461746546696e405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/15/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476237365744465736372697074696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/15/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476237365744465736372697074696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/19/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762367657445746174405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/19/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762367657445746174405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/1e/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762465746174405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/1e/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762465746174405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/20/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476247469747265405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/20/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476247469747265405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/28/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647623736574446174654465627574405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/28/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647623736574446174654465627574405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/35/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476236765744465736372697074696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/35/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476236765744465736372697074696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/3f/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647623676574446174654465627574405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/3f/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647623676574446174654465627574405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/56/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762373657445746174405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/56/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762373657445746174405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/5d/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647623746f4172726179405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/5d/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647623746f4172726179405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/74/5b5b435d4576656e656d656e7442756e646c655c436f6e74726f6c6c65725c526476436f6e74726f6c6c6572236368617267654576656e7473416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/74/5b5b435d4576656e656d656e7442756e646c655c436f6e74726f6c6c65725c526476436f6e74726f6c6c6572236368617267654576656e7473416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/82/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647624646174654465627574405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/82/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647624646174654465627574405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/8b/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476246964405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/8b/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476246964405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/8f/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476246461746546696e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/8f/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476246461746546696e405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/95/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476246465736372697074696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/95/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476246465736372697074696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/9d/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762367657452647654797065405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/9d/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762367657452647654797065405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/a2/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762470617469656e74405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/a2/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762470617469656e74405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/a3/5b5b435d4576656e656d656e7442756e646c655c436f6e74726f6c6c65725c526476436f6e74726f6c6c657223616c6c52647673416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/a3/5b5b435d4576656e656d656e7442756e646c655c436f6e74726f6c6c65725c526476436f6e74726f6c6c657223616c6c52647673416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/a3/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476237365745469747265405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/a3/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476237365745469747265405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/a6/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476236765745469747265405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/a6/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476236765745469747265405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/a7/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762472647654797065405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/a7/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762472647654797065405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/a8/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/a8/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/ab/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762373657450617469656e74405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/ab/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762373657450617469656e74405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/b4/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647623736574436c6173734e616d65405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/b4/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647623736574436c6173734e616d65405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/b5/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762367657450617469656e74405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/b5/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762367657450617469656e74405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/b5/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647624636c6173734e616d65405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/b5/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647624636c6173734e616d65405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/b5/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647624706572696f646963697465405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/b5/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647624706572696f646963697465405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/b8/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476237365744461746546696e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/b8/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476237365744461746546696e405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/b8/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762475736572405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/b8/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762475736572405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/c6/5b5b435d4576656e656d656e7442756e646c655c436f6e74726f6c6c65725c526476436f6e74726f6c6c65722364726f70416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/c6/5b5b435d4576656e656d656e7442756e646c655c436f6e74726f6c6c65725c526476436f6e74726f6c6c65722364726f70416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/d0/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762373657452647654797065405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/d0/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762373657452647654797065405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/d5/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476235f5f636f6e737472756374405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/d5/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476235f5f636f6e737472756374405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/db/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476236765744964405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/db/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476236765744964405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/e1/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647623676574436c6173734e616d65405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/e1/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647623676574436c6173734e616d65405b416e6e6f745d5d5b315d.doctrinecache.data" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/profiler/index.csv" afterPath="$PROJECT_DIR$/app/cache/dev/profiler/index.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/twig/d6/d666eaa236060b4917ff28a39091e41506bf92444fa08390c8274b942e0547c3.php" afterPath="$PROJECT_DIR$/app/cache/dev/twig/d6/d666eaa236060b4917ff28a39091e41506bf92444fa08390c8274b942e0547c3.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/twig/dd/dd1e8b9d5c04dc9887655f7de44e61de68fe6ea79ecfb7e513862e6dec2b53aa.php" afterPath="$PROJECT_DIR$/app/cache/dev/twig/dd/dd1e8b9d5c04dc9887655f7de44e61de68fe6ea79ecfb7e513862e6dec2b53aa.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/logs/dev.log" afterPath="$PROJECT_DIR$/app/logs/dev.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvenementBundle/Controller/RdvController.php" afterPath="$PROJECT_DIR$/src/EvenementBundle/Controller/RdvController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvenementBundle/Entity/Rdv.php" afterPath="$PROJECT_DIR$/src/EvenementBundle/Entity/Rdv.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvenementBundle/Resources/views/Default/Agenda.html.twig" afterPath="$PROJECT_DIR$/src/EvenementBundle/Resources/views/Default/Agenda.html.twig" />
     </list>
     <ignored path="taskPerson.iws" />
@@ -70,47 +28,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/layout.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.65384614">
-              <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RdvController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/EvenementBundle/Controller/RdvController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.65384614">
-              <caret line="59" column="32" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
-              <folding>
-                <element signature="e#46#91#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Agenda.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/EvenementBundle/Resources/views/Default/Agenda.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54270464">
-              <caret line="425" column="58" selection-start-line="425" selection-start-column="58" selection-end-line="425" selection-end-column="58" />
+            <state vertical-scroll-proportion="0.29893237">
+              <caret line="395" column="4" selection-start-line="395" selection-start-column="4" selection-end-line="395" selection-end-column="4" />
               <folding>
-                <element signature="e#6957#10215#0#Twig" expanded="false" />
-                <element signature="e#16132#16760#0#HTML" expanded="false" />
+                <element signature="n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#!!top" expanded="false" />
+                <element signature="e#6958#10216#0#Twig" expanded="false" />
+                <element signature="e#11242#12134#0#HTML" expanded="false" />
+                <element signature="e#12251#12354#0#HTML" expanded="false" />
+                <element signature="e#12400#12655#0#HTML" expanded="false" />
+                <element signature="e#12727#14057#0#HTML" expanded="false" />
+                <element signature="e#14151#15688#0#HTML" expanded="false" />
+                <element signature="e#14180#15670#0#HTML" expanded="false" />
+                <element signature="e#15756#16384#0#HTML" expanded="false" />
+                <element signature="e#18900#19397#0#HTML" expanded="false" />
+                <element signature="e#19463#22846#0#HTML" expanded="false" />
+                <element signature="e#23123#23332#0#HTML" expanded="false" />
+                <element signature="e#23389#23939#0#HTML" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConfigurationController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/EvenementBundle/Controller/ConfigurationController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.65384614">
-              <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -118,28 +56,8 @@
       <file leaf-file-name="new.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/EvenementBundle/Resources/views/configuration/new.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="5.230769">
-              <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Configuration.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/EvenementBundle/Entity/Configuration.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="99" column="18" selection-start-line="99" selection-start-column="18" selection-end-line="99" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConfigurationType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/EvenementBundle/Form/ConfigurationType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+            <state vertical-scroll-proportion="-6.5384617">
+              <caret line="43" column="32" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -386,15 +304,22 @@
       <option name="project" value="LOCAL" />
       <updated>1464306986752</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="after adinng tooltipster to calendar">
+      <created>1464427574924</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1464427574924</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1382" height="744" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24018127" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24018127" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -402,7 +327,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="100" width="1182" height="544" />
@@ -769,14 +693,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EvenementBundle/Entity/Configuration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="99" column="18" selection-start-line="99" selection-start-column="18" selection-end-line="99" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/EvenementBundle/Form/ConfigurationType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -787,17 +703,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/EvenementBundle/Controller/RdvController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614">
+        <state vertical-scroll-proportion="0.03024911">
           <caret line="59" column="32" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
           <folding>
-            <element signature="e#46#91#0#PHP" expanded="true" />
+            <element signature="e#46#91#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614">
+        <state vertical-scroll-proportion="0.03024911">
           <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
           <folding />
         </state>
@@ -805,27 +721,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/EvenementBundle/Controller/ConfigurationController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614">
+        <state vertical-scroll-proportion="0.03024911">
           <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EvenementBundle/Entity/Configuration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03024911">
+          <caret line="99" column="18" selection-start-line="99" selection-start-column="18" selection-end-line="99" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/EvenementBundle/Resources/views/configuration/new.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.230769">
-          <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="43" column="32" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/EvenementBundle/Resources/views/Default/Agenda.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54270464">
-          <caret line="425" column="58" selection-start-line="425" selection-start-column="58" selection-end-line="425" selection-end-column="58" />
+        <state vertical-scroll-proportion="0.29893237">
+          <caret line="395" column="4" selection-start-line="395" selection-start-column="4" selection-end-line="395" selection-end-column="4" />
           <folding>
-            <element signature="e#6957#10215#0#Twig" expanded="false" />
-            <element signature="e#16132#16760#0#HTML" expanded="false" />
+            <element signature="n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#!!top" expanded="false" />
+            <element signature="e#6958#10216#0#Twig" expanded="false" />
+            <element signature="e#11242#12134#0#HTML" expanded="false" />
+            <element signature="e#12251#12354#0#HTML" expanded="false" />
+            <element signature="e#12400#12655#0#HTML" expanded="false" />
+            <element signature="e#12727#14057#0#HTML" expanded="false" />
+            <element signature="e#14151#15688#0#HTML" expanded="false" />
+            <element signature="e#14180#15670#0#HTML" expanded="false" />
+            <element signature="e#15756#16384#0#HTML" expanded="false" />
+            <element signature="e#18900#19397#0#HTML" expanded="false" />
+            <element signature="e#19463#22846#0#HTML" expanded="false" />
+            <element signature="e#23123#23332#0#HTML" expanded="false" />
+            <element signature="e#23389#23939#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>

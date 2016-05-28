@@ -94,6 +94,7 @@
                     <!--    <span class="lite-text-shadow" >Chargement du calendrier</span> -->
                 </div>
                 <div class="box box-primary">
+
                     <div class="box-body no-padding">
                         <!-- THE CALENDAR -->
                         <div id="calendar">
@@ -240,19 +241,6 @@
     <script src="{{ asset("plugins/fullcalendar/lib/moment.min.js") }}"></script>
     <script>
         $(function () {
-            /* $('#btnSubmit').click(function () {
-             $('form').submit(function () {
-             $.ajax({
-             type: 'GET',
-             url: 'http://localhost/taskPerson/web/app_dev.php/all',
-             success: function (data) {
-             $('#calendar').fullCalendar('refrechEvents');
-             }
-             })
-             })
-
-             })*/
-
 
             $('#close').click(function () {
                 sidebar.removeClass('control-sidebar-open');
@@ -296,7 +284,6 @@
                     hours: slot[0]
                 });
             }
-
 
             var selectComplete = function (start, end, jsEvent, view) {
                 var now = moment();
@@ -350,7 +337,7 @@
                             }
                         })
                     },
-                    cancel: function(){
+                    cancel: function () {
                         revertFunc();
                     }
                 });
@@ -407,7 +394,18 @@
                 editable: true,
                 axisFormat: 'HH:mm',
                 lazyFetching: true,
+                //le premier jour de la semaine
                 firstDay: {{ myConfiguration.firstDay }},
+                //les jours du calendrier
+
+                hiddenDays: [
+                {% for item in myConfiguration.daysSelected %}
+                    {{ item }}{{ loop.last ? '' : ','  }}
+                {% endfor %}
+
+                ],
+
+
 
                 //weekNumbers:{{ myConfiguration.weeksNumber }} ,
                 minTime: '{{ myConfiguration.dateDeb|date('h:i') }}',
@@ -530,7 +528,7 @@
                         contentAsHTML: true,
                         animation: 'fade',
                         delay: 200,
-                        content: $('<strong>Titre :   </strong>'+event.title+'</br><strong>Description :   </strong>'+event.description+'</br><strong>Type : ------</strong></br><strong>Date Debut : </strong>'+event.start.format('DD-MM-YYYY h:mm')+'</br><strong>Date Fin :   </strong>'+event.end.format('DD-MM-YYYY h:mm')+'')
+                        content: $('<strong>Titre :   </strong>' + event.title + '</br><strong>Description :   </strong>' + event.description + '</br><strong>Type : ------</strong></br><strong>Date Debut : </strong>' + event.start.format('DD-MM-YYYY h:mm') + '</br><strong>Date Fin :   </strong>' + event.end.format('DD-MM-YYYY h:mm') + '')
                     })
 
                 },
