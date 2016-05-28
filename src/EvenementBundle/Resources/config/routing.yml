@@ -41,11 +41,10 @@ updateRdv:
     defaults: { _controller: EvenementBundle:Rdv:editer,id: 1 }
 
 addDel:
-    path:     /addDel/{start}/{startH}/{end}/{endH}
-    defaults: { _controller: EvenementBundle:Delimiteur:addDel,start: 1,startH: 2,end: 3,endH: 4}
+    path:     /addDel/{start}/{end}
+    defaults: { _controller: EvenementBundle:Delimiteur:addDel,start: 1,end: 2}
     options:
         expose: true
-
 load_events:
     path:     /load
     defaults: { _controller: EvenementBundle:Rdv:chargeEvents }

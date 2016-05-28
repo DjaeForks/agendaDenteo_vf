@@ -7,6 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use DateTime;
 use EvenementBundle\Entity\Delimiteur;
 use EvenementBundle\Form\DelimiteurType;
+use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Delimiteur controller.
@@ -54,18 +55,26 @@ class DelimiteurController extends Controller
         ));
     }
 
-    public function addDelAction($start,$startH,$end,$endH){
+    public function addDelAction(Request $request,$start,$end){
         $delimiteur = new Delimiteur();
-        $delimiteur->setDebut(new DateTime($start.' '.$startH));
-        $delimiteur->setFin(new DateTime($end.' '.$endH));
-        $delimiteur->setBlockage(0);
-        $em = $this->getDoctrine()->getManager();
-        $em->persist($delimiteur);
-        $em->flush();
-        return $this->render('delimiteur/new.html.twig', array(
-            'delimiteur' => $delimiteur,
 
-        ));
+        $form = $this->createForm('EvenementBundle\Form\DelimiteurType', $delimiteur);
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()){
+            $delimiteur->setUser($this->getUser());
+            $delimiteur->setDebut(new DateTime($start));
+            $delimiteur->setFin(new DateTime($end));
+            $delimiteur->setBlockage(0);
+            //$delimiteur->setTitre('Delimiteur');
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($delimiteur);
+            $em->flush();
+        }
+
+        return new Response('OK');
+
+
 
     }
 

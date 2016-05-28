@@ -3,9 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="2c1ede49-85e3-4396-bc23-ee7d68262477" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/appDevDebugProjectContainer.php" afterPath="$PROJECT_DIR$/app/cache/dev/appDevDebugProjectContainer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/appDevDebugProjectContainer.xml" afterPath="$PROJECT_DIR$/app/cache/dev/appDevDebugProjectContainer.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/appDevUrlGenerator.php" afterPath="$PROJECT_DIR$/app/cache/dev/appDevUrlGenerator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/appDevUrlMatcher.php" afterPath="$PROJECT_DIR$/app/cache/dev/appDevUrlMatcher.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/fosJsRouting/data.json" afterPath="$PROJECT_DIR$/app/cache/dev/fosJsRouting/data.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/profiler/index.csv" afterPath="$PROJECT_DIR$/app/cache/dev/profiler/index.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/twig/dd/dd1e8b9d5c04dc9887655f7de44e61de68fe6ea79ecfb7e513862e6dec2b53aa.php" afterPath="$PROJECT_DIR$/app/cache/dev/twig/dd/dd1e8b9d5c04dc9887655f7de44e61de68fe6ea79ecfb7e513862e6dec2b53aa.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/logs/dev.log" afterPath="$PROJECT_DIR$/app/logs/dev.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvenementBundle/Controller/DelimiteurController.php" afterPath="$PROJECT_DIR$/src/EvenementBundle/Controller/DelimiteurController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvenementBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/EvenementBundle/Resources/config/routing.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvenementBundle/Resources/views/Default/Agenda.html.twig" afterPath="$PROJECT_DIR$/src/EvenementBundle/Resources/views/Default/Agenda.html.twig" />
     </list>
     <ignored path="taskPerson.iws" />
@@ -28,26 +35,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Agenda.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Agenda.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/EvenementBundle/Resources/views/Default/Agenda.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29893237">
-              <caret line="395" column="4" selection-start-line="395" selection-start-column="4" selection-end-line="395" selection-end-column="4" />
+            <state vertical-scroll-proportion="-72.03846">
+              <caret line="304" column="54" selection-start-line="304" selection-start-column="54" selection-end-line="304" selection-end-column="54" />
               <folding>
                 <element signature="n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#!!top" expanded="false" />
-                <element signature="e#6958#10216#0#Twig" expanded="false" />
-                <element signature="e#11242#12134#0#HTML" expanded="false" />
-                <element signature="e#12251#12354#0#HTML" expanded="false" />
-                <element signature="e#12400#12655#0#HTML" expanded="false" />
-                <element signature="e#12727#14057#0#HTML" expanded="false" />
-                <element signature="e#14151#15688#0#HTML" expanded="false" />
-                <element signature="e#14180#15670#0#HTML" expanded="false" />
-                <element signature="e#15756#16384#0#HTML" expanded="false" />
-                <element signature="e#18900#19397#0#HTML" expanded="false" />
-                <element signature="e#19463#22846#0#HTML" expanded="false" />
-                <element signature="e#23123#23332#0#HTML" expanded="false" />
-                <element signature="e#23389#23939#0#HTML" expanded="false" />
+                <element signature="e#7236#10494#0#Twig" expanded="false" />
+                <element signature="e#11405#11481#0#HTML" expanded="false" />
+                <element signature="e#11596#12514#0#HTML" expanded="false" />
+                <element signature="e#12561#12945#0#HTML" expanded="false" />
+                <element signature="e#12991#13043#0#HTML" expanded="false" />
+                <element signature="e#14583#15475#0#HTML" expanded="false" />
+                <element signature="e#15592#15695#0#HTML" expanded="false" />
+                <element signature="e#15741#15996#0#HTML" expanded="false" />
+                <element signature="e#16090#17627#0#HTML" expanded="false" />
+                <element signature="e#16119#17609#0#HTML" expanded="false" />
+                <element signature="e#17695#18323#0#HTML" expanded="false" />
+                <element signature="e#20837#21334#0#HTML" expanded="false" />
+                <element signature="e#21400#24783#0#HTML" expanded="false" />
+                <element signature="e#25060#25269#0#HTML" expanded="false" />
+                <element signature="e#25326#25876#0#HTML" expanded="false" />
+                <element signature="e#25924#25943#0#HTML" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/EvenementBundle/Resources/config/routing.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DelimiteurController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/EvenementBundle/Controller/DelimiteurController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.95683455">
+              <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+              <folding>
+                <element signature="e#46#91#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -112,7 +144,6 @@
         <option value="$PROJECT_DIR$/../E-compta/src/cnss/cnssBundle/Tests/Controller/CnssControllerTest.php" />
         <option value="$PROJECT_DIR$/web/assets/css/MyStyle.css" />
         <option value="$PROJECT_DIR$/src/EvenementBundle/Form/ERdvType.php" />
-        <option value="$PROJECT_DIR$/src/EvenementBundle/Controller/DelimiteurController.php" />
         <option value="$PROJECT_DIR$/src/EvenementBundle/Entity/DelimiteurType.php" />
         <option value="$PROJECT_DIR$/src/EvenementBundle/service/CalendarService.php" />
         <option value="$PROJECT_DIR$/src/EvenementBundle/Entity/Delimiteur.php" />
@@ -145,7 +176,6 @@
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/src/UsersBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/EvenementBundle/Resources/config/routing/configuration.yml" />
-        <option value="$PROJECT_DIR$/src/EvenementBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/EvenementBundle/Resources/views/rdvtype/new.html.twig" />
         <option value="$PROJECT_DIR$/src/EvenementBundle/Entity/Rdv.php" />
         <option value="$PROJECT_DIR$/src/EvenementBundle/Controller/RdvController.php" />
@@ -155,7 +185,9 @@
         <option value="$PROJECT_DIR$/src/EvenementBundle/Entity/Configuration.php" />
         <option value="$PROJECT_DIR$/src/EvenementBundle/Form/ConfigurationType.php" />
         <option value="$PROJECT_DIR$/src/EvenementBundle/Resources/views/configuration/new.html.twig" />
+        <option value="$PROJECT_DIR$/src/EvenementBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/EvenementBundle/Resources/views/Default/Agenda.html.twig" />
+        <option value="$PROJECT_DIR$/src/EvenementBundle/Controller/DelimiteurController.php" />
       </list>
     </option>
   </component>
@@ -169,9 +201,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="1366" />
+    <option name="height" value="738" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -208,22 +239,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taskPerson" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="denteo2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Agenda2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../agendaDenteo" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -310,14 +331,20 @@
       <option name="project" value="LOCAL" />
       <updated>1464427574924</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="apres terminer la configuration">
+      <created>1464429243546</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1464429243546</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1382" height="744" extended-state="0" />
+    <frame x="0" y="0" width="1366" height="738" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24018127" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24311927" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -376,7 +403,8 @@
     <MESSAGE value="dernier clone, projet propre avant d'entamer la configuration" />
     <MESSAGE value="apres avoir conmmencer la configuration c'est 2 h du soir je vais me couché tchaw hhh" />
     <MESSAGE value="after adinng tooltipster to calendar" />
-    <option name="LAST_COMMIT_MESSAGE" value="after adinng tooltipster to calendar" />
+    <MESSAGE value="apres terminer la configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="apres terminer la configuration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -567,13 +595,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EvenementBundle/Controller/DelimiteurController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/EvenementBundle/Controller/RdvTypeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12099644">
@@ -686,13 +707,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EvenementBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16156463">
-          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/EvenementBundle/Form/ConfigurationType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -743,25 +757,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/EvenementBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/EvenementBundle/Resources/views/Default/Agenda.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29893237">
-          <caret line="395" column="4" selection-start-line="395" selection-start-column="4" selection-end-line="395" selection-end-column="4" />
+        <state vertical-scroll-proportion="-72.03846">
+          <caret line="304" column="54" selection-start-line="304" selection-start-column="54" selection-end-line="304" selection-end-column="54" />
           <folding>
             <element signature="n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#!!top" expanded="false" />
-            <element signature="e#6958#10216#0#Twig" expanded="false" />
-            <element signature="e#11242#12134#0#HTML" expanded="false" />
-            <element signature="e#12251#12354#0#HTML" expanded="false" />
-            <element signature="e#12400#12655#0#HTML" expanded="false" />
-            <element signature="e#12727#14057#0#HTML" expanded="false" />
-            <element signature="e#14151#15688#0#HTML" expanded="false" />
-            <element signature="e#14180#15670#0#HTML" expanded="false" />
-            <element signature="e#15756#16384#0#HTML" expanded="false" />
-            <element signature="e#18900#19397#0#HTML" expanded="false" />
-            <element signature="e#19463#22846#0#HTML" expanded="false" />
-            <element signature="e#23123#23332#0#HTML" expanded="false" />
-            <element signature="e#23389#23939#0#HTML" expanded="false" />
+            <element signature="e#7236#10494#0#Twig" expanded="false" />
+            <element signature="e#11405#11481#0#HTML" expanded="false" />
+            <element signature="e#11596#12514#0#HTML" expanded="false" />
+            <element signature="e#12561#12945#0#HTML" expanded="false" />
+            <element signature="e#12991#13043#0#HTML" expanded="false" />
+            <element signature="e#14583#15475#0#HTML" expanded="false" />
+            <element signature="e#15592#15695#0#HTML" expanded="false" />
+            <element signature="e#15741#15996#0#HTML" expanded="false" />
+            <element signature="e#16090#17627#0#HTML" expanded="false" />
+            <element signature="e#16119#17609#0#HTML" expanded="false" />
+            <element signature="e#17695#18323#0#HTML" expanded="false" />
+            <element signature="e#20837#21334#0#HTML" expanded="false" />
+            <element signature="e#21400#24783#0#HTML" expanded="false" />
+            <element signature="e#25060#25269#0#HTML" expanded="false" />
+            <element signature="e#25326#25876#0#HTML" expanded="false" />
+            <element signature="e#25924#25943#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EvenementBundle/Controller/DelimiteurController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.95683455">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+          <folding>
+            <element signature="e#46#91#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

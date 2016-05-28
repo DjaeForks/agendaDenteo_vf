@@ -198,8 +198,8 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         // addDel
-        if (0 === strpos($pathinfo, '/addDel') && preg_match('#^/addDel(?:/(?P<start>[^/]++)(?:/(?P<startH>[^/]++)(?:/(?P<end>[^/]++)(?:/(?P<endH>[^/]++))?)?)?)?$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'addDel')), array (  '_controller' => 'EvenementBundle\\Controller\\DelimiteurController::addDelAction',  'start' => 1,  'startH' => 2,  'end' => 3,  'endH' => 4,));
+        if (0 === strpos($pathinfo, '/addDel') && preg_match('#^/addDel(?:/(?P<start>[^/]++)(?:/(?P<end>[^/]++))?)?$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'addDel')), array (  '_controller' => 'EvenementBundle\\Controller\\DelimiteurController::addDelAction',  'start' => 1,  'end' => 2,));
         }
 
         // load_events

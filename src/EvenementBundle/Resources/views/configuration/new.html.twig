@@ -1,0 +1,150 @@
+{% extends '::layout.html.twig' %}
+
+{% block stylesheets %}
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="{{ asset('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css') }}">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="{{ asset('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css') }}">
+    <!-- daterange picker -->
+    <link rel="stylesheet" href="{{ asset('plugins/daterangepicker/daterangepicker-bs3.css') }}">
+    <!-- iCheck for checkboxes and radio inputs -->
+    <link rel="stylesheet" href="{{ asset('plugins/iCheck/all.css') }}">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="{{ asset('plugins/select2/select2.min.css') }}">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{{ asset('dist/css/AdminLTE.min.css') }}">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="{{ asset('dist/css/skins/_all-skins.min.css') }}">
+
+
+
+    <style>
+        .daysCalendar{
+           display:inline-block;
+            width: 780px !important;
+        }
+
+    </style>
+{% endblock %}
+{% block content %}
+
+    <div style="background-color: white;" class="col-md-12">
+        <div class="grid simple">
+            <div class="grid-title ">
+                <h4><strong>Configuration</strong> <span class="semi-bold">Generale</span></h4>
+            </div>
+            </br>
+            </br>
+            {{ form_start(form) }}
+
+            <div class="form-group">
+                <label class="form-group">Jours a Masquer :</label>
+                <div class="input-group">
+                    {{ form_widget(form.daysSelected, { 'attr': {'class': 'daysCalendar select2'} }) }}
+
+                </div>
+            </div><!-- /.form-group -->
+
+            <div class="row form-row">
+                <div class="col-md-3">
+                    <label class="form-label">Heure de Debut : </label>
+                    <div class="input-group transparent clockpicker ">
+                        {{ form_widget(form.dateDeb, { 'attr': {'class': 'form-control dateDeb'} }) }}
+                        <span class="input-group-addon ">
+                       <i class="fa fa-clock-o"></i>
+                      </span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Heure de Fin : </label>
+                    <div class="input-group transparent clockpicker ">
+                        {{ form_widget(form.dateFin, { 'attr': {'class': 'form-control dateDeb'} }) }}
+                        <span class="input-group-addon ">
+                       <i class="fa fa-clock-o"></i>
+                      </span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Céneaux de : </label>
+                    {{ form_widget(form.creneau, { 'attr': {'class': 'form-control creneau select2 '} }) }}
+                </div>
+            </div>
+            </br>
+            <div class="row form-row">
+                <div class="col-md-3">
+                    <label>Jours de debut de Semaine : </label>
+                    <div class="input-group transparent clockpicker ">
+                        {{ form_widget(form.firstDay, { 'attr': {'class': 'form-control firstDay select2'} }) }}
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label>Langue du Calendrier : </label>
+                    <div class="input-group transparent clockpicker ">
+                        {{ form_widget(form.lang, { 'attr': {'class': 'form-control langCalendar select2'} }) }}
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Numeroter les semaines : </label>
+                    <div class="checkbox check-success 	">
+                        {{ form_widget(form.weeksNumber, { 'attr': {'class': 'weeksay flat-red'} }) }}
+                        <label for="checkbox2">Oui </label>
+                    </div>
+                </div>
+            </div>
+
+
+            <input class="btn btn-info  pull-right" type="submit" value="Configure"/>
+            {{ form_end(form) }}
+        </div>
+
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+
+    <!-- Bootstrap 3.3.5 -->
+    <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
+    <!-- Select2 -->
+    <script src="{{ asset('plugins/select2/select2.full.min.js') }}"></script>
+    <!-- InputMask -->
+    <script src="{{ asset('plugins/input-mask/jquery.inputmask.js') }}"></script>
+    <script src="{{ asset('plugins/input-mask/jquery.inputmask.date.extensions.js') }}"></script>
+    <script src="{{ asset('plugins/input-mask/jquery.inputmask.extensions.js') }}"></script>
+    <!-- SlimScroll 1.3.0 -->
+    <script src="{{ asset('plugins/slimScroll/jquery.slimscroll.min.js') }}"></script>
+    <!-- iCheck 1.0.1 -->
+    <script src="{{ asset('plugins/iCheck/icheck.min.js') }}"></script>
+    <!-- FastClick -->
+    <script src="{{ asset('plugins/fastclick/fastclick.min.js') }}"></script>
+    <!-- AdminLTE App -->
+    <script src="{{ asset('dist/js/app.min.js') }}"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="../../dist/js/demo.js"></script>
+    <script>
+
+        $(function () {
+
+            //Flat red color scheme for iCheck
+            $('.flat-red').iCheck({
+                checkboxClass: 'icheckbox_flat-orange'
+            });
+            //Initialize Select2 Elements
+            $(".select2").select2();
+
+            //Time pickers
+            $('.clockpicker ').clockpicker({
+                autoclose: true
+            });
+
+
+        });
+
+
+    </script>
+
+{% endblock %}

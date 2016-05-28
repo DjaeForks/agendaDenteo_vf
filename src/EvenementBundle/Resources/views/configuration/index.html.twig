@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Configuration list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Datedeb</th>
+                <th>Datefin</th>
+                <th>Creneau</th>
+                <th>Firstday</th>
+                <th>Weeksnumber</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for configuration in configurations %}
+            <tr>
+                <td><a href="{{ path('configuration_show', { 'id': configuration.id }) }}">{{ configuration.id }}</a></td>
+                <td>{% if configuration.dateDeb %}{{ configuration.dateDeb|date('H:i:s') }}{% endif %}</td>
+                <td>{% if configuration.dateFin %}{{ configuration.dateFin|date('H:i:s') }}{% endif %}</td>
+                <td>{{ configuration.creneau }}</td>
+                <td>{{ configuration.firstDay }}</td>
+                <td>{% if configuration.weeksNumber %}Yes{% else %}No{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('configuration_show', { 'id': configuration.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('configuration_edit', { 'id': configuration.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('configuration_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}
