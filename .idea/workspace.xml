@@ -3,52 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2c1ede49-85e3-4396-bc23-ee7d68262477" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/0d/5b5b435d4576656e656d656e7442756e646c655c436f6e74726f6c6c65725c526476436f6e74726f6c6c6572405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/0d/5b5b435d4576656e656d656e7442756e646c655c436f6e74726f6c6c65725c526476436f6e74726f6c6c6572405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/14/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476236765744461746546696e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/14/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476236765744461746546696e405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/15/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476237365744465736372697074696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/15/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476237365744465736372697074696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/19/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762367657445746174405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/19/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762367657445746174405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/1e/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762465746174405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/1e/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762465746174405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/20/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476247469747265405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/20/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476247469747265405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/28/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647623736574446174654465627574405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/28/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647623736574446174654465627574405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/35/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476236765744465736372697074696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/35/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476236765744465736372697074696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/3f/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647623676574446174654465627574405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/3f/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647623676574446174654465627574405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/56/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762373657445746174405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/56/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762373657445746174405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/5d/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647623746f4172726179405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/5d/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647623746f4172726179405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/74/5b5b435d4576656e656d656e7442756e646c655c436f6e74726f6c6c65725c526476436f6e74726f6c6c6572236368617267654576656e7473416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/74/5b5b435d4576656e656d656e7442756e646c655c436f6e74726f6c6c65725c526476436f6e74726f6c6c6572236368617267654576656e7473416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/7b/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647623676574506572696f646963697465405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/7b/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647623676574506572696f646963697465405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/82/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647624646174654465627574405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/82/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647624646174654465627574405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/8b/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476246964405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/8b/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476246964405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/8f/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762373657455736572405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/8f/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762373657455736572405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/8f/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476246461746546696e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/8f/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476246461746546696e405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/95/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476246465736372697074696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/95/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476246465736372697074696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/9d/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762367657452647654797065405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/9d/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762367657452647654797065405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/a2/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762470617469656e74405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/a2/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762470617469656e74405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/a3/5b5b435d4576656e656d656e7442756e646c655c436f6e74726f6c6c65725c526476436f6e74726f6c6c657223616c6c52647673416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/a3/5b5b435d4576656e656d656e7442756e646c655c436f6e74726f6c6c65725c526476436f6e74726f6c6c657223616c6c52647673416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/a3/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476237365745469747265405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/a3/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476237365745469747265405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/a6/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476236765745469747265405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/a6/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476236765745469747265405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/a7/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762472647654797065405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/a7/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762472647654797065405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/a8/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/a8/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/ab/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762373657450617469656e74405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/ab/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762373657450617469656e74405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/b4/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647623736574436c6173734e616d65405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/b4/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647623736574436c6173734e616d65405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/b5/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762367657450617469656e74405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/b5/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762367657450617469656e74405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/b5/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647624636c6173734e616d65405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/b5/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647624636c6173734e616d65405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/b5/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647624706572696f646963697465405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/b5/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647624706572696f646963697465405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/b8/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476237365744461746546696e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/b8/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476237365744461746546696e405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/b8/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762475736572405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/b8/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762475736572405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/cd/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647623736574506572696f646963697465405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/cd/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647623736574506572696f646963697465405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/d0/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762373657452647654797065405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/d0/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762373657452647654797065405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/d5/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476235f5f636f6e737472756374405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/d5/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476235f5f636f6e737472756374405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/db/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476236765744964405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/db/5b5b435d4576656e656d656e7442756e646c655c456e746974795c526476236765744964405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/e1/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647623676574436c6173734e616d65405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/e1/5b5b435d4576656e656d656e7442756e646c655c456e746974795c52647623676574436c6173734e616d65405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/e4/5b5b435d4576656e656d656e7442756e646c655c436f6e74726f6c6c65725c526476436f6e74726f6c6c65722364656c65746564416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/e4/5b5b435d4576656e656d656e7442756e646c655c436f6e74726f6c6c65725c526476436f6e74726f6c6c65722364656c65746564416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/ec/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762367657455736572405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/app/cache/dev/annotations/ec/5b5b435d4576656e656d656e7442756e646c655c456e746974795c5264762367657455736572405b416e6e6f745d5d5b315d.doctrinecache.data" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/profiler/index.csv" afterPath="$PROJECT_DIR$/app/cache/dev/profiler/index.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/twig/dd/dd1e8b9d5c04dc9887655f7de44e61de68fe6ea79ecfb7e513862e6dec2b53aa.php" afterPath="$PROJECT_DIR$/app/cache/dev/twig/dd/dd1e8b9d5c04dc9887655f7de44e61de68fe6ea79ecfb7e513862e6dec2b53aa.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/logs/dev.log" afterPath="$PROJECT_DIR$/app/logs/dev.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvenementBundle/Controller/RdvController.php" afterPath="$PROJECT_DIR$/src/EvenementBundle/Controller/RdvController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvenementBundle/Entity/Rdv.php" afterPath="$PROJECT_DIR$/src/EvenementBundle/Entity/Rdv.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvenementBundle/Resources/views/Default/Agenda.html.twig" afterPath="$PROJECT_DIR$/src/EvenementBundle/Resources/views/Default/Agenda.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvenementBundle/Service/CalendarService.php" afterPath="$PROJECT_DIR$/src/EvenementBundle/Service/CalendarService.php" />
     </list>
     <ignored path="taskPerson.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,8 +29,8 @@
       <file leaf-file-name="Rdv.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/EvenementBundle/Entity/Rdv.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20377359">
-              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.043396227">
+              <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -338,14 +294,20 @@
       <option name="project" value="LOCAL" />
       <updated>1464543292138</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="dernier commit en cafe semelalia avant de partir">
+      <created>1464546345965</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1464546345965</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="738" extended-state="0" />
-    <editor active="false" />
+    <frame x="0" y="0" width="1366" height="738" extended-state="1" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25076452" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25076452" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -406,7 +368,9 @@
     <MESSAGE value="after adinng tooltipster to calendar" />
     <MESSAGE value="apres terminer la configuration" />
     <MESSAGE value="reunion au cafe semlalia apres syncronisation de projet" />
-    <option name="LAST_COMMIT_MESSAGE" value="reunion au cafe semlalia apres syncronisation de projet" />
+    <MESSAGE value="dernier commit en cafe semelalia avant de partir" />
+    <MESSAGE value="dernier commit en cafe semelalia avant de partir2" />
+    <option name="LAST_COMMIT_MESSAGE" value="dernier commit en cafe semelalia avant de partir2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -790,8 +754,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/EvenementBundle/Entity/Rdv.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20377359">
-          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.043396227">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
           <folding />
         </state>
       </provider>
