@@ -86,7 +86,7 @@ class CalendarService
                 'title'   => $rdv->getTitre().' - '.$rdv->getPatient()->getNom(),
                 'start'   => $rdv->getDateDebut()->format(\DateTime::ISO8601),
                 'end'     => $rdv->getDateFin()->format(\DateTime::ISO8601),
-
+                'color'   => $rdv->getCouleur(),
                 'description' =>$rdv->getDescription(),
             );
 
@@ -96,7 +96,7 @@ class CalendarService
                 'title'   => $rdv->getTitre(),
                 'start'   => $rdv->getDateDebut()->format(\DateTime::ISO8601),
                 'end'     => $rdv->getDateFin()->format(\DateTime::ISO8601),
-
+                'color'   => $rdv->getCouleur(),
                 'description' =>$rdv->getDescription(),
             );
         }

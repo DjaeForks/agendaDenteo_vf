@@ -74,7 +74,11 @@ class RdvController extends Controller
         $rdvTypes = $em->getRepository('EvenementBundle:RdvType')->findAll();
 
 
+
         if ($form->isSubmitted() && $form->isValid()) {
+
+            $rdvType = $em->getRepository('EvenementBundle:RdvType')->find($request->request->get('rdvTtpee'));
+            $rdv->setCouleur($rdvType->getCouleur());
             $em->persist($rdv);
             $em->flush();
         }

@@ -87,6 +87,16 @@ class Rdv
      */
     protected $className;
 
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="couleur", type="string", length=255)
+     */
+    protected $couleur;
+
+
+
     /**
      * Rdv constructor.
      * @param string $className
@@ -331,5 +341,29 @@ class Rdv
     public function getPeriodicite()
     {
         return $this->periodicite;
+    }
+
+    /**
+     * Set couleur
+     *
+     * @param string $couleur
+     *
+     * @return Rdv
+     */
+    public function setCouleur($couleur)
+    {
+        $this->couleur = $couleur;
+
+        return $this;
+    }
+
+    /**
+     * Get couleur
+     *
+     * @return string
+     */
+    public function getCouleur()
+    {
+        return $this->couleur;
     }
 }
