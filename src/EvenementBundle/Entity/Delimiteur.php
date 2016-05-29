@@ -192,5 +192,52 @@ class Delimiteur
         $this->titre = $titre;
     }
 
-}
 
+    /**
+     * Set user
+     *
+     * @param \UsersBundle\Entity\User $user
+     *
+     * @return Delimiteur
+     */
+    public function setUser(\UsersBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \UsersBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * Set delimiteurType
+     *
+     * @param \EvenementBundle\Entity\DelimiteurType $delimiteurType
+     *
+     * @return Delimiteur
+     */
+    public function setDelimiteurType(\EvenementBundle\Entity\DelimiteurType $delimiteurType = null)
+    {
+        $this->delimiteurType = $delimiteurType;
+
+        return $this;
+    }
+
+    /**
+     * Get delimiteurType
+     *
+     * @return \EvenementBundle\Entity\DelimiteurType
+     */
+    public function getDelimiteurType()
+    {
+        return $this->delimiteurType;
+    }
+}

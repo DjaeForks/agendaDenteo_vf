@@ -110,6 +110,7 @@ class CalendarService
                 'start' => $delimiteur->getDebut()->format(\DateTime::ISO8601),
                 'end'   => $delimiteur->getFin()->format(\DateTime::ISO8601),
                 'className' => $delimiteur->getClassName(),
+                'color'=> '#0a0a0a',
             );
     }
 }

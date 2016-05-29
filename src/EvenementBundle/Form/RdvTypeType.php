@@ -16,7 +16,8 @@ class RdvTypeType extends AbstractType
     {
         $builder
             ->add('titre')
-            ->add('duree' , 'choice' , array('choices' =>  array('10' => '10 Min' , '15' => '15 Min' , '20' => '20 Min' , '25' => '25 Min')))
+            //->add('duree' , 'choice' , array('choices' =>  array('10' => '10 Min' , '15' => '15 Min' , '20' => '20 Min' , '25' => '25 Min')))
+            ->add('duree' ,'time',array('widget' => 'single_text'))
             ->add('couleur')
             ->add('description','textarea')
         ;

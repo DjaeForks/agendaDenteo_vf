@@ -24,20 +24,20 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_aa6ffe1b45f484f43ce006325ebc86978689706fe57809918cf82cf34d7c9030 = $this->env->getExtension("native_profiler");
-        $__internal_aa6ffe1b45f484f43ce006325ebc86978689706fe57809918cf82cf34d7c9030->enter($__internal_aa6ffe1b45f484f43ce006325ebc86978689706fe57809918cf82cf34d7c9030_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "EvenementBundle:Default:Agenda.html.twig"));
+        $__internal_d20d98a1c84a40fb1d0637a520172271120a7e88bbbfe9634fb14c36603257eb = $this->env->getExtension("native_profiler");
+        $__internal_d20d98a1c84a40fb1d0637a520172271120a7e88bbbfe9634fb14c36603257eb->enter($__internal_d20d98a1c84a40fb1d0637a520172271120a7e88bbbfe9634fb14c36603257eb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "EvenementBundle:Default:Agenda.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_aa6ffe1b45f484f43ce006325ebc86978689706fe57809918cf82cf34d7c9030->leave($__internal_aa6ffe1b45f484f43ce006325ebc86978689706fe57809918cf82cf34d7c9030_prof);
+        $__internal_d20d98a1c84a40fb1d0637a520172271120a7e88bbbfe9634fb14c36603257eb->leave($__internal_d20d98a1c84a40fb1d0637a520172271120a7e88bbbfe9634fb14c36603257eb_prof);
 
     }
 
     // line 2
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_e0a4024e5c236ed7555e14ee079cdb79abf0b45da5042337f37add2516094d68 = $this->env->getExtension("native_profiler");
-        $__internal_e0a4024e5c236ed7555e14ee079cdb79abf0b45da5042337f37add2516094d68->enter($__internal_e0a4024e5c236ed7555e14ee079cdb79abf0b45da5042337f37add2516094d68_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_7b5553d1d293aaf8cf927deecceee24d91b63eef43ab244d557c392fcca78de8 = $this->env->getExtension("native_profiler");
+        $__internal_7b5553d1d293aaf8cf927deecceee24d91b63eef43ab244d557c392fcca78de8->enter($__internal_7b5553d1d293aaf8cf927deecceee24d91b63eef43ab244d557c392fcca78de8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 3
         echo "    <link rel=\"stylesheet\" href=\"";
@@ -65,15 +65,15 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
     </style>
 ";
         
-        $__internal_e0a4024e5c236ed7555e14ee079cdb79abf0b45da5042337f37add2516094d68->leave($__internal_e0a4024e5c236ed7555e14ee079cdb79abf0b45da5042337f37add2516094d68_prof);
+        $__internal_7b5553d1d293aaf8cf927deecceee24d91b63eef43ab244d557c392fcca78de8->leave($__internal_7b5553d1d293aaf8cf927deecceee24d91b63eef43ab244d557c392fcca78de8_prof);
 
     }
 
     // line 22
     public function block_content($context, array $blocks = array())
     {
-        $__internal_8e23198a7c354cc451c4d8d595a283cdaa1cac1a47d0be7fbc81f78928e614ca = $this->env->getExtension("native_profiler");
-        $__internal_8e23198a7c354cc451c4d8d595a283cdaa1cac1a47d0be7fbc81f78928e614ca->enter($__internal_8e23198a7c354cc451c4d8d595a283cdaa1cac1a47d0be7fbc81f78928e614ca_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_a58a4b0b8914ed9d805732862be61d048da02a8b991aa8138bab294404c0bba6 = $this->env->getExtension("native_profiler");
+        $__internal_a58a4b0b8914ed9d805732862be61d048da02a8b991aa8138bab294404c0bba6->enter($__internal_a58a4b0b8914ed9d805732862be61d048da02a8b991aa8138bab294404c0bba6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 23
         echo "
@@ -212,15 +212,15 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 
 ";
         
-        $__internal_8e23198a7c354cc451c4d8d595a283cdaa1cac1a47d0be7fbc81f78928e614ca->leave($__internal_8e23198a7c354cc451c4d8d595a283cdaa1cac1a47d0be7fbc81f78928e614ca_prof);
+        $__internal_a58a4b0b8914ed9d805732862be61d048da02a8b991aa8138bab294404c0bba6->leave($__internal_a58a4b0b8914ed9d805732862be61d048da02a8b991aa8138bab294404c0bba6_prof);
 
     }
 
     // line 155
     public function block_rdvForm($context, array $blocks = array())
     {
-        $__internal_38cac88f4151358265473e6056a97a85ffa17c289c9488ca56bf3896beca208d = $this->env->getExtension("native_profiler");
-        $__internal_38cac88f4151358265473e6056a97a85ffa17c289c9488ca56bf3896beca208d->enter($__internal_38cac88f4151358265473e6056a97a85ffa17c289c9488ca56bf3896beca208d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "rdvForm"));
+        $__internal_2de2342b8b57e6459b4c33747c88c600769219e333b205348182ea95226d1405 = $this->env->getExtension("native_profiler");
+        $__internal_2de2342b8b57e6459b4c33747c88c600769219e333b205348182ea95226d1405->enter($__internal_2de2342b8b57e6459b4c33747c88c600769219e333b205348182ea95226d1405_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "rdvForm"));
 
         // line 156
         echo "
@@ -245,40 +245,66 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
                 <div class=\"row\">
                     <div class='col-sm-6 col-md-offset-3 form-group'>
                         <label>Type de Rendez-Vous</label>
-                        ";
-        // line 175
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "rdvType", array()), 'widget', array("attr" => array("class" => "form-control input-sm")));
-        echo "
+                        <select id=\"mySelect\" class=\"form-control input-sm\" name=\"rdvTtpee\">
+                            <option vlaue=\"#\">--SELECT--</option>
+                            ";
+        // line 177
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["rdvTypes"]) ? $context["rdvTypes"] : $this->getContext($context, "rdvTypes")));
+        foreach ($context['_seq'] as $context["_key"] => $context["rdv"]) {
+            // line 178
+            echo "                                <option value=\"";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["rdv"], "id", array()), "html", null, true);
+            echo "\" data-duree=\"";
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["rdv"], "duree", array()), "H:i"), "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["rdv"], "titre", array()), "html", null, true);
+            echo "
+                                    (";
+            // line 179
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["rdv"], "duree", array()), "H:i"), "html", null, true);
+            echo ")
+                                </option>
+                            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['rdv'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 182
+        echo "                        </select>
+
                         <label>Patient</label>
                         ";
-        // line 177
+        // line 185
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "patient", array()), 'widget', array("attr" => array("class" => "form-control input-sm")));
         echo "
                         <label>Date et Heure de Debut</label>
                         ";
-        // line 179
+        // line 187
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "dateDebut", array()), 'widget', array("attr" => array("class" => "form-control input-sm")));
         echo "
 
 
                         <label>Heure de Fin</label>
                         ";
-        // line 183
+        // line 191
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "dateFin", array()), 'widget', array("attr" => array("class" => "form-control input-sm")));
         echo "
 
 
                         <label>Titre</label>
                         ";
-        // line 187
+        // line 195
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "titre", array()), 'widget', array("attr" => array("class" => "form-control input-sm")));
         echo "
 
                         <label>Description</label>
                         ";
-        // line 190
+        // line 198
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "description", array()), 'widget', array("attr" => array("class" => "form-control input-sm")));
         echo "<br/>
+
+                        <input type=\"text\" id=\"startMinutes\" value=\"\" hidden/>
 
 
                         <button type=\"submit\" id=\"btnSubmit\" class=\"btn btn-primary\">Ajouter</button>
@@ -289,11 +315,11 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 
 
                 ";
-        // line 200
+        // line 210
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
                 ";
-        // line 201
+        // line 211
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["editForm"]) ? $context["editForm"] : $this->getContext($context, "editForm")), 'form_start', array("attr" => array("id" => "editRdv")));
         echo "
                 <div class=\"row\">
@@ -302,13 +328,13 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 
                         <label>Titre</label>
                         ";
-        // line 207
+        // line 217
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["editForm"]) ? $context["editForm"] : $this->getContext($context, "editForm")), "titre", array()), 'widget', array("attr" => array("class" => "form-control input-sm")));
         echo "
 
                         <label>Description</label>
                         ";
-        // line 210
+        // line 220
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["editForm"]) ? $context["editForm"] : $this->getContext($context, "editForm")), "description", array()), 'widget', array("attr" => array("class" => "form-control input-sm")));
         echo "<br/>
 
@@ -321,7 +347,7 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 
 
                 ";
-        // line 220
+        // line 230
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["editForm"]) ? $context["editForm"] : $this->getContext($context, "editForm")), 'form_end');
         echo "
             </div>
@@ -337,49 +363,60 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 
 ";
         
-        $__internal_38cac88f4151358265473e6056a97a85ffa17c289c9488ca56bf3896beca208d->leave($__internal_38cac88f4151358265473e6056a97a85ffa17c289c9488ca56bf3896beca208d_prof);
+        $__internal_2de2342b8b57e6459b4c33747c88c600769219e333b205348182ea95226d1405->leave($__internal_2de2342b8b57e6459b4c33747c88c600769219e333b205348182ea95226d1405_prof);
 
     }
 
-    // line 234
+    // line 244
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_2f797a36530c98211cc8c6792bb1e68aecdeedba7591f768d41b4820c70214bd = $this->env->getExtension("native_profiler");
-        $__internal_2f797a36530c98211cc8c6792bb1e68aecdeedba7591f768d41b4820c70214bd->enter($__internal_2f797a36530c98211cc8c6792bb1e68aecdeedba7591f768d41b4820c70214bd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_01a2a5ef18a6e7fab31e0ad1003b7054fa735e3aa7362fae9526affdfab3cd67 = $this->env->getExtension("native_profiler");
+        $__internal_01a2a5ef18a6e7fab31e0ad1003b7054fa735e3aa7362fae9526affdfab3cd67->enter($__internal_01a2a5ef18a6e7fab31e0ad1003b7054fa735e3aa7362fae9526affdfab3cd67_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 235
+        // line 245
         echo "    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js\"></script>
     <script src=\"";
-        // line 236
+        // line 246
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("plugins/fullcalendar/fullcalendar.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 237
+        // line 247
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("JSCalander/lang/lang-all.js"), "html", null, true);
         echo "\"></script>
     <!-- date-range-picker -->
     <script src=\"https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js\"></script>
     <script src=\"";
-        // line 240
+        // line 250
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("plugins/daterangepicker/daterangepicker.js"), "html", null, true);
         echo "\"></script>
     <!-- bootstrap color picker -->
     <script src=\"";
-        // line 242
+        // line 252
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("plugins/colorpicker/bootstrap-colorpicker.min.js"), "html", null, true);
         echo "\"></script>
     <!-- bootstrap time picker -->
     <script src=\"";
-        // line 244
+        // line 254
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("plugins/timepicker/bootstrap-timepicker.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 245
+        // line 255
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("plugins/fullcalendar/lib/moment.min.js"), "html", null, true);
         echo "\"></script>
     <script>
         \$(function () {
 
+            \$('#btnSubmit').click(function () {
+                \$('form').submit(function () {
+                    \$.ajax({
+                        type: 'GET',
+                        url: 'http://localhost/denteo2/web/app_dev.php/all',
+                        success: function (data) {
+                            \$('#calendar').fullCalendar('refrechEvents');
+                        }
+                    })
+                })
+            })
 
 
             \$('#close').click(function () {
@@ -411,8 +448,8 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
                 var duree = durationAsMomentObject(\$('#mySelect option:selected').attr('data-duree'));
                 var start = durationAsMomentObject(\$('#startMinutes').text());
                 start.add(duree);
-                var a = \$('#m_rdv_dateDebut').val().split(' ');
-                \$('#m_rdv_dateFin').val(a[0]+' '+start.hours() + ':' + start.minutes());
+                var a = \$('#rdv_dateDebut').val().split(' ');
+                \$('#rdv_dateFin').val(a[0]+' '+start.hours() + ':' + start.minutes());
             }
 
             \$('#mySelect').change(function(){
@@ -428,7 +465,10 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
                 var endH = moment(end).format('HH:mm');
                 var duration = moment.duration(temp.subtract(start));
                 var warningMsg = (now.isAfter(end) && !now.isSame(end)) ? '<strong><span>Attention Vous Avez séléctionné une ancienne date</span></strong>' : '';
-                \$('#modalDelimiteur').modal().show();
+                if (!sidebar.hasClass('control-sidebar-open')
+                        && !\$('body').hasClass('control-sidebar-open')) {
+                    \$('#modalDelimiteur').modal().show();
+                }
                 \$('#detailsD').html('L\\'intervalle que vous avez choisi est: ' + '<br/>' +
                         'Du: ' + start + '<br/>' +
                         'A: ' +  end + '<br/>');
@@ -436,6 +476,7 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 
                     \$.ajax({
                         type: 'get',
+                        //url: Routing.generate('addDel', {start: start, end: end}),
                         url: 'http://localhost/denteo2/web/app_dev.php/addDel' + '/' + start + '/' + end,
                         success: function (data) {
                             \$('#calendar').fullCalendar('removeEvents');
@@ -505,9 +546,8 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 
                         \$.ajax({
                             type: 'get',
-                            url: 'http://localhost/denteo2/web/app_dev.php/drop' + '/' + event.id + '/' + start + '/' + startH + '/' + end + '/' + endH,
+                            url: Routing.generate('drop', {id: event.id, start: start, startH: startH, end: end ,endH: endH}),
                             success: function (data) {
-                                //\$.growl.notice({ message: \"Votre Rdv a été Deplacer\" });
                                 \$.growl({title: \"Success\", message: \"Votre Rdv a été Déplacer avec success!\"});
                                 \$('#calendar').fullCalendar('refrechEvents');
                             }
@@ -527,7 +567,7 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
                     \$('#loading').show();
                     timedFunction = window.setInterval(function () {
                         var newText = '  <span >   <img src=\"";
-        // line 395
+        // line 419
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("icons/hamid.gif"), "html", null, true);
         echo "\" width=\"25%\" height=\"25%\" /> </span> ';
                         \$('#loading span').replaceWith(newText);
@@ -570,7 +610,7 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
                 //weekends: false,
                 defaultView: 'agendaWeek',
                 events: '";
-        // line 435
+        // line 459
         echo $this->env->getExtension('routing')->getPath("load_events");
         echo "',
                 editable: true,
@@ -578,14 +618,14 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
                 lazyFetching: true,
                 //le premier jour de la semaine
                 firstDay: ";
-        // line 440
+        // line 464
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["myConfiguration"]) ? $context["myConfiguration"] : $this->getContext($context, "myConfiguration")), "firstDay", array()), "html", null, true);
         echo ",
                 //les jours du calendrier
 
                 hiddenDays: [
                 ";
-        // line 444
+        // line 468
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["myConfiguration"]) ? $context["myConfiguration"] : $this->getContext($context, "myConfiguration")), "daysSelected", array()));
         $context['loop'] = array(
@@ -602,7 +642,7 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 445
+            // line 469
             echo "                    ";
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo (($this->getAttribute($context["loop"], "last", array())) ? ("") : (","));
@@ -620,76 +660,75 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 447
+        // line 471
         echo "
                 ],
 
                 //weekNumbers:";
-        // line 450
+        // line 474
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["myConfiguration"]) ? $context["myConfiguration"] : $this->getContext($context, "myConfiguration")), "weeksNumber", array()), "html", null, true);
         echo " ,
-                minTime: '";
-        // line 451
+                //minTime: '";
+        // line 475
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["myConfiguration"]) ? $context["myConfiguration"] : $this->getContext($context, "myConfiguration")), "dateDeb", array()), "h:i"), "html", null, true);
         echo "',
+                minTime: '08:00',
                 // maxTime: '";
-        // line 452
+        // line 477
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["myConfiguration"]) ? $context["myConfiguration"] : $this->getContext($context, "myConfiguration")), "dateFin", array()), "h:i"), "html", null, true);
         echo "',
                 maxTime: '18:00',
                 slotDuration: '00:";
-        // line 454
+        // line 479
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["myConfiguration"]) ? $context["myConfiguration"] : $this->getContext($context, "myConfiguration")), "creneau", array()), "html", null, true);
         echo ":00',
                 droppable: true, // this allows things to be dropped onto the calendar !!!
                 //aspectRatio: 2,
                 ";
-        // line 457
+        // line 482
         if ($this->getAttribute((isset($context["myConfiguration"]) ? $context["myConfiguration"] : $this->getContext($context, "myConfiguration")), "weeksNumber", array())) {
-            // line 458
+            // line 483
             echo "                weekNumbers: true,
                 ";
         } else {
-            // line 460
+            // line 485
             echo "                weekNumbers: false,
                 ";
         }
-        // line 462
+        // line 487
         echo "                eventTextColor: 'black',
                 eventBackgroundColor: '#00c0ef',
                 ";
-        // line 464
+        // line 489
         if (($this->getAttribute((isset($context["myConfiguration"]) ? $context["myConfiguration"] : $this->getContext($context, "myConfiguration")), "lang", array()) == "anglais")) {
-            // line 465
+            // line 490
             echo "                lang: 'en',
                 ";
-        } elseif (($this->getAttribute(        // line 466
+        } elseif (($this->getAttribute(        // line 491
 (isset($context["myConfiguration"]) ? $context["myConfiguration"] : $this->getContext($context, "myConfiguration")), "lang", array()) == "francais")) {
-            // line 467
+            // line 492
             echo "                lang: 'fr',
                 ";
         } else {
-            // line 469
+            // line 494
             echo "                lang: 'ar',
                 ";
         }
-        // line 471
+        // line 496
         echo "                columnFormat: 'dddd D/M',
                 weekNumberTitle: 'week N°',
                 dayClick: function (date, jsEvent, view) {
 
-                    \$('#m_rdv_dateDebut').val(date.format('YYYY-MM-DD h:mm'));
+                    \$('#startMinutes').text(date.format('h:mm'));
+                    \$('#rdv_dateDebut').val(date.format('YYYY-MM-DD h:mm'));
                     if (!sidebar.hasClass('control-sidebar-open')
                             && !\$('body').hasClass('control-sidebar-open')) {
-                        //Open the sidebar
                         sidebar.addClass('control-sidebar-open');
                         \$('#editRdv').hide();
                         \$('#addRdv').show();
                     } else {
 
                     }
-
-
                 },
 
                 eventClick: function (calEvent, jsEvent, view) {
@@ -707,9 +746,7 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
                                 \$.ajax({
                                     type: 'get',
                                     url: 'http://localhost/denteo2/web/app_dev.php/deleted' + '/' + calEvent.id,
-                                    // url: Routing.generate('deleteRdv', {id: calEvent.id}),
                                     success: function (data) {
-                                        //supprimer le rdv du calendrier
                                         \$('#calendar').fullCalendar('removeEvents', calEvent.id);
                                         \$.growl({title: \"Success\", message: \"Votre Rdv a été bien Supprimer \"});
                                         \$('#calendar').fullCalendar('refrechEvents');
@@ -718,6 +755,7 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
                             }
                         });
                     })
+
                     \$('#modalModifier').click(function () {
                         if (!sidebar.hasClass('control-sidebar-open')
                                 && !\$('body').hasClass('control-sidebar-open')) {
@@ -728,9 +766,9 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
                             \$('#editRdv').show();
                             \$('#addRdv').hide();
 
-                            \$('#m_rdv_dateDebut').val(moment(calEvent.start).format('DD-MM-YYYY h:mm'));
-                            \$('#m_rdv_dateFin').val(moment(calEvent.end).format('DD-MM-YYYY h:mm'));
-                            \$('#m_rdv_titre').val(calEvent.title);
+                            \$('#rdv_dateDebut').val(moment(calEvent.start).format('DD-MM-YYYY h:mm'));
+                            \$('#rdv_dateFin').val(moment(calEvent.end).format('DD-MM-YYYY h:mm'));
+                            \$('#rdv_titre').val(calEvent.title);
                             \$('#btnModif').click(function () {
                                 \$.ajax({
                                     type: 'get',
@@ -831,7 +869,7 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 
 ";
         
-        $__internal_2f797a36530c98211cc8c6792bb1e68aecdeedba7591f768d41b4820c70214bd->leave($__internal_2f797a36530c98211cc8c6792bb1e68aecdeedba7591f768d41b4820c70214bd_prof);
+        $__internal_01a2a5ef18a6e7fab31e0ad1003b7054fa735e3aa7362fae9526affdfab3cd67->leave($__internal_01a2a5ef18a6e7fab31e0ad1003b7054fa735e3aa7362fae9526affdfab3cd67_prof);
 
     }
 
@@ -847,7 +885,7 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 
     public function getDebugInfo()
     {
-        return array (  677 => 471,  673 => 469,  669 => 467,  667 => 466,  664 => 465,  662 => 464,  658 => 462,  654 => 460,  650 => 458,  648 => 457,  642 => 454,  637 => 452,  633 => 451,  629 => 450,  624 => 447,  606 => 445,  589 => 444,  582 => 440,  574 => 435,  531 => 395,  378 => 245,  374 => 244,  369 => 242,  364 => 240,  358 => 237,  354 => 236,  351 => 235,  345 => 234,  325 => 220,  312 => 210,  306 => 207,  297 => 201,  293 => 200,  280 => 190,  274 => 187,  267 => 183,  260 => 179,  255 => 177,  250 => 175,  243 => 171,  226 => 156,  220 => 155,  151 => 93,  79 => 23,  73 => 22,  48 => 4,  43 => 3,  37 => 2,  11 => 1,);
+        return array (  718 => 496,  714 => 494,  710 => 492,  708 => 491,  705 => 490,  703 => 489,  699 => 487,  695 => 485,  691 => 483,  689 => 482,  683 => 479,  678 => 477,  673 => 475,  669 => 474,  664 => 471,  646 => 469,  629 => 468,  622 => 464,  614 => 459,  571 => 419,  404 => 255,  400 => 254,  395 => 252,  390 => 250,  384 => 247,  380 => 246,  377 => 245,  371 => 244,  351 => 230,  338 => 220,  332 => 217,  323 => 211,  319 => 210,  304 => 198,  298 => 195,  291 => 191,  284 => 187,  279 => 185,  274 => 182,  265 => 179,  256 => 178,  252 => 177,  243 => 171,  226 => 156,  220 => 155,  151 => 93,  79 => 23,  73 => 22,  48 => 4,  43 => 3,  37 => 2,  11 => 1,);
     }
 }
 /* {% extends '::layout.html.twig' %}*/
@@ -1024,7 +1062,15 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 /*                 <div class="row">*/
 /*                     <div class='col-sm-6 col-md-offset-3 form-group'>*/
 /*                         <label>Type de Rendez-Vous</label>*/
-/*                         {{ form_widget(form.rdvType,{'attr': {'class':'form-control input-sm'} }) }}*/
+/*                         <select id="mySelect" class="form-control input-sm" name="rdvTtpee">*/
+/*                             <option vlaue="#">--SELECT--</option>*/
+/*                             {% for rdv in rdvTypes %}*/
+/*                                 <option value="{{ rdv.id }}" data-duree="{{ rdv.duree|date('H:i') }}">{{ rdv.titre }}*/
+/*                                     ({{ rdv.duree|date('H:i') }})*/
+/*                                 </option>*/
+/*                             {% endfor %}*/
+/*                         </select>*/
+/* */
 /*                         <label>Patient</label>*/
 /*                         {{ form_widget(form.patient,{'attr': {'class':'form-control input-sm'} }) }}*/
 /*                         <label>Date et Heure de Debut</label>*/
@@ -1040,6 +1086,8 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 /* */
 /*                         <label>Description</label>*/
 /*                         {{ form_widget(form.description,{'attr': {'class':'form-control input-sm'} }) }}<br/>*/
+/* */
+/*                         <input type="text" id="startMinutes" value="" hidden/>*/
 /* */
 /* */
 /*                         <button type="submit" id="btnSubmit" class="btn btn-primary">Ajouter</button>*/
@@ -1098,6 +1146,17 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 /*     <script>*/
 /*         $(function () {*/
 /* */
+/*             $('#btnSubmit').click(function () {*/
+/*                 $('form').submit(function () {*/
+/*                     $.ajax({*/
+/*                         type: 'GET',*/
+/*                         url: 'http://localhost/denteo2/web/app_dev.php/all',*/
+/*                         success: function (data) {*/
+/*                             $('#calendar').fullCalendar('refrechEvents');*/
+/*                         }*/
+/*                     })*/
+/*                 })*/
+/*             })*/
 /* */
 /* */
 /*             $('#close').click(function () {*/
@@ -1129,8 +1188,8 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 /*                 var duree = durationAsMomentObject($('#mySelect option:selected').attr('data-duree'));*/
 /*                 var start = durationAsMomentObject($('#startMinutes').text());*/
 /*                 start.add(duree);*/
-/*                 var a = $('#m_rdv_dateDebut').val().split(' ');*/
-/*                 $('#m_rdv_dateFin').val(a[0]+' '+start.hours() + ':' + start.minutes());*/
+/*                 var a = $('#rdv_dateDebut').val().split(' ');*/
+/*                 $('#rdv_dateFin').val(a[0]+' '+start.hours() + ':' + start.minutes());*/
 /*             }*/
 /* */
 /*             $('#mySelect').change(function(){*/
@@ -1146,7 +1205,10 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 /*                 var endH = moment(end).format('HH:mm');*/
 /*                 var duration = moment.duration(temp.subtract(start));*/
 /*                 var warningMsg = (now.isAfter(end) && !now.isSame(end)) ? '<strong><span>Attention Vous Avez séléctionné une ancienne date</span></strong>' : '';*/
-/*                 $('#modalDelimiteur').modal().show();*/
+/*                 if (!sidebar.hasClass('control-sidebar-open')*/
+/*                         && !$('body').hasClass('control-sidebar-open')) {*/
+/*                     $('#modalDelimiteur').modal().show();*/
+/*                 }*/
 /*                 $('#detailsD').html('L\'intervalle que vous avez choisi est: ' + '<br/>' +*/
 /*                         'Du: ' + start + '<br/>' +*/
 /*                         'A: ' +  end + '<br/>');*/
@@ -1154,6 +1216,7 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 /* */
 /*                     $.ajax({*/
 /*                         type: 'get',*/
+/*                         //url: Routing.generate('addDel', {start: start, end: end}),*/
 /*                         url: 'http://localhost/denteo2/web/app_dev.php/addDel' + '/' + start + '/' + end,*/
 /*                         success: function (data) {*/
 /*                             $('#calendar').fullCalendar('removeEvents');*/
@@ -1223,9 +1286,8 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 /* */
 /*                         $.ajax({*/
 /*                             type: 'get',*/
-/*                             url: 'http://localhost/denteo2/web/app_dev.php/drop' + '/' + event.id + '/' + start + '/' + startH + '/' + end + '/' + endH,*/
+/*                             url: Routing.generate('drop', {id: event.id, start: start, startH: startH, end: end ,endH: endH}),*/
 /*                             success: function (data) {*/
-/*                                 //$.growl.notice({ message: "Votre Rdv a été Deplacer" });*/
 /*                                 $.growl({title: "Success", message: "Votre Rdv a été Déplacer avec success!"});*/
 /*                                 $('#calendar').fullCalendar('refrechEvents');*/
 /*                             }*/
@@ -1300,7 +1362,8 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 /*                 ],*/
 /* */
 /*                 //weekNumbers:{{ myConfiguration.weeksNumber }} ,*/
-/*                 minTime: '{{ myConfiguration.dateDeb|date('h:i') }}',*/
+/*                 //minTime: '{{ myConfiguration.dateDeb|date('h:i') }}',*/
+/*                 minTime: '08:00',*/
 /*                 // maxTime: '{{ myConfiguration.dateFin|date('h:i') }}',*/
 /*                 maxTime: '18:00',*/
 /*                 slotDuration: '00:{{ myConfiguration.creneau }}:00',*/
@@ -1324,18 +1387,16 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 /*                 weekNumberTitle: 'week N°',*/
 /*                 dayClick: function (date, jsEvent, view) {*/
 /* */
-/*                     $('#m_rdv_dateDebut').val(date.format('YYYY-MM-DD h:mm'));*/
+/*                     $('#startMinutes').text(date.format('h:mm'));*/
+/*                     $('#rdv_dateDebut').val(date.format('YYYY-MM-DD h:mm'));*/
 /*                     if (!sidebar.hasClass('control-sidebar-open')*/
 /*                             && !$('body').hasClass('control-sidebar-open')) {*/
-/*                         //Open the sidebar*/
 /*                         sidebar.addClass('control-sidebar-open');*/
 /*                         $('#editRdv').hide();*/
 /*                         $('#addRdv').show();*/
 /*                     } else {*/
 /* */
 /*                     }*/
-/* */
-/* */
 /*                 },*/
 /* */
 /*                 eventClick: function (calEvent, jsEvent, view) {*/
@@ -1353,9 +1414,7 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 /*                                 $.ajax({*/
 /*                                     type: 'get',*/
 /*                                     url: 'http://localhost/denteo2/web/app_dev.php/deleted' + '/' + calEvent.id,*/
-/*                                     // url: Routing.generate('deleteRdv', {id: calEvent.id}),*/
 /*                                     success: function (data) {*/
-/*                                         //supprimer le rdv du calendrier*/
 /*                                         $('#calendar').fullCalendar('removeEvents', calEvent.id);*/
 /*                                         $.growl({title: "Success", message: "Votre Rdv a été bien Supprimer "});*/
 /*                                         $('#calendar').fullCalendar('refrechEvents');*/
@@ -1364,6 +1423,7 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 /*                             }*/
 /*                         });*/
 /*                     })*/
+/* */
 /*                     $('#modalModifier').click(function () {*/
 /*                         if (!sidebar.hasClass('control-sidebar-open')*/
 /*                                 && !$('body').hasClass('control-sidebar-open')) {*/
@@ -1374,9 +1434,9 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 /*                             $('#editRdv').show();*/
 /*                             $('#addRdv').hide();*/
 /* */
-/*                             $('#m_rdv_dateDebut').val(moment(calEvent.start).format('DD-MM-YYYY h:mm'));*/
-/*                             $('#m_rdv_dateFin').val(moment(calEvent.end).format('DD-MM-YYYY h:mm'));*/
-/*                             $('#m_rdv_titre').val(calEvent.title);*/
+/*                             $('#rdv_dateDebut').val(moment(calEvent.start).format('DD-MM-YYYY h:mm'));*/
+/*                             $('#rdv_dateFin').val(moment(calEvent.end).format('DD-MM-YYYY h:mm'));*/
+/*                             $('#rdv_titre').val(calEvent.title);*/
 /*                             $('#btnModif').click(function () {*/
 /*                                 $.ajax({*/
 /*                                     type: 'get',*/

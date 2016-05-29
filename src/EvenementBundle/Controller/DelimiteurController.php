@@ -58,10 +58,10 @@ class DelimiteurController extends Controller
     public function addDelAction(Request $request,$start,$end){
         $delimiteur = new Delimiteur();
 
-        $form = $this->createForm('EvenementBundle\Form\DelimiteurType', $delimiteur);
-        $form->handleRequest($request);
+        //$form = $this->createForm('EvenementBundle\Form\DelimiteurType', $delimiteur);
+        //$form->handleRequest($request);
 
-        if($form->isSubmitted() && $form->isValid()){
+        //if($form->isSubmitted() && $form->isValid()){
             $delimiteur->setUser($this->getUser());
             $delimiteur->setDebut(new DateTime($start));
             $delimiteur->setFin(new DateTime($end));
@@ -70,11 +70,9 @@ class DelimiteurController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($delimiteur);
             $em->flush();
-        }
+        //}
 
         return new Response('OK');
-
-
 
     }
 

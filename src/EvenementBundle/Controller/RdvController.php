@@ -34,7 +34,7 @@ class RdvController extends Controller
     {
 
         $rdv = new Rdv();
-        $form = $this->createForm('EvenementBundle\Form\MRdvType', $rdv);
+        $form = $this->createForm('EvenementBundle\Form\RdvType', $rdv);
         $form->handleRequest($request);
         $em = $this->getDoctrine()->getManager();
         if ($form->isSubmitted() && $form->isValid()) {
@@ -61,7 +61,7 @@ class RdvController extends Controller
     {
 
         $rdv = new Rdv();
-        $form = $this->createForm('EvenementBundle\Form\MRdvType', $rdv);
+        $form = $this->createForm('EvenementBundle\Form\RdvType', $rdv);
         $form->handleRequest($request);
         $em = $this->getDoctrine()->getManager();
 
@@ -70,7 +70,8 @@ class RdvController extends Controller
         $idConfiguration = $connectedUser->getConfiguration();
         $myConfiguration = $em->getRepository('EvenementBundle:Configuration')->find($idConfiguration);
 
-        $editForm = $this->createForm('EvenementBundle\Form\MRdvType', $rdv);
+        $editForm = $this->createForm('EvenementBundle\Form\RdvType', $rdv);
+        $rdvTypes = $em->getRepository('EvenementBundle:RdvType')->findAll();
 
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -78,6 +79,7 @@ class RdvController extends Controller
             $em->flush();
         }
         return $this->render('EvenementBundle:Default:Agenda.html.twig', array(
+            'rdvTypes' => $rdvTypes,
             'form' => $form->createView(),
             'editForm' => $editForm->createView(),
             'myConfiguration'=>$myConfiguration,
@@ -104,7 +106,7 @@ class RdvController extends Controller
         //$rdv->setDateDebut(new DateTime($form['m_rdv[dateDebut]']->getData()));
         // $rdv->setDateFin(new DateTime($form['m_rdv[dateFin]']->getData()));
 
-        $editForm = $this->createForm('EvenementBundle\Form\MRdvType', $rdv);
+        $editForm = $this->createForm('EvenementBundle\Form\RdvType', $rdv);
         $editForm->handleRequest($request);
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $em = $this->getDoctrine()->getManager();

@@ -213,23 +213,23 @@ class RdvType extends \EvenementBundle\Entity\RdvType implements \Doctrine\ORM\P
     /**
      * {@inheritDoc}
      */
-    public function setDuree($duree)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setDuree', [$duree]);
-
-        return parent::setDuree($duree);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function getDuree()
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getDuree', []);
 
         return parent::getDuree();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setDuree($duree)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setDuree', [$duree]);
+
+        return parent::setDuree($duree);
     }
 
     /**

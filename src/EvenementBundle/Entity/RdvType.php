@@ -32,6 +32,7 @@ class RdvType
      * @ORM\OneToMany(targetEntity="Rdv", mappedBy="rdvType")
      */
     protected $rdvs;
+
     public function __construct()
     {
         $this->rdvs = new ArrayCollection();
@@ -45,9 +46,9 @@ class RdvType
     private $titre;
 
     /**
-     * @var int
+     * @var time
      *
-     * @ORM\Column(name="duree", type="integer")
+     * @ORM\Column(name="duree", type="time")
      */
     private $duree;
 
@@ -100,29 +101,8 @@ class RdvType
         return $this->titre;
     }
 
-    /**
-     * Set duree
-     *
-     * @param integer $duree
-     *
-     * @return RdvType
-     */
-    public function setDuree($duree)
-    {
-        $this->duree = $duree;
+   
 
-        return $this;
-    }
-
-    /**
-     * Get duree
-     *
-     * @return int
-     */
-    public function getDuree()
-    {
-        return $this->duree;
-    }
 
     /**
      * Set couleur
@@ -209,6 +189,54 @@ class RdvType
     public function __toString()
     {
         // TODO: Implement __toString() method.
-        return $this->titre.' ('.$this->duree.')';
+        return '';
+    }
+
+    /**
+     * Set duree
+     *
+     * @param integer $duree
+     *
+     * @return RdvType
+     */
+    public function setDuree($duree)
+    {
+        $this->duree = $duree;
+
+        return $this;
+    }
+
+    /**
+     * Get duree
+     *
+     * @return int
+     */
+    public function getDuree()
+    {
+        return $this->duree;
+    }
+
+    /**
+     * Set user
+     *
+     * @param \UsersBundle\Entity\User $user
+     *
+     * @return RdvType
+     */
+    public function setUser(\UsersBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \UsersBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
     }
 }

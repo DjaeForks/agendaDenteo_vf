@@ -29,6 +29,7 @@ drop:
     defaults: { _controller: EvenementBundle:Rdv:drop,id: 1,start: 2,startH: 3,end: 4,endH: 5}
     options:
         expose: true
+
 deleteRdv:
     path:     /deleted/{id}
     defaults: { _controller: EvenementBundle:Rdv:deleted,id: 1 }

@@ -33,7 +33,7 @@
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Duree :</label>
                         <div class="col-sm-2">
-                            {{ form_widget(form.duree, { 'attr': {'class': 'form-control select2 duree1'} }) }}
+                            {{ form_widget(form.duree, { 'attr': {'class': 'form-control  duree1'} }) }}
                         </div>
                     </div>
                     <div class="form-group">
@@ -82,8 +82,7 @@
                     <tr id="{{ item.id }}">
                         <td style="color: {{ item.couleur }};">{{ item.titre }}</td>
 
-
-                        <td>{{ item.duree }}</td>
+                        <td>{{ item.duree|date('H:i') }}</td>
                         <td>
                             <label class="tag label"
                                    style="background-color: {{ item.couleur }}; display : inline-block ; width:170px;">{{ item.couleur }}</label>

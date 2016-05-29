@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class MRdvType extends AbstractType
+class RdvType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -15,7 +15,6 @@ class MRdvType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('rdvType')
             ->add('patient')
             ->add('description')
             ->add('titre')
