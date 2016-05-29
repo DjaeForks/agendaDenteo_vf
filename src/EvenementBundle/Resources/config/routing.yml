@@ -30,6 +30,10 @@ drop:
     options:
         expose: true
 
+resize_rdv:
+    path:     /resize/{id}/{end}/{endH}
+    defaults: { _controller: EvenementBundle:Rdv:resize,id: 1,end: 2,endH: 3}
+
 deleteRdv:
     path:     /deleted/{id}
     defaults: { _controller: EvenementBundle:Rdv:deleted,id: 1 }

@@ -174,17 +174,19 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'EvenementBundle\\Controller\\RdvController::allRdvsAction',  '_route' => 'allRdvs',);
         }
 
-        if (0 === strpos($pathinfo, '/d')) {
-            // drop
-            if (0 === strpos($pathinfo, '/drop') && preg_match('#^/drop(?:/(?P<id>[^/]++)(?:/(?P<start>[^/]++)(?:/(?P<startH>[^/]++)(?:/(?P<end>[^/]++)(?:/(?P<endH>[^/]++))?)?)?)?)?$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'drop')), array (  '_controller' => 'EvenementBundle\\Controller\\RdvController::dropAction',  'id' => 1,  'start' => 2,  'startH' => 3,  'end' => 4,  'endH' => 5,));
-            }
+        // drop
+        if (0 === strpos($pathinfo, '/drop') && preg_match('#^/drop(?:/(?P<id>[^/]++)(?:/(?P<start>[^/]++)(?:/(?P<startH>[^/]++)(?:/(?P<end>[^/]++)(?:/(?P<endH>[^/]++))?)?)?)?)?$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'drop')), array (  '_controller' => 'EvenementBundle\\Controller\\RdvController::dropAction',  'id' => 1,  'start' => 2,  'startH' => 3,  'end' => 4,  'endH' => 5,));
+        }
 
-            // deleteRdv
-            if (0 === strpos($pathinfo, '/deleted') && preg_match('#^/deleted(?:/(?P<id>[^/]++))?$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'deleteRdv')), array (  '_controller' => 'EvenementBundle\\Controller\\RdvController::deletedAction',  'id' => 1,));
-            }
+        // resize_rdv
+        if (0 === strpos($pathinfo, '/resize') && preg_match('#^/resize(?:/(?P<id>[^/]++)(?:/(?P<end>[^/]++)(?:/(?P<endH>[^/]++))?)?)?$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'resize_rdv')), array (  '_controller' => 'EvenementBundle\\Controller\\RdvController::resizeAction',  'id' => 1,  'end' => 2,  'endH' => 3,));
+        }
 
+        // deleteRdv
+        if (0 === strpos($pathinfo, '/deleted') && preg_match('#^/deleted(?:/(?P<id>[^/]++))?$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'deleteRdv')), array (  '_controller' => 'EvenementBundle\\Controller\\RdvController::deletedAction',  'id' => 1,));
         }
 
         // selectRdv

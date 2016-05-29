@@ -17,6 +17,42 @@
             z-index: 3;
 
         }
+
+        .modal {
+            text-align: center;
+            padding: 0 !important;
+
+        }
+
+        .modal:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+            margin-right: -4px; /* Adjusts for spacing */
+            background-color: green;
+
+        }
+
+        .modal-dialog {
+            display: inline-block;
+            text-align: left;
+            vertical-align: middle;
+            background-color: #444444;
+
+        }
+
+
+
+        .modal-title {
+            color: black;
+            font-family: "Brush Script MT";
+            font-size: 30px;
+  }
+
+        .modal-header {
+            background-color: #3c8dbc;
+        }
     </style>
 {% endblock %}
 {% block content %}
@@ -113,17 +149,17 @@
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                 aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                    <h4 class="modal-title" id="myModalLabel">Infos Rendez-vous</h4>
                 </div>
                 <div class="modal-body">
                     <p id="details"></p>
-                    <button class="btn btn-primary" id="modalModifier" data-dismiss="modal">Modifier</button>
 
-                    <button class="btn btn-primary" id="supprimerModal" data-dismiss="modal">Supprimer</button>
                 </div>
 
                 <div class="modal-footer">
-
+                    <button class="btn btn-success" id="modalModifier" data-dismiss="modal">Modifier</button>
+                    <button  class="btn btn-danger" id="supprimerModal" data-dismiss="modal">Supprimer</button>
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Fermer</button>
                 </div>
             </div>
         </div>
@@ -138,8 +174,10 @@
                     <p id="detailsD"></p>
                     <form>
                         <input type="text" placeholder="Titre" class="form-control input-sm"><br/>
-                        <input type="text" placeholder="Couleur" class="form-control input-sm" ><br/>
-                        <button type="submit" class="btn btn-primary" id="addDelimiteur" data-dismiss="modal">Nouveau Délimiteur</button>
+                        <input type="text" placeholder="Couleur" class="form-control input-sm"><br/>
+                        <button type="submit" class="btn btn-primary" id="addDelimiteur" data-dismiss="modal">Nouveau
+                            Délimiteur
+                        </button>
                         <button class="btn btn-primary" id="supprimerDelimiteur" data-dismiss="modal">Fermer</button>
                     </form>
                 </div>
@@ -208,6 +246,7 @@
 
 
                 {{ form_end(form) }}
+
                 {{ form_start(editForm,{'attr': {'id':'editRdv'} }) }}
                 <div class="row">
                     <div class='col-sm-6 col-md-offset-3 form-group'>
@@ -218,6 +257,9 @@
 
                         <label>Description</label>
                         {{ form_widget(editForm.description,{'attr': {'class':'form-control input-sm'} }) }}<br/>
+
+                        <label>Patient</label>
+                        {{ form_widget(editForm.patient,{'attr': {'class':'form-control input-sm' } }) }}
 
 
                         <button type="submit" id="btnModif" class="btn btn-warning">Modifier</button>
@@ -294,15 +336,15 @@
                 }
             }
 
-            function updateRdvDuration(event){
+            function updateRdvDuration(event) {
                 var duree = durationAsMomentObject($('#mySelect option:selected').attr('data-duree'));
                 var start = durationAsMomentObject($('#startMinutes').text());
                 start.add(duree);
                 var a = $('#rdv_dateDebut').val().split(' ');
-                $('#rdv_dateFin').val(a[0]+' '+start.hours() + ':' + start.minutes());
+                $('#rdv_dateFin').val(a[0] + ' ' + start.hours() + ':' + start.minutes());
             }
 
-            $('#mySelect').change(function(){
+            $('#mySelect').change(function () {
                 updateRdvDuration();
             })
 
@@ -321,7 +363,7 @@
                 }
                 $('#detailsD').html('L\'intervalle que vous avez choisi est: ' + '<br/>' +
                         'Du: ' + start + '<br/>' +
-                        'A: ' +  end + '<br/>');
+                        'A: ' + end + '<br/>');
                 $('#addDelimiteur').click(function () {
 
                     $.ajax({
@@ -396,7 +438,13 @@
 
                         $.ajax({
                             type: 'get',
-                            url: Routing.generate('drop', {id: event.id, start: start, startH: startH, end: end ,endH: endH}),
+                            url: Routing.generate('drop', {
+                                id: event.id,
+                                start: start,
+                                startH: startH,
+                                end: end,
+                                endH: endH
+                            }),
                             success: function (data) {
                                 $.growl({title: "Success", message: "Votre Rdv a été Déplacer avec success!"});
                                 $('#calendar').fullCalendar('refrechEvents');
@@ -465,9 +513,9 @@
                 //les jours du calendrier
 
                 hiddenDays: [
-                {% for item in myConfiguration.daysSelected %}
-                    {{ item }}{{ loop.last ? '' : ','  }}
-                {% endfor %}
+                    {% for item in myConfiguration.daysSelected %}
+                    {{ item }}{{ loop.last ? '' : ',' }}
+                    {% endfor %}
 
                 ],
 
@@ -600,6 +648,34 @@
                 select: selectComplete,
                 selectable: true,
                 selectHelper: true,
+                eventResize: function (event, delta, revertFunc, jsEvent, ui, view) {
+
+                    $.confirm({
+                        title: 'Confirmation',
+                        theme: 'black',
+                        confirmButton: 'Modifier',
+                        cancelButton: 'Annuler',
+                        content: 'Vous voulez vraiment modifier la durre de ce Rendez-vous ?',
+                        confirm: function () {
+                            var now = moment();
+                            var end = moment(event.end).format('DD-MM-YYYY');
+                            var endH = moment(event.end).format('HH:mm');
+                            $.ajax({
+                                type: 'get',
+                                //url: Routing.generate('resize_rdv', {id: event.id, end: end ,endH: endH}),
+                                url: 'http://localhost/denteo2/web/app_dev.php/resize/' + event.id + '/' + end + '/' + endH,
+                                success: function (data) {
+                                    $.growl({title: "Success", message: "la duree est bien Modifier "});
+                                }
+                            })
+                        },
+                        cancel: function () {
+                            revertFunc();
+                        }
+                    });
+
+
+                }
             });
 
             /* ADDING EVENTS */

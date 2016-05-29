@@ -101,6 +101,18 @@ class RdvController extends Controller
         return new Response('OK');
     }
 
+
+    public function resizeAction($id, $end, $endH)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $rdv = $em->getRepository('EvenementBundle:Rdv')->find($id);
+        $rdv->setDateFin(new DateTime($end . ' ' . $endH));
+        $em->flush();
+        return new Response('OK');
+    }
+
+
+
     public function editerAction($id, Request $request)
     {
 
