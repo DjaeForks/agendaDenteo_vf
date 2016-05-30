@@ -24,20 +24,20 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_8f7ed433f88aeda5bd8221daa0036aa494d87809538100f66dd76dd9828e62d8 = $this->env->getExtension("native_profiler");
-        $__internal_8f7ed433f88aeda5bd8221daa0036aa494d87809538100f66dd76dd9828e62d8->enter($__internal_8f7ed433f88aeda5bd8221daa0036aa494d87809538100f66dd76dd9828e62d8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "EvenementBundle:Default:Agenda.html.twig"));
+        $__internal_e56992f86facbc920b44e1a83997b264dccd94c1101783db8d67a6f4b2395fc7 = $this->env->getExtension("native_profiler");
+        $__internal_e56992f86facbc920b44e1a83997b264dccd94c1101783db8d67a6f4b2395fc7->enter($__internal_e56992f86facbc920b44e1a83997b264dccd94c1101783db8d67a6f4b2395fc7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "EvenementBundle:Default:Agenda.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_8f7ed433f88aeda5bd8221daa0036aa494d87809538100f66dd76dd9828e62d8->leave($__internal_8f7ed433f88aeda5bd8221daa0036aa494d87809538100f66dd76dd9828e62d8_prof);
+        $__internal_e56992f86facbc920b44e1a83997b264dccd94c1101783db8d67a6f4b2395fc7->leave($__internal_e56992f86facbc920b44e1a83997b264dccd94c1101783db8d67a6f4b2395fc7_prof);
 
     }
 
     // line 2
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_c4b25288afe7d42cd3ac44a9006a167bc2f27ca023ac997e3e93191137500ba3 = $this->env->getExtension("native_profiler");
-        $__internal_c4b25288afe7d42cd3ac44a9006a167bc2f27ca023ac997e3e93191137500ba3->enter($__internal_c4b25288afe7d42cd3ac44a9006a167bc2f27ca023ac997e3e93191137500ba3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_1168b0a5b32d7f1aad48cac7f3afbab8f72880a92bdaaf5ac360bf3db8121358 = $this->env->getExtension("native_profiler");
+        $__internal_1168b0a5b32d7f1aad48cac7f3afbab8f72880a92bdaaf5ac360bf3db8121358->enter($__internal_1168b0a5b32d7f1aad48cac7f3afbab8f72880a92bdaaf5ac360bf3db8121358_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 3
         echo "    <link rel=\"stylesheet\" href=\"";
@@ -87,13 +87,11 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 
         }
 
-
-
         .modal-title {
             color: black;
             font-family: \"Brush Script MT\";
             font-size: 30px;
-  }
+        }
 
         .modal-header {
             background-color: #3c8dbc;
@@ -101,17 +99,17 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
     </style>
 ";
         
-        $__internal_c4b25288afe7d42cd3ac44a9006a167bc2f27ca023ac997e3e93191137500ba3->leave($__internal_c4b25288afe7d42cd3ac44a9006a167bc2f27ca023ac997e3e93191137500ba3_prof);
+        $__internal_1168b0a5b32d7f1aad48cac7f3afbab8f72880a92bdaaf5ac360bf3db8121358->leave($__internal_1168b0a5b32d7f1aad48cac7f3afbab8f72880a92bdaaf5ac360bf3db8121358_prof);
 
     }
 
-    // line 58
+    // line 56
     public function block_content($context, array $blocks = array())
     {
-        $__internal_77bfb74f30452d28d47954a18bf044b16ee61217d953dabbd9da33cda9c5f5b7 = $this->env->getExtension("native_profiler");
-        $__internal_77bfb74f30452d28d47954a18bf044b16ee61217d953dabbd9da33cda9c5f5b7->enter($__internal_77bfb74f30452d28d47954a18bf044b16ee61217d953dabbd9da33cda9c5f5b7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_2b735b491ef9d134427584173281a84ceb0f9db90a409d47d922410f893691ac = $this->env->getExtension("native_profiler");
+        $__internal_2b735b491ef9d134427584173281a84ceb0f9db90a409d47d922410f893691ac->enter($__internal_2b735b491ef9d134427584173281a84ceb0f9db90a409d47d922410f893691ac_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-        // line 59
+        // line 57
         echo "
     <!-- Content Header (Page header) -->
     <section class=\"content-header\">
@@ -183,7 +181,7 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
             <div class=\"col-md-9\">
                 <div id=\"loading\" class=\" \">
                     <span>   <img src=\"";
-        // line 129
+        // line 127
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("icons/hamid.gif"), "html", null, true);
         echo "\" width=\"25%\" height=\"25%\"/> </span>
                     <!--    <span class=\"lite-text-shadow\" >Chargement du calendrier</span> -->
@@ -202,7 +200,9 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
     </section><!-- /.content -->
     <!-- Control Sidebar -->
 
-    <div class=\"modal fade\" id=\"myModal\" tabindex=\"-1\" role=\"dialog\" data-toggle=\"modal\" aria-labelledby=\"myModalLabel\">
+    ";
+        // line 145
+        echo "    <div class=\"modal fade\" id=\"myModal\" tabindex=\"-1\" role=\"dialog\" data-toggle=\"modal\" aria-labelledby=\"myModalLabel\">
         <div class=\"modal-dialog\" role=\"document\">
             <div class=\"modal-content\">
                 <div class=\"modal-header\">
@@ -217,32 +217,84 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 
                 <div class=\"modal-footer\">
                     <button class=\"btn btn-success\" id=\"modalModifier\" data-dismiss=\"modal\">Modifier</button>
-                    <button  class=\"btn btn-danger\" id=\"supprimerModal\" data-dismiss=\"modal\">Supprimer</button>
+                    <button class=\"btn btn-danger\" id=\"supprimerModal\" data-dismiss=\"modal\">Supprimer</button>
                     <button type=\"button\" class=\"btn btn-default pull-left\" data-dismiss=\"modal\">Fermer</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class=\"modal fade\" id=\"modalDelimiteur\" tabindex=\"-1\" role=\"dialog\" data-toggle=\"modal\"
+    ";
+        // line 168
+        echo "    <div class=\"modal fade\" id=\"modalDelimiteur\" tabindex=\"-1\" role=\"dialog\" data-toggle=\"modal\"
          aria-labelledby=\"myModalLabel\">
         <div class=\"modal-dialog\" role=\"document\">
             <div class=\"modal-content\">
-
+                <div class=\"modal-header\">
+                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span
+                                aria-hidden=\"true\">&times;</span></button>
+                    <h4 class=\"modal-title\" id=\"myModalLabel\">Nouveau Delimiteur</h4>
+                </div>
                 <div class=\"modal-body\">
                     <p id=\"detailsD\"></p>
-                    <form>
-                        <input type=\"text\" placeholder=\"Titre\" class=\"form-control input-sm\"><br/>
-                        <input type=\"text\" placeholder=\"Couleur\" class=\"form-control input-sm\"><br/>
-                        <button type=\"submit\" class=\"btn btn-primary\" id=\"addDelimiteur\" data-dismiss=\"modal\">Nouveau
-                            Délimiteur
-                        </button>
-                        <button class=\"btn btn-primary\" id=\"supprimerDelimiteur\" data-dismiss=\"modal\">Fermer</button>
-                    </form>
+                        <div class=\"box box-primary\">
+                            <div class=\"box-header with-border\">
+                                <h3 class=\"box-title\">Infos Générals</h3>
+                            </div>
+                            <div class=\"box-body\">
+                                <div class=\"row\">
+                                    <div class=\"col-xs-2\">
+                                        <h5>Date Debut </h5>
+                                    </div>
+                                    <div class=\"col-xs-4\">
+                                        <input id=\"dateDebDel\" type=\"text\"  contenteditable=\"false\" class=\"form-control\">
+                                    </div>
+                                    <div class=\"col-xs-2\">
+                                        <h5>Date Fin  </h5>
+                                    </div>
+                                    <div class=\"col-xs-4\">
+                                        <input id=\"dateFinDel\" type=\"text\" contenteditable=\"false\" class=\"form-control\">
+                                    </div>
+                                </div>
+                                </br>
+                                <div class=\"row\">
+                                    <div class=\"col-xs-1\">
+                                        <h5>Titre </h5>
+                                    </div>
+                                    <div class=\"col-xs-5\">
+                                        <input id=\"titreDel\" type=\"text\"  contenteditable=\"false\" class=\"form-control\">
+                                    </div>
+                                    <div class=\"col-xs-1\">
+                                        <h5>Couleur </h5>
+                                    </div>
+                                    <div class=\"col-xs-4\">
+                                        <input id=\"couleurDel\" type=\"text\" contenteditable=\"false\" class=\"form-control\">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class=\"box box-primary\">
+                        <div class=\"box-header with-border\">
+                            <h3 class=\"box-title\">Plage de Periodicite</h3>
+                        </div>
+                        <div class=\"box-body\">
+                            <div class=\"row\">
+                                <div class=\"col-xs-3\">
+                                    <input type=\"text\" class=\"form-control\" >
+                                </div>
+                                <div class=\"col-xs-4\">
+                                    <input type=\"text\" class=\"form-control\" >
+                                </div>
+                                <div class=\"col-xs-5\">
+                                    <input type=\"text\" class=\"form-control\" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
                 <div class=\"modal-footer\">
-
+                    <button type=\"submit\" class=\"btn btn-info\" id=\"addDelimiteur\" data-dismiss=\"modal\">Ajouter</button>
+                    <button class=\"btn btn-default pull-left\" id=\"supprimerDelimiteur\" data-dismiss=\"modal\">Fermer</button>
                 </div>
             </div>
         </div>
@@ -250,17 +302,17 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 
 ";
         
-        $__internal_77bfb74f30452d28d47954a18bf044b16ee61217d953dabbd9da33cda9c5f5b7->leave($__internal_77bfb74f30452d28d47954a18bf044b16ee61217d953dabbd9da33cda9c5f5b7_prof);
+        $__internal_2b735b491ef9d134427584173281a84ceb0f9db90a409d47d922410f893691ac->leave($__internal_2b735b491ef9d134427584173281a84ceb0f9db90a409d47d922410f893691ac_prof);
 
     }
 
-    // line 193
+    // line 243
     public function block_rdvForm($context, array $blocks = array())
     {
-        $__internal_7b32e4ddf0c8239bad1ed1585b0f0b50e70972d183239c4ef400f0a0fe838015 = $this->env->getExtension("native_profiler");
-        $__internal_7b32e4ddf0c8239bad1ed1585b0f0b50e70972d183239c4ef400f0a0fe838015->enter($__internal_7b32e4ddf0c8239bad1ed1585b0f0b50e70972d183239c4ef400f0a0fe838015_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "rdvForm"));
+        $__internal_e57e23e304e08b3736b1cb649471c49770fbc923f0ec948d2a2ad67db40ffe7f = $this->env->getExtension("native_profiler");
+        $__internal_e57e23e304e08b3736b1cb649471c49770fbc923f0ec948d2a2ad67db40ffe7f->enter($__internal_e57e23e304e08b3736b1cb649471c49770fbc923f0ec948d2a2ad67db40ffe7f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "rdvForm"));
 
-        // line 194
+        // line 244
         echo "
     <div id=\"rootwizard\" class=\"col-md-12\">
         <div class=\"form-wizard-steps\">
@@ -277,7 +329,7 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
             <div class=\"tab-pane\" id=\"tab1\"><br>
                 <h4 class=\"semi-bold\">Step 1 - <span class=\"light\">Basic Information</span></h4>
                 ";
-        // line 209
+        // line 259
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start', array("attr" => array("id" => "addRdv")));
         echo "
                 <div class=\"row\">
@@ -286,11 +338,11 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
                         <select id=\"mySelect\" class=\"form-control input-sm\" name=\"rdvTtpee\">
                             <option vlaue=\"#\">--SELECT--</option>
                             ";
-        // line 215
+        // line 265
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["rdvTypes"]) ? $context["rdvTypes"] : $this->getContext($context, "rdvTypes")));
         foreach ($context['_seq'] as $context["_key"] => $context["rdv"]) {
-            // line 216
+            // line 266
             echo "                                <option value=\"";
             echo twig_escape_filter($this->env, $this->getAttribute($context["rdv"], "id", array()), "html", null, true);
             echo "\" data-duree=\"";
@@ -299,7 +351,7 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
             echo twig_escape_filter($this->env, $this->getAttribute($context["rdv"], "titre", array()), "html", null, true);
             echo "
                                     (";
-            // line 217
+            // line 267
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["rdv"], "duree", array()), "H:i"), "html", null, true);
             echo ")
                                 </option>
@@ -308,37 +360,37 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['rdv'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 220
+        // line 270
         echo "                        </select>
 
                         <label>Patient</label>
                         ";
-        // line 223
+        // line 273
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "patient", array()), 'widget', array("attr" => array("class" => "form-control input-sm")));
         echo "
                         <label>Date et Heure de Debut</label>
                         ";
-        // line 225
+        // line 275
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "dateDebut", array()), 'widget', array("attr" => array("class" => "form-control input-sm")));
         echo "
 
 
                         <label>Heure de Fin</label>
                         ";
-        // line 229
+        // line 279
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "dateFin", array()), 'widget', array("attr" => array("class" => "form-control input-sm")));
         echo "
 
 
                         <label>Titre</label>
                         ";
-        // line 233
+        // line 283
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "titre", array()), 'widget', array("attr" => array("class" => "form-control input-sm")));
         echo "
 
                         <label>Description</label>
                         ";
-        // line 236
+        // line 286
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "description", array()), 'widget', array("attr" => array("class" => "form-control input-sm")));
         echo "<br/>
 
@@ -353,12 +405,12 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 
 
                 ";
-        // line 248
+        // line 298
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
 
                 ";
-        // line 250
+        // line 300
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["editForm"]) ? $context["editForm"] : $this->getContext($context, "editForm")), 'form_start', array("attr" => array("id" => "editRdv")));
         echo "
                 <div class=\"row\">
@@ -367,19 +419,19 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 
                         <label>Titre</label>
                         ";
-        // line 256
+        // line 306
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["editForm"]) ? $context["editForm"] : $this->getContext($context, "editForm")), "titre", array()), 'widget', array("attr" => array("class" => "form-control input-sm")));
         echo "
 
                         <label>Description</label>
                         ";
-        // line 259
+        // line 309
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["editForm"]) ? $context["editForm"] : $this->getContext($context, "editForm")), "description", array()), 'widget', array("attr" => array("class" => "form-control input-sm")));
         echo "<br/>
 
                         <label>Patient</label>
                         ";
-        // line 262
+        // line 312
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["editForm"]) ? $context["editForm"] : $this->getContext($context, "editForm")), "patient", array()), 'widget', array("attr" => array("class" => "form-control input-sm")));
         echo "
 
@@ -392,7 +444,7 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 
 
                 ";
-        // line 272
+        // line 322
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["editForm"]) ? $context["editForm"] : $this->getContext($context, "editForm")), 'form_end');
         echo "
             </div>
@@ -408,49 +460,50 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 
 ";
         
-        $__internal_7b32e4ddf0c8239bad1ed1585b0f0b50e70972d183239c4ef400f0a0fe838015->leave($__internal_7b32e4ddf0c8239bad1ed1585b0f0b50e70972d183239c4ef400f0a0fe838015_prof);
+        $__internal_e57e23e304e08b3736b1cb649471c49770fbc923f0ec948d2a2ad67db40ffe7f->leave($__internal_e57e23e304e08b3736b1cb649471c49770fbc923f0ec948d2a2ad67db40ffe7f_prof);
 
     }
 
-    // line 286
+    // line 336
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_5bb68ebda12f9e0a716d5cb48a070f372be5587b6cfbbf33d7eac85a87f926d7 = $this->env->getExtension("native_profiler");
-        $__internal_5bb68ebda12f9e0a716d5cb48a070f372be5587b6cfbbf33d7eac85a87f926d7->enter($__internal_5bb68ebda12f9e0a716d5cb48a070f372be5587b6cfbbf33d7eac85a87f926d7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_3c25a2df0a2ae129bda7efddcd146c29f4a00b11453822bdcdd17b683064ff5a = $this->env->getExtension("native_profiler");
+        $__internal_3c25a2df0a2ae129bda7efddcd146c29f4a00b11453822bdcdd17b683064ff5a->enter($__internal_3c25a2df0a2ae129bda7efddcd146c29f4a00b11453822bdcdd17b683064ff5a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 287
+        // line 337
         echo "    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js\"></script>
     <script src=\"";
-        // line 288
+        // line 338
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("plugins/fullcalendar/fullcalendar.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 289
+        // line 339
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("JSCalander/lang/lang-all.js"), "html", null, true);
         echo "\"></script>
     <!-- date-range-picker -->
     <script src=\"https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js\"></script>
     <script src=\"";
-        // line 292
+        // line 342
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("plugins/daterangepicker/daterangepicker.js"), "html", null, true);
         echo "\"></script>
     <!-- bootstrap color picker -->
     <script src=\"";
-        // line 294
+        // line 344
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("plugins/colorpicker/bootstrap-colorpicker.min.js"), "html", null, true);
         echo "\"></script>
     <!-- bootstrap time picker -->
     <script src=\"";
-        // line 296
+        // line 346
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("plugins/timepicker/bootstrap-timepicker.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 297
+        // line 347
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("plugins/fullcalendar/lib/moment.min.js"), "html", null, true);
         echo "\"></script>
     <script>
         \$(function () {
 
+            \$('#couleurDel').colorpicker();
             \$('#btnSubmit').click(function () {
                 \$('form').submit(function () {
                     \$.ajax({
@@ -514,9 +567,8 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
                         && !\$('body').hasClass('control-sidebar-open')) {
                     \$('#modalDelimiteur').modal().show();
                 }
-                \$('#detailsD').html('L\\'intervalle que vous avez choisi est: ' + '<br/>' +
-                        'Du: ' + start + '<br/>' +
-                        'A: ' + end + '<br/>');
+                \$('#dateDebDel').val(start);
+                \$('#dateFinDel').val(end);
                 \$('#addDelimiteur').click(function () {
 
                     \$.ajax({
@@ -618,7 +670,7 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
                     \$('#loading').show();
                     timedFunction = window.setInterval(function () {
                         var newText = '  <span >   <img src=\"";
-        // line 467
+        // line 517
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("icons/hamid.gif"), "html", null, true);
         echo "\" width=\"25%\" height=\"25%\" /> </span> ';
                         \$('#loading span').replaceWith(newText);
@@ -661,7 +713,7 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
                 //weekends: false,
                 defaultView: 'agendaWeek',
                 events: '";
-        // line 507
+        // line 557
         echo $this->env->getExtension('routing')->getPath("load_events");
         echo "',
                 editable: true,
@@ -669,14 +721,14 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
                 lazyFetching: true,
                 //le premier jour de la semaine
                 firstDay: ";
-        // line 512
+        // line 562
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["myConfiguration"]) ? $context["myConfiguration"] : $this->getContext($context, "myConfiguration")), "firstDay", array()), "html", null, true);
         echo ",
                 //les jours du calendrier
 
                 hiddenDays: [
                     ";
-        // line 516
+        // line 566
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["myConfiguration"]) ? $context["myConfiguration"] : $this->getContext($context, "myConfiguration")), "daysSelected", array()));
         $context['loop'] = array(
@@ -693,7 +745,7 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 517
+            // line 567
             echo "                    ";
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo (($this->getAttribute($context["loop"], "last", array())) ? ("") : (","));
@@ -711,61 +763,61 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 519
+        // line 569
         echo "
                 ],
 
                 //weekNumbers:";
-        // line 522
+        // line 572
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["myConfiguration"]) ? $context["myConfiguration"] : $this->getContext($context, "myConfiguration")), "weeksNumber", array()), "html", null, true);
         echo " ,
                 //minTime: '";
-        // line 523
+        // line 573
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["myConfiguration"]) ? $context["myConfiguration"] : $this->getContext($context, "myConfiguration")), "dateDeb", array()), "h:i"), "html", null, true);
         echo "',
                 minTime: '08:00',
                 // maxTime: '";
-        // line 525
+        // line 575
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["myConfiguration"]) ? $context["myConfiguration"] : $this->getContext($context, "myConfiguration")), "dateFin", array()), "h:i"), "html", null, true);
         echo "',
                 maxTime: '18:00',
                 slotDuration: '00:";
-        // line 527
+        // line 577
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["myConfiguration"]) ? $context["myConfiguration"] : $this->getContext($context, "myConfiguration")), "creneau", array()), "html", null, true);
         echo ":00',
                 droppable: true, // this allows things to be dropped onto the calendar !!!
                 //aspectRatio: 2,
                 ";
-        // line 530
+        // line 580
         if ($this->getAttribute((isset($context["myConfiguration"]) ? $context["myConfiguration"] : $this->getContext($context, "myConfiguration")), "weeksNumber", array())) {
-            // line 531
+            // line 581
             echo "                weekNumbers: true,
                 ";
         } else {
-            // line 533
+            // line 583
             echo "                weekNumbers: false,
                 ";
         }
-        // line 535
+        // line 585
         echo "                eventTextColor: 'black',
                 //eventBackgroundColor: '#00c0ef',
                 ";
-        // line 537
+        // line 587
         if (($this->getAttribute((isset($context["myConfiguration"]) ? $context["myConfiguration"] : $this->getContext($context, "myConfiguration")), "lang", array()) == "anglais")) {
-            // line 538
+            // line 588
             echo "                lang: 'en',
                 ";
-        } elseif (($this->getAttribute(        // line 539
+        } elseif (($this->getAttribute(        // line 589
 (isset($context["myConfiguration"]) ? $context["myConfiguration"] : $this->getContext($context, "myConfiguration")), "lang", array()) == "francais")) {
-            // line 540
+            // line 590
             echo "                lang: 'fr',
                 ";
         } else {
-            // line 542
+            // line 592
             echo "                lang: 'ar',
                 ";
         }
-        // line 544
+        // line 594
         echo "                columnFormat: 'dddd D/M',
                 weekNumberTitle: 'week N°',
                 dayClick: function (date, jsEvent, view) {
@@ -948,7 +1000,7 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 
 ";
         
-        $__internal_5bb68ebda12f9e0a716d5cb48a070f372be5587b6cfbbf33d7eac85a87f926d7->leave($__internal_5bb68ebda12f9e0a716d5cb48a070f372be5587b6cfbbf33d7eac85a87f926d7_prof);
+        $__internal_3c25a2df0a2ae129bda7efddcd146c29f4a00b11453822bdcdd17b683064ff5a->leave($__internal_3c25a2df0a2ae129bda7efddcd146c29f4a00b11453822bdcdd17b683064ff5a_prof);
 
     }
 
@@ -964,7 +1016,7 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 
     public function getDebugInfo()
     {
-        return array (  769 => 544,  765 => 542,  761 => 540,  759 => 539,  756 => 538,  754 => 537,  750 => 535,  746 => 533,  742 => 531,  740 => 530,  734 => 527,  729 => 525,  724 => 523,  720 => 522,  715 => 519,  697 => 517,  680 => 516,  673 => 512,  665 => 507,  622 => 467,  449 => 297,  445 => 296,  440 => 294,  435 => 292,  429 => 289,  425 => 288,  422 => 287,  416 => 286,  396 => 272,  383 => 262,  377 => 259,  371 => 256,  362 => 250,  357 => 248,  342 => 236,  336 => 233,  329 => 229,  322 => 225,  317 => 223,  312 => 220,  303 => 217,  294 => 216,  290 => 215,  281 => 209,  264 => 194,  258 => 193,  187 => 129,  115 => 59,  109 => 58,  48 => 4,  43 => 3,  37 => 2,  11 => 1,);
+        return array (  821 => 594,  817 => 592,  813 => 590,  811 => 589,  808 => 588,  806 => 587,  802 => 585,  798 => 583,  794 => 581,  792 => 580,  786 => 577,  781 => 575,  776 => 573,  772 => 572,  767 => 569,  749 => 567,  732 => 566,  725 => 562,  717 => 557,  674 => 517,  501 => 347,  497 => 346,  492 => 344,  487 => 342,  481 => 339,  477 => 338,  474 => 337,  468 => 336,  448 => 322,  435 => 312,  429 => 309,  423 => 306,  414 => 300,  409 => 298,  394 => 286,  388 => 283,  381 => 279,  374 => 275,  369 => 273,  364 => 270,  355 => 267,  346 => 266,  342 => 265,  333 => 259,  316 => 244,  310 => 243,  229 => 168,  205 => 145,  185 => 127,  113 => 57,  107 => 56,  48 => 4,  43 => 3,  37 => 2,  11 => 1,);
     }
 }
 /* {% extends '::layout.html.twig' %}*/
@@ -1011,13 +1063,11 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 /* */
 /*         }*/
 /* */
-/* */
-/* */
 /*         .modal-title {*/
 /*             color: black;*/
 /*             font-family: "Brush Script MT";*/
 /*             font-size: 30px;*/
-/*   }*/
+/*         }*/
 /* */
 /*         .modal-header {*/
 /*             background-color: #3c8dbc;*/
@@ -1112,6 +1162,7 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 /*     </section><!-- /.content -->*/
 /*     <!-- Control Sidebar -->*/
 /* */
+/*     {# modal day click#}*/
 /*     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" data-toggle="modal" aria-labelledby="myModalLabel">*/
 /*         <div class="modal-dialog" role="document">*/
 /*             <div class="modal-content">*/
@@ -1127,32 +1178,83 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 /* */
 /*                 <div class="modal-footer">*/
 /*                     <button class="btn btn-success" id="modalModifier" data-dismiss="modal">Modifier</button>*/
-/*                     <button  class="btn btn-danger" id="supprimerModal" data-dismiss="modal">Supprimer</button>*/
+/*                     <button class="btn btn-danger" id="supprimerModal" data-dismiss="modal">Supprimer</button>*/
 /*                     <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Fermer</button>*/
 /*                 </div>*/
 /*             </div>*/
 /*         </div>*/
 /*     </div>*/
 /* */
+/*     {# modal delimiteur#}*/
 /*     <div class="modal fade" id="modalDelimiteur" tabindex="-1" role="dialog" data-toggle="modal"*/
 /*          aria-labelledby="myModalLabel">*/
 /*         <div class="modal-dialog" role="document">*/
 /*             <div class="modal-content">*/
-/* */
+/*                 <div class="modal-header">*/
+/*                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span*/
+/*                                 aria-hidden="true">&times;</span></button>*/
+/*                     <h4 class="modal-title" id="myModalLabel">Nouveau Delimiteur</h4>*/
+/*                 </div>*/
 /*                 <div class="modal-body">*/
 /*                     <p id="detailsD"></p>*/
-/*                     <form>*/
-/*                         <input type="text" placeholder="Titre" class="form-control input-sm"><br/>*/
-/*                         <input type="text" placeholder="Couleur" class="form-control input-sm"><br/>*/
-/*                         <button type="submit" class="btn btn-primary" id="addDelimiteur" data-dismiss="modal">Nouveau*/
-/*                             Délimiteur*/
-/*                         </button>*/
-/*                         <button class="btn btn-primary" id="supprimerDelimiteur" data-dismiss="modal">Fermer</button>*/
-/*                     </form>*/
+/*                         <div class="box box-primary">*/
+/*                             <div class="box-header with-border">*/
+/*                                 <h3 class="box-title">Infos Générals</h3>*/
+/*                             </div>*/
+/*                             <div class="box-body">*/
+/*                                 <div class="row">*/
+/*                                     <div class="col-xs-2">*/
+/*                                         <h5>Date Debut </h5>*/
+/*                                     </div>*/
+/*                                     <div class="col-xs-4">*/
+/*                                         <input id="dateDebDel" type="text"  contenteditable="false" class="form-control">*/
+/*                                     </div>*/
+/*                                     <div class="col-xs-2">*/
+/*                                         <h5>Date Fin  </h5>*/
+/*                                     </div>*/
+/*                                     <div class="col-xs-4">*/
+/*                                         <input id="dateFinDel" type="text" contenteditable="false" class="form-control">*/
+/*                                     </div>*/
+/*                                 </div>*/
+/*                                 </br>*/
+/*                                 <div class="row">*/
+/*                                     <div class="col-xs-1">*/
+/*                                         <h5>Titre </h5>*/
+/*                                     </div>*/
+/*                                     <div class="col-xs-5">*/
+/*                                         <input id="titreDel" type="text"  contenteditable="false" class="form-control">*/
+/*                                     </div>*/
+/*                                     <div class="col-xs-1">*/
+/*                                         <h5>Couleur </h5>*/
+/*                                     </div>*/
+/*                                     <div class="col-xs-4">*/
+/*                                         <input id="couleurDel" type="text" contenteditable="false" class="form-control">*/
+/*                                     </div>*/
+/*                                 </div>*/
+/*                             </div>*/
+/*                         </div>*/
+/*                     <div class="box box-primary">*/
+/*                         <div class="box-header with-border">*/
+/*                             <h3 class="box-title">Plage de Periodicite</h3>*/
+/*                         </div>*/
+/*                         <div class="box-body">*/
+/*                             <div class="row">*/
+/*                                 <div class="col-xs-3">*/
+/*                                     <input type="text" class="form-control" >*/
+/*                                 </div>*/
+/*                                 <div class="col-xs-4">*/
+/*                                     <input type="text" class="form-control" >*/
+/*                                 </div>*/
+/*                                 <div class="col-xs-5">*/
+/*                                     <input type="text" class="form-control" >*/
+/*                                 </div>*/
+/*                             </div>*/
+/*                         </div>*/
+/*                     </div>*/
 /*                 </div>*/
-/* */
 /*                 <div class="modal-footer">*/
-/* */
+/*                     <button type="submit" class="btn btn-info" id="addDelimiteur" data-dismiss="modal">Ajouter</button>*/
+/*                     <button class="btn btn-default pull-left" id="supprimerDelimiteur" data-dismiss="modal">Fermer</button>*/
 /*                 </div>*/
 /*             </div>*/
 /*         </div>*/
@@ -1267,6 +1369,7 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 /*     <script>*/
 /*         $(function () {*/
 /* */
+/*             $('#couleurDel').colorpicker();*/
 /*             $('#btnSubmit').click(function () {*/
 /*                 $('form').submit(function () {*/
 /*                     $.ajax({*/
@@ -1330,9 +1433,8 @@ class __TwigTemplate_b55232a60146c13cd1b8f44278dc07d7cec8352d6d32893872c07762f07
 /*                         && !$('body').hasClass('control-sidebar-open')) {*/
 /*                     $('#modalDelimiteur').modal().show();*/
 /*                 }*/
-/*                 $('#detailsD').html('L\'intervalle que vous avez choisi est: ' + '<br/>' +*/
-/*                         'Du: ' + start + '<br/>' +*/
-/*                         'A: ' + end + '<br/>');*/
+/*                 $('#dateDebDel').val(start);*/
+/*                 $('#dateFinDel').val(end);*/
 /*                 $('#addDelimiteur').click(function () {*/
 /* */
 /*                     $.ajax({*/

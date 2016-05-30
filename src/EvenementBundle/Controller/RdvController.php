@@ -2,6 +2,7 @@
 
 namespace EvenementBundle\Controller;
 
+use EvenementBundle\Entity\Delimiteur;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
@@ -71,6 +72,8 @@ class RdvController extends Controller
         $myConfiguration = $em->getRepository('EvenementBundle:Configuration')->find($idConfiguration);
 
         $editForm = $this->createForm('EvenementBundle\Form\RdvType', $rdv);
+
+
         $rdvTypes = $em->getRepository('EvenementBundle:RdvType')->findAll();
 
 

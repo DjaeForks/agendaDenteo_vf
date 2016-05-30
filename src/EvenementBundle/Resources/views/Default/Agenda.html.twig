@@ -42,13 +42,11 @@
 
         }
 
-
-
         .modal-title {
             color: black;
             font-family: "Brush Script MT";
             font-size: 30px;
-  }
+        }
 
         .modal-header {
             background-color: #3c8dbc;
@@ -143,6 +141,7 @@
     </section><!-- /.content -->
     <!-- Control Sidebar -->
 
+    {# modal day click#}
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" data-toggle="modal" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -158,32 +157,83 @@
 
                 <div class="modal-footer">
                     <button class="btn btn-success" id="modalModifier" data-dismiss="modal">Modifier</button>
-                    <button  class="btn btn-danger" id="supprimerModal" data-dismiss="modal">Supprimer</button>
+                    <button class="btn btn-danger" id="supprimerModal" data-dismiss="modal">Supprimer</button>
                     <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Fermer</button>
                 </div>
             </div>
         </div>
     </div>
 
+    {# modal delimiteur#}
     <div class="modal fade" id="modalDelimiteur" tabindex="-1" role="dialog" data-toggle="modal"
          aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Nouveau Delimiteur</h4>
+                </div>
                 <div class="modal-body">
                     <p id="detailsD"></p>
-                    <form>
-                        <input type="text" placeholder="Titre" class="form-control input-sm"><br/>
-                        <input type="text" placeholder="Couleur" class="form-control input-sm"><br/>
-                        <button type="submit" class="btn btn-primary" id="addDelimiteur" data-dismiss="modal">Nouveau
-                            Délimiteur
-                        </button>
-                        <button class="btn btn-primary" id="supprimerDelimiteur" data-dismiss="modal">Fermer</button>
-                    </form>
+                        <div class="box box-primary">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Infos Générals</h3>
+                            </div>
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-xs-2">
+                                        <h5>Date Debut </h5>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <input id="dateDebDel" type="text"  contenteditable="false" class="form-control">
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <h5>Date Fin  </h5>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <input id="dateFinDel" type="text" contenteditable="false" class="form-control">
+                                    </div>
+                                </div>
+                                </br>
+                                <div class="row">
+                                    <div class="col-xs-1">
+                                        <h5>Titre </h5>
+                                    </div>
+                                    <div class="col-xs-5">
+                                        <input id="titreDel" type="text"  contenteditable="false" class="form-control">
+                                    </div>
+                                    <div class="col-xs-1">
+                                        <h5>Couleur </h5>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <input id="couleurDel" type="text" contenteditable="false" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Plage de Periodicite</h3>
+                        </div>
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <input type="text" class="form-control" >
+                                </div>
+                                <div class="col-xs-4">
+                                    <input type="text" class="form-control" >
+                                </div>
+                                <div class="col-xs-5">
+                                    <input type="text" class="form-control" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
                 <div class="modal-footer">
-
+                    <button type="submit" class="btn btn-info" id="addDelimiteur" data-dismiss="modal">Ajouter</button>
+                    <button class="btn btn-default pull-left" id="supprimerDelimiteur" data-dismiss="modal">Fermer</button>
                 </div>
             </div>
         </div>
@@ -298,6 +348,7 @@
     <script>
         $(function () {
 
+            $('#couleurDel').colorpicker();
             $('#btnSubmit').click(function () {
                 $('form').submit(function () {
                     $.ajax({
@@ -361,9 +412,8 @@
                         && !$('body').hasClass('control-sidebar-open')) {
                     $('#modalDelimiteur').modal().show();
                 }
-                $('#detailsD').html('L\'intervalle que vous avez choisi est: ' + '<br/>' +
-                        'Du: ' + start + '<br/>' +
-                        'A: ' + end + '<br/>');
+                $('#dateDebDel').val(start);
+                $('#dateFinDel').val(end);
                 $('#addDelimiteur').click(function () {
 
                     $.ajax({
