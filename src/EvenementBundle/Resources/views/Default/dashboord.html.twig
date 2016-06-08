@@ -1,0 +1,192 @@
+{% extends '::layout.html.twig' %}
+
+
+
+    {% block stylesheets %}
+
+        <link href="{{ asset('assetsWebArch/plugins/pace/pace-theme-flash.css') }}" rel="stylesheet" type="text/css"
+              media="screen"/>
+        <link href="{{ asset('assetsWebArch/plugins/gritter/css/jquery.gritter.css') }}" rel="stylesheet"
+              type="text/css"/>
+        <link rel="stylesheet" href="{{ asset('assetsWebArch/plugins/jquery-ricksaw-chart/css/rickshaw.css') }}"
+              type="text/css" media="screen">
+        <link rel="stylesheet" href="{{ asset('assetsWebArch/plugins/jquery-morris-chart/css/morris.css') }}"
+              type="text/css" media="screen">
+        <link href="{{ asset('assetsWebArch/plugins/jquery-jvectormap/css/jquery-jvectormap-1.2.2.css') }}"
+              rel="stylesheet" type="text/css" media="screen"/>
+        <!-- END PLUGIN CSS -->
+        <!-- BEGIN CORE CSS FRAMEWsORK -->
+        <link href="{{ asset('assetsWebArch/plugins/boostrapv3/css/bootstrap.min.css') }}" rel="stylesheet"
+              type="text/css"/>
+        <link href="{{ asset('assetsWebArch/plugins/boostrapv3/css/bootstrap-theme.min.css') }}" rel="stylesheet"
+              type="text/css"/>
+        <link href="{{ asset('assetsWebArch/plugins/font-awesome/css/font-awesome.css') }}" rel="stylesheet"
+              type="text/css"/>
+        <link href="{{ asset('assetsWebArch/css/animate.min.css') }}" rel="stylesheet" type="text/css"/>
+        <link href="{{ asset('assetsWebArch/plugins/jquery-scrollbar/jquery.scrollbar.css') }}" rel="stylesheet"
+              type="text/css"/>
+        <!-- END CORE CSS FRAMEWORK -->
+
+        <!-- BEGIN CSS TEMPLATE -->
+        <link href="{{ asset('assetsWebArch/css/style.css') }}" rel="stylesheet" type="text/css"/>
+        <link href="{{ asset('assetsWebArch/css/responsive.css') }}" rel="stylesheet" type="text/css"/>
+        <link href="{{ asset('assetsWebArch/css/custom-icon-set.css') }}" rel="stylesheet" type="text/css"/>
+    {% endblock %}
+{% block content %}
+
+    <section class="content-header">
+        <h1>
+            Dashboard
+            <small>Control panel</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Dashboard</li>
+        </ol>
+    </section>
+    </br></br>
+
+    <div class="col-md-12">
+        <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-aqua">
+                <div class="inner">
+                    <h3>150</h3>
+                    <p>les Rendez-vous d'aujourd'hui</p>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-bag"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div><!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-green">
+                <div class="inner">
+                    <h3>53</h3>
+                    <p>les Rendez-vous Passer</p>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div><!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-yellow">
+                <div class="inner">
+                    <h3>44</h3>
+                    <p>les Rendez-vous Restés</p>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-person-add"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div><!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-red">
+                <div class="inner">
+                    <h3>65</h3>
+                    <p>les Rendez-vous annulés</p>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-pie-graph"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div><!-- ./col -->
+    </div>
+
+    {% block patient %}
+
+        <div   class="col-md-10 col-sm-10">
+            <div class="tiles white">
+                <div  class="tiles-body">
+                    <div class="tiles-title"> Etat du Salle d'Attente</div>
+                    <br>
+                    {% for patient in patients %}
+                        <div class="notification-messages info">
+                            <div class="user-profile"><img src="{{ asset('assetsWebArch/img/profiles/c.jpg') }}" alt=""
+                                                           data-src="{{ asset('assetsWebArch/img/profiles/c.jpg') }}"
+                                                           data-src-retina="{{ asset('assetsWebArch/img/profiles/c2x.jpg') }}" width="35" height="35">
+                            </div>
+                            <div class="message-wrapper">
+                                <div class="heading"> {{ patient.nom }}{{ patient.prenom }}</div>
+                                <div class="">
+                                    <strong>Tel : </strong>{{ patient.telMobile }}
+
+
+                                    <strong>Email : </strong> {{ patient.email }}
+                                </div>
+                            </div>
+                            <div class="date pull-right">
+                                hello
+                            </div>
+                            <div class="clearfix">
+                                <div class="row">
+                                    <input   onclick="sendMail('fatihaabenaliaa@gmail.com')" class="btn  btn-success btn-xs" type="button"   value="send Mail"/>
+                                    <input class="btn  btn-success btn-xs" type="button"   value="send Sms"/>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                    {# <div class="notification-messages success">
+                        <div class="user-profile"><img src="{{ asset('assetsWebArch/img/profiles/h.jpg') }}" alt=""
+                                                       data-src="{{ asset('assetsWebArch/img/profiles/h.jpg') }}"
+                                                       data-src-retina="{{ asset('assetsWebArch/img/profiles/h2x.jpg') }}" width="35" height="35">
+                        </div>
+                        <div class="message-wrapper">
+                            <div class="heading"> You have've got 150 messages</div>
+                            <div class="description"> 150 newly unread messages in your inbox</div>
+                        </div>
+                        <div class="date pull-right"> Yesterday</div>
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <div class="notification-messages danger">
+                        <div class="iconholder"><i class="icon-warning-sign"></i></div>
+                        <div class="message-wrapper">
+                            <div class="heading"> Server load limited</div>
+                            <div class="description"> Database server has reached its daily capicity</div>
+                        </div>
+                        <div class="date pull-right"> Yesterday</div>
+                        <div class="clearfix"></div>
+                    </div>#}
+
+                </div>
+            </div>
+
+        </div>
+
+    {% endblock  %}
+
+
+
+{% endblock %}
+
+{% block javascripts %}
+
+    <script>
+
+        function sendMail(mail){
+            $.ajax({
+                type: 'get',
+                //url: Routing.generate('addDel', {start: start, end: end}),
+                url: 'http://localhost/denteo2/web/app_dev.php/testMailler/' + mail,
+                success: function (data) {
+
+                    console.log('sendMailler : done');
+                    $.growl({title: "Success", message: "Mailer envoyer avec succes "});
+                }
+            })
+
+        }
+    </script>
+{% endblock %}

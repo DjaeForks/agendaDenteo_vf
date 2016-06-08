@@ -105,6 +105,77 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // command_homepage
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'command_homepage');
+            }
+
+            return array (  '_controller' => 'command\\commandBundle\\Controller\\DefaultController::indexAction',  '_route' => 'command_homepage',);
+        }
+
+        if (0 === strpos($pathinfo, '/patient')) {
+            // patient_index
+            if (rtrim($pathinfo, '/') === '/patient') {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_patient_index;
+                }
+
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'patient_index');
+                }
+
+                return array (  '_controller' => 'PatientBundle\\Controller\\PatientController::indexAction',  '_route' => 'patient_index',);
+            }
+            not_patient_index:
+
+            // patient_show
+            if (preg_match('#^/patient/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_patient_show;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'patient_show')), array (  '_controller' => 'PatientBundle\\Controller\\PatientController::showAction',));
+            }
+            not_patient_show:
+
+            // patient_new
+            if ($pathinfo === '/patient/new') {
+                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                    goto not_patient_new;
+                }
+
+                return array (  '_controller' => 'PatientBundle\\Controller\\PatientController::newAction',  '_route' => 'patient_new',);
+            }
+            not_patient_new:
+
+            // patient_edit
+            if (preg_match('#^/patient/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                    goto not_patient_edit;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'patient_edit')), array (  '_controller' => 'PatientBundle\\Controller\\PatientController::editAction',));
+            }
+            not_patient_edit:
+
+            // patient_delete
+            if (preg_match('#^/patient/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                if ($this->context->getMethod() != 'DELETE') {
+                    $allow[] = 'DELETE';
+                    goto not_patient_delete;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'patient_delete')), array (  '_controller' => 'PatientBundle\\Controller\\PatientController::deleteAction',));
+            }
+            not_patient_delete:
+
+        }
+
         // patient_homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {
@@ -209,16 +280,46 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'EvenementBundle\\Controller\\RdvController::chargeEventsAction',  '_route' => 'load_events',);
         }
 
-        // configuration_edit
-        if (0 === strpos($pathinfo, '/configuration/edit') && preg_match('#^/configuration/edit/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-            if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
-                $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
-                goto not_configuration_edit;
+        if (0 === strpos($pathinfo, '/c')) {
+            // configuration_edit
+            if (0 === strpos($pathinfo, '/configuration/edit') && preg_match('#^/configuration/edit/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                    goto not_configuration_edit;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'configuration_edit')), array (  '_controller' => 'EvenementBundle\\Controller\\ConfigurationController::editAction',));
+            }
+            not_configuration_edit:
+
+            // cronJob_Test
+            if (rtrim($pathinfo, '/') === '/cronJobTest') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'cronJob_Test');
+                }
+
+                return array (  '_controller' => 'EvenementBundle\\Controller\\ConfigurationController::testJobQueueAction',  '_route' => 'cronJob_Test',);
             }
 
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'configuration_edit')), array (  '_controller' => 'EvenementBundle\\Controller\\ConfigurationController::editAction',));
         }
-        not_configuration_edit:
+
+        // dashboord_test
+        if ($pathinfo === '/dashboord') {
+            return array (  '_controller' => 'EvenementBundle\\Controller\\AcueilController::dashboordAction',  '_route' => 'dashboord_test',);
+        }
+
+        if (0 === strpos($pathinfo, '/test')) {
+            // test_mailler
+            if (0 === strpos($pathinfo, '/testMailler') && preg_match('#^/testMailler(?:/(?P<mail>[^/]++))?$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'test_mailler')), array (  '_controller' => 'EvenementBundle\\Controller\\AcueilController::sendMailToPatientAction',  'mail' => 1,));
+            }
+
+            // test_twilio
+            if ($pathinfo === '/testTwilio') {
+                return array (  '_controller' => 'EvenementBundle\\Controller\\AcueilController::sendSmsToPatientAction',  '_route' => 'test_twilio',);
+            }
+
+        }
 
         // users_homepage
         if (rtrim($pathinfo, '/') === '') {
@@ -415,9 +516,34 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
         not_fos_user_change_password:
 
-        // fos_js_routing_js
-        if (0 === strpos($pathinfo, '/js/routing') && preg_match('#^/js/routing(?:\\.(?P<_format>js|json))?$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_js_routing_js')), array (  '_controller' => 'fos_js_routing.controller:indexAction',  '_format' => 'js',));
+        if (0 === strpos($pathinfo, '/j')) {
+            // fos_js_routing_js
+            if (0 === strpos($pathinfo, '/js/routing') && preg_match('#^/js/routing(?:\\.(?P<_format>js|json))?$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_js_routing_js')), array (  '_controller' => 'fos_js_routing.controller:indexAction',  '_format' => 'js',));
+            }
+
+            if (0 === strpos($pathinfo, '/jobs')) {
+                // jms_jobs_overview
+                if (rtrim($pathinfo, '/') === '/jobs') {
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($pathinfo.'/', 'jms_jobs_overview');
+                    }
+
+                    return array (  '_controller' => 'JMS\\JobQueueBundle\\Controller\\JobController::overviewAction',  '_route' => 'jms_jobs_overview',);
+                }
+
+                // jms_jobs_details
+                if (preg_match('#^/jobs/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'jms_jobs_details')), array (  '_controller' => 'JMS\\JobQueueBundle\\Controller\\JobController::detailsAction',));
+                }
+
+                // jms_jobs_retry_job
+                if (preg_match('#^/jobs/(?P<id>[^/]++)/retry$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'jms_jobs_retry_job')), array (  '_controller' => 'JMS\\JobQueueBundle\\Controller\\JobController::retryJobAction',));
+                }
+
+            }
+
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

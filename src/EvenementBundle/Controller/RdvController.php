@@ -92,6 +92,8 @@ class RdvController extends Controller
             'myConfiguration'=>$myConfiguration,
         ));
 
+
+
     }
 
     public function dropAction($id, $start, $startH, $end, $endH)
@@ -239,5 +241,23 @@ class RdvController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('rdv_delete', array('id' => $rdv->getId())))
             ->getForm();
+    }
+
+
+
+
+    public function dashboordAction(){
+
+        $em  = $this->getDoctrine()->getManager();
+
+        $query = $em->createQuery("SELECT r FROM EvenementBundle:Rdv r WHERE DAY(r.dateDebut) = :date");
+        $query->setParameters(array('date' => date("d")));
+
+        $rdvs =  $query->getResult();
+
+        var_dump(rdvs);
+        die();
+
+        return $this->render('EvenementBundle:Default:dashboord.html.twig');
     }
 }

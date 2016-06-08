@@ -1,3 +1,9 @@
+command:
+    resource: "@commandBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+
 patient:
     resource: "@PatientBundle/Resources/config/routing.yml"
     prefix:   /
@@ -14,3 +20,7 @@ koko:
     resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
     prefix:   /
 
+JMSJobQueueBundle:
+    resource: "@JMSJobQueueBundle/Controller/"
+    type: annotation
+    prefix: /jobs

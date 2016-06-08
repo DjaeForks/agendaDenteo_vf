@@ -4,12 +4,15 @@ namespace PatientBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\validator\Constraints as Assert;
+
 
 /**
  * Patient
  *
  * @ORM\Table(name="patient")
  * @ORM\Entity(repositoryClass="PatientBundle\Repository\PatientRepository")
+ * @ORM\HasLifecycleCallbacks
  */
 class Patient
 {
@@ -79,6 +82,132 @@ class Patient
      * @ORM\Column(name="telFix", type="string", length=255)
      */
     private $telFix;
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=255)
+     */
+    private $email;
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="path", type="string", length=255)
+     */
+    private $path;
+
+
+    public $file;
+
+
+
+    public function getUploadRootDir()
+    {
+        return __dir__.'/../../../web/uploads';
+    }
+
+    public function getAbsolutePath()
+    {
+        return null === $this->path ? null : $this->getUploadRootDir().'/'.$this->path;
+    }
+
+    public function getAssetPath()
+    {
+        return 'uploads/'.$this->path;
+    }
+
+    /**
+     * @ORM\Prepersist()
+     * @ORM\Preupdate()
+     */
+    public function preUpload()
+    {
+        $this->tempFile = $this->getAbsolutePath();
+        $this->oldFile = $this->getPath();
+        $this->updateAt = new \DateTime();
+
+        if (null !== $this->file)
+            $this->path = sha1(uniqid(mt_rand(),true)).'.'.$this->file->guessExtension();
+    }
+
+    /**
+     * @ORM\PostPersist()
+     * @ORM\PostUpdate()
+     */
+    public function upload()
+    {
+        if (null !== $this->file) {
+            $this->file->move($this->getUploadRootDir(),$this->path);
+            unset($this->file);
+
+            if ($this->oldFile != null) unlink($this->tempFile);
+        }
+    }
+
+    /**
+     * @ORM\PreRemove()
+     */
+    public function preRemoveUpload()
+    {
+        $this->tempFile = $this->getAbsolutePath();
+    }
+
+    /**
+     * @ORM\PostRemove()
+     */
+    public function removeUpload()
+    {
+        if (file_exists($this->tempFile)) unlink($this->tempFile);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     /**
@@ -272,7 +401,113 @@ class Patient
     public function __toString()
     {
         // TODO: Implement __toString() method.
-        return $this->getNom().' '.$this->getPrenom();
+        return $this->getNom() . ' ' . $this->getPrenom();
     }
 
+
+    /**
+     * Set email
+     *
+     * @param string $email
+     *
+     * @return Patient
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    /**
+     * Get email
+     *
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * Set user
+     *
+     * @param \UsersBundle\Entity\User $user
+     *
+     * @return Patient
+     */
+    public function setUser(\UsersBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \UsersBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * Add rdv
+     *
+     * @param \EvenementBundle\Entity\Rdv $rdv
+     *
+     * @return Patient
+     */
+    public function addRdv(\EvenementBundle\Entity\Rdv $rdv)
+    {
+        $this->rdvs[] = $rdv;
+
+        return $this;
+    }
+
+    /**
+     * Remove rdv
+     *
+     * @param \EvenementBundle\Entity\Rdv $rdv
+     */
+    public function removeRdv(\EvenementBundle\Entity\Rdv $rdv)
+    {
+        $this->rdvs->removeElement($rdv);
+    }
+
+    /**
+     * Get rdvs
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getRdvs()
+    {
+        return $this->rdvs;
+    }
+
+    /**
+     * Set path
+     *
+     * @param string $path
+     *
+     * @return Patient
+     */
+    public function setPath($path)
+    {
+        $this->path = $path;
+
+        return $this;
+    }
+
+    /**
+     * Get path
+     *
+     * @return string
+     */
+    public function getPath()
+    {
+        return $this->path;
+    }
 }

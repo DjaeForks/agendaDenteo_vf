@@ -24,7 +24,7 @@ class RdvTypeController extends Controller
 
         $rdvTypes = $em->getRepository('EvenementBundle:RdvType')->findAll();
 
-        return $this->render('rdvtype/index.html.twig', array(
+        return $this->render('rdvtype/dashboord.html.twig', array(
             'rdvTypes' => $rdvTypes,
         ));
     }

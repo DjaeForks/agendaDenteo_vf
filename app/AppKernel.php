@@ -20,6 +20,9 @@ class AppKernel extends Kernel
             new EvenementBundle\EvenementBundle(),
             new PatientBundle\PatientBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
+            new JMS\JobQueueBundle\JMSJobQueueBundle(),
+            new command\commandBundle\commandBundle(),
+            new Vresh\TwilioBundle\VreshTwilioBundle(),
 
         );
 

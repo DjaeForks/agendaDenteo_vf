@@ -47,10 +47,19 @@
             font-family: "Brush Script MT";
             font-size: 30px;
         }
+       /* #details{
+            color: red;
+            font-family: "Brush Script MT";
+            font-size: 20px;
+        }*/
+        .titreEvent{
+            color: red;
+        }
 
         .modal-header {
             background-color: #3c8dbc;
         }
+
     </style>
 {% endblock %}
 {% block content %}
@@ -70,7 +79,7 @@
     </section>
     <section class="content">
         <div class="row">
-            <div class="col-md-3">
+            {#<div class="col-md-3">
                 <div class="box box-solid">
                     <div class="box-header with-border">
                         <h4 class="box-title">Les types Rdvs</h4>
@@ -121,8 +130,8 @@
                         </div><!-- /input-group -->
                     </div>
                 </div>
-            </div><!-- /.col -->
-            <div class="col-md-9">
+            </div><!-- /.col -->#}
+            <div class="col-md-12">
                 <div id="loading" class=" ">
                     <span>   <img src="{{ asset('icons/hamid.gif') }}" width="25%" height="25%"/> </span>
                     <!--    <span class="lite-text-shadow" >Chargement du calendrier</span> -->
@@ -141,24 +150,43 @@
     </section><!-- /.content -->
     <!-- Control Sidebar -->
 
-    {# modal day click#}
+    {# modal event  click#}
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" data-toggle="modal" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                 aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Infos Rendez-vous</h4>
+                    <h4 class="modal-title" id="myModalLabel"></h4>
                 </div>
                 <div class="modal-body">
-                    <p id="details"></p>
-
+                    <h4 id="details"></h4>
                 </div>
 
                 <div class="modal-footer">
                     <button class="btn btn-success" id="modalModifier" data-dismiss="modal">Modifier</button>
                     <button class="btn btn-danger" id="supprimerModal" data-dismiss="modal">Supprimer</button>
                     <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {# modal day click (ancienne date #}
+    <div class="modal fade" id="myModalAncienDate" tabindex="-1" role="dialog" data-toggle="modal"
+         aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div id="ancienneDateHeader" class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Attention</h4>
+                </div>
+                <div class="modal-body">
+                    <h4 class="font-family:'Times New Roman';">Attention la demande d'ajout de l'info concerne une date <strong>passée</strong></h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning pull-right" data-dismiss="modal">Fermer</button>
                 </div>
             </div>
         </div>
@@ -176,56 +204,37 @@
                 </div>
                 <div class="modal-body">
                     <p id="detailsD"></p>
-                        <div class="box box-primary">
-                            <div class="box-header with-border">
-                                <h3 class="box-title">Infos Générals</h3>
-                            </div>
-                            <div class="box-body">
-                                <div class="row">
-                                    <div class="col-xs-2">
-                                        <h5>Date Debut </h5>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <input id="dateDebDel" type="text"  contenteditable="false" class="form-control">
-                                    </div>
-                                    <div class="col-xs-2">
-                                        <h5>Date Fin  </h5>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <input id="dateFinDel" type="text" contenteditable="false" class="form-control">
-                                    </div>
-                                </div>
-                                </br>
-                                <div class="row">
-                                    <div class="col-xs-1">
-                                        <h5>Titre </h5>
-                                    </div>
-                                    <div class="col-xs-5">
-                                        <input id="titreDel" type="text"  contenteditable="false" class="form-control">
-                                    </div>
-                                    <div class="col-xs-1">
-                                        <h5>Couleur </h5>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <input id="couleurDel" type="text" contenteditable="false" class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     <div class="box box-primary">
-                        <div class="box-header with-border">
-                            <h3 class="box-title">Plage de Periodicite</h3>
-                        </div>
                         <div class="box-body">
                             <div class="row">
-                                <div class="col-xs-3">
-                                    <input type="text" class="form-control" >
+                                <div class="col-xs-2">
+                                    <h5>Date Debut </h5>
                                 </div>
                                 <div class="col-xs-4">
-                                    <input type="text" class="form-control" >
+                                    <input id="dateDebDel" type="text" contenteditable="false" class="form-control">
+                                </div>
+                                <div class="col-xs-2">
+                                    <h5>Date Fin </h5>
+                                </div>
+                                <div class="col-xs-4">
+                                    <input id="dateFinDel" type="text" contenteditable="false" class="form-control">
+                                </div>
+                            </div>
+                            </br>
+                            <div class="row">
+                                <div class="col-xs-1">
+                                    <h5>Titre </h5>
                                 </div>
                                 <div class="col-xs-5">
-                                    <input type="text" class="form-control" >
+                                    <input id="titreDel" type="text" contenteditable="false" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-1">
+                                    <h5>Description </h5>
+                                </div>
+                                <div class="col-xs-5">
+                                    <texterea id="description"  editable="false" class="form-control" />
                                 </div>
                             </div>
                         </div>
@@ -233,7 +242,8 @@
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-info" id="addDelimiteur" data-dismiss="modal">Ajouter</button>
-                    <button class="btn btn-default pull-left" id="supprimerDelimiteur" data-dismiss="modal">Fermer</button>
+                    <button class="btn btn-default pull-left" id="supprimerDelimiteur" data-dismiss="modal">Fermer
+                    </button>
                 </div>
             </div>
         </div>
@@ -334,18 +344,16 @@
 {% endblock rdvForm %}
 
 {% block javascripts %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
     <script src="{{ asset("plugins/fullcalendar/fullcalendar.min.js") }}"></script>
     <script src="{{ asset("JSCalander/lang/lang-all.js") }}"></script>
-    <!-- date-range-picker -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
     <script src="{{ asset("plugins/daterangepicker/daterangepicker.js") }}"></script>
-    <!-- bootstrap color picker -->
     <script src="{{ asset("plugins/colorpicker/bootstrap-colorpicker.min.js") }}"></script>
-    <!-- bootstrap time picker -->
     <script src="{{ asset("plugins/timepicker/bootstrap-timepicker.min.js") }}"></script>
     <script src="{{ asset("plugins/fullcalendar/lib/moment.min.js") }}"></script>
-    <script>
+
+
+
+    <strong>
         $(function () {
 
             $('#couleurDel').colorpicker();
@@ -387,6 +395,7 @@
                 }
             }
 
+            //fixer la date fin du rdv selon le rdvType choisi
             function updateRdvDuration(event) {
                 var duree = durationAsMomentObject($('#mySelect option:selected').attr('data-duree'));
                 var start = durationAsMomentObject($('#startMinutes').text());
@@ -399,15 +408,13 @@
                 updateRdvDuration();
             })
 
+
             var selectComplete = function (start, end, jsEvent, view) {
-                var now = moment();
-                var temp = moment(end);
+
                 start = moment(start).format('DD-MM-YYYY HH:mm');
                 var startH = moment(start).format('HH:mm');
                 end = moment(end).format('DD-MM-YYYY HH:mm');
                 var endH = moment(end).format('HH:mm');
-                var duration = moment.duration(temp.subtract(start));
-                var warningMsg = (now.isAfter(end) && !now.isSame(end)) ? '<strong><span>Attention Vous Avez séléctionné une ancienne date</span></strong>' : '';
                 if (!sidebar.hasClass('control-sidebar-open')
                         && !$('body').hasClass('control-sidebar-open')) {
                     $('#modalDelimiteur').modal().show();
@@ -422,16 +429,14 @@
                         url: 'http://localhost/denteo2/web/app_dev.php/addDel' + '/' + start + '/' + end,
                         success: function (data) {
                             $('#calendar').fullCalendar('removeEvents');
-                            // $('#calendar').fullCalendar('refetchEvents');
+                            //$('#calendar').fullCalendar('refetchEvents');
                             location.reload();
                         }
                     })
                 })
             }
 
-
-            //*******************************************************
-            function ini_events(ele) {
+            /* function ini_events(ele) {
                 ele.each(function () {
 
                     // create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
@@ -452,7 +457,7 @@
                     });
 
                 });
-            }
+            }*/
 
             //Sauvgarder les dates anciennes
             var saveOldDragInfo = function (event, jsEvent, ui, view) {
@@ -474,7 +479,7 @@
                 $.confirm({
                     title: 'Confirmation',
                     theme: 'black',
-                    confirmButton: 'Deplacer',
+                    confirmButton: 'Déplacer',
                     cancelButton: 'Annuler',
                     content: 'Vous voulez vraiment deplacer ce Rendez-vous ?',
                     confirm: function () {
@@ -526,6 +531,102 @@
             }
 
 
+            var addRdv = function (date, jsEvent, view) {
+
+                var now = moment();
+                console.log(now);
+                if (now.isAfter(date) && !now.isSame(date)) {
+                    console.log('vous avez selectionner une ancienne date ');
+                    $('#modalDelimiteur').modal().hide();
+                    $('#myModalAncienDate').modal().show();
+                }
+
+                else {
+                    $('#startMinutes').text(date.format('h:mm'));
+                    $('#rdv_dateDebut').val(date.format('YYYY-MM-DD h:mm'));
+                    if (!sidebar.hasClass('control-sidebar-open')
+                            && !$('body').hasClass('control-sidebar-open')) {
+                        sidebar.addClass('control-sidebar-open');
+                        $('#editRdv').hide();
+                        $('#addRdv').show();
+                    }
+                }
+            }
+
+            var datailsEvent =function (calEvent, jsEvent, view) {
+                $('#myModal').modal().show();
+
+                if(calEvent.className == 'Rdv'){
+                    $('#myModalLabel').text('Infos Rendez-Vous ');
+                    $('#details').html('Titre Rdv :' + calEvent.title + '<br/>' + 'Date de Debut: ' + moment(calEvent.start).format('DD-MM-YYYY h:mm') + '<br/> Heure de Fin: ' + moment(calEvent.end).format('DD-MM-YYYY h:mm') +'<br/> Description Rdv : '+calEvent.description);
+                }
+                if(calEvent.className == 'Delimiteur'){
+                    $('#myModalLabel').text('Infos Délimiteur ');
+                    $('#details').html('<strong class="titreEvent"> Titre Délimiteur :</strong>' + calEvent.title + '<br/>' + '<strong class="titreEvent">Date de Debut: </strong> ' + moment(calEvent.start).format('DD-MM-YYYY h:mm') + '<br/> Heure de Fin: ' + moment(calEvent.end).format('DD-MM-YYYY h:mm') +'<br/> Description Délimiteur : '+calEvent.description);
+                }
+
+                $('#supprimerModal').click(function () {
+                    $.confirm({
+                        title: 'Confirmation',
+                        theme: 'black',
+                        confirmButton: 'Supprimer',
+                        cancelButton: 'Annuler',
+                        content: 'Vous voulez vraiment Supprimer ce Rendez-vous ?',
+                        confirm: function () {
+                            $.ajax({
+                                type: 'get',
+                                url: 'http://localhost/denteo2/web/app_dev.php/deleted' + '/' + calEvent.id,
+                                success: function (data) {
+                                    $('#calendar').fullCalendar('removeEvents', calEvent.id);
+                                    $.growl({title: "Success", message: "Votre Rdv a été bien Supprimer "});
+                                    $('#calendar').fullCalendar('refrechEvents');
+                                }
+                            })
+                        }
+                    });
+                })
+
+                $('#modalModifier').click(function () {
+                    if (!sidebar.hasClass('control-sidebar-open')
+                            && !$('body').hasClass('control-sidebar-open')) {
+                        //Open the sidebar
+
+                        sidebar.addClass('control-sidebar-open');
+
+                        $('#editRdv').show();
+                        $('#addRdv').hide();
+
+                        $('#rdv_dateDebut').val(moment(calEvent.start).format('DD-MM-YYYY h:mm'));
+                        $('#rdv_dateFin').val(moment(calEvent.end).format('DD-MM-YYYY h:mm'));
+                        $('#rdv_titre').val(calEvent.title);
+                        $('#btnModif').click(function () {
+                            $.ajax({
+                                type: 'get',
+                                url: 'http://localhost/taskPerson/web/app_dev.php/select' + '/' + calEvent.id,
+                                success: function (data) {
+                                    $('#calendar').fullCalendar('refrech');
+                                }
+                            })
+                        })
+
+                    } else {
+
+                    }
+                    $('#btnModif').click(function () {
+                        $.ajax({
+                            type: 'get',
+                            url: 'http://localhost/taskPerson/web/app_dev.php/rdv_modif',
+                            success: function (data) {
+                                $('#calendar').fullCalendar('refrech');
+                            }
+                        })
+                    })
+
+                })
+            }
+
+
+
             //Get the object
             var _this = this;
             //Update options
@@ -550,9 +651,6 @@
                     week: 'week',
                     day: 'day'
                 },
-                //theme: true ,
-                //isRTL: true ,
-                //weekends: false,
                 defaultView: 'agendaWeek',
                 events: '{{ path('load_events') }}',
                 editable: true,
@@ -593,106 +691,33 @@
                 {% endif %}
                 columnFormat: 'dddd D/M',
                 weekNumberTitle: 'week N°',
-                dayClick: function (date, jsEvent, view) {
-
-                    $('#startMinutes').text(date.format('h:mm'));
-                    $('#rdv_dateDebut').val(date.format('YYYY-MM-DD h:mm'));
-                    if (!sidebar.hasClass('control-sidebar-open')
-                            && !$('body').hasClass('control-sidebar-open')) {
-                        sidebar.addClass('control-sidebar-open');
-                        $('#editRdv').hide();
-                        $('#addRdv').show();
-                    } else {
-
-                    }
-                },
-
-                eventClick: function (calEvent, jsEvent, view) {
-                    $('#myModal').modal().show();
-                    $('#details').html('Titre :' + calEvent.title + '<br/>' + 'Date de Debut: ' + moment(calEvent.start).format('DD-MM-YYYY h:mm') + '<br/> Heure de Fin: ' + moment(calEvent.end).format('DD-MM-YYYY h:mm'));
-
-                    $('#supprimerModal').click(function () {
-                        $.confirm({
-                            title: 'Confirmation',
-                            theme: 'black',
-                            confirmButton: 'Supprimer',
-                            cancelButton: 'Annuler',
-                            content: 'Vous voulez vraiment Supprimer ce Rendez-vous ?',
-                            confirm: function () {
-                                $.ajax({
-                                    type: 'get',
-                                    url: 'http://localhost/denteo2/web/app_dev.php/deleted' + '/' + calEvent.id,
-                                    success: function (data) {
-                                        $('#calendar').fullCalendar('removeEvents', calEvent.id);
-                                        $.growl({title: "Success", message: "Votre Rdv a été bien Supprimer "});
-                                        $('#calendar').fullCalendar('refrechEvents');
-                                    }
-                                })
-                            }
-                        });
-                    })
-
-                    $('#modalModifier').click(function () {
-                        if (!sidebar.hasClass('control-sidebar-open')
-                                && !$('body').hasClass('control-sidebar-open')) {
-                            //Open the sidebar
-
-                            sidebar.addClass('control-sidebar-open');
-
-                            $('#editRdv').show();
-                            $('#addRdv').hide();
-
-                            $('#rdv_dateDebut').val(moment(calEvent.start).format('DD-MM-YYYY h:mm'));
-                            $('#rdv_dateFin').val(moment(calEvent.end).format('DD-MM-YYYY h:mm'));
-                            $('#rdv_titre').val(calEvent.title);
-                            $('#btnModif').click(function () {
-                                $.ajax({
-                                    type: 'get',
-                                    url: 'http://localhost/taskPerson/web/app_dev.php/select' + '/' + calEvent.id,
-                                    success: function (data) {
-                                        $('#calendar').fullCalendar('refrech');
-                                    }
-                                })
-                            })
-
-                        } else {
-
-                        }
-                        $('#btnModif').click(function () {
-                            $.ajax({
-                                type: 'get',
-                                url: 'http://localhost/taskPerson/web/app_dev.php/rdv_modif',
-                                success: function (data) {
-                                    $('#calendar').fullCalendar('refrech');
-                                }
-                            })
-                        })
-
-                    })
-                },
+                dayClick: addRdv ,
+                eventClick: datailsEvent,
                 eventDrop: deplacerRdvAndMemo,
                 eventDragStop: saveOldDragInfo,
                 loading: calendarLoadingEvent,
-                eventReceive: function (event) {
-
-                },
-                eventMouseover: function (event, jsEvent, view) {
-                    console.log(event.titre);
-                    console.log(event.id);
-                    console.log(event.description);
-                    console.log(event.dateFin);
-
-                },
                 eventRender: function (event, element) {
-                    element.tooltipster({
-                        contentAsHTML: true,
-                        animation: 'fade',
-                        delay: 200,
-                        content: $('<strong>Titre :   </strong>' + event.title + '</br><strong>Description :   </strong>' + event.description + '</br><strong>Type : ------</strong></br><strong>Date Debut : </strong>' + event.start.format('DD-MM-YYYY h:mm') + '</br><strong>Date Fin :   </strong>' + event.end.format('DD-MM-YYYY h:mm') + '')
-                    })
 
-                },
-                drop: function (date, allDay) {
+                    if(event.className == 'Rdv'){
+
+                        element.tooltipster({
+                            contentAsHTML: true,
+                            animation: 'fade',
+                            delay: 200,
+                            content: $('<strong>Titre Rdv:   </strong>' + event.title + '</br><strong>Description :   </strong>' + event.description + '</br><strong>Type : ------</strong></br><strong>Date Debut : </strong>' + event.start.format('DD-MM-YYYY h:mm') + '</br><strong>Date Fin :   </strong>' + event.end.format('DD-MM-YYYY h:mm') + '')
+                        })
+
+                    }
+                    else{
+                        element.tooltipster({
+                            contentAsHTML: true,
+                            animation: 'fade',
+                            delay: 200,
+                            content: $('<strong>Titre Délimiteur:   </strong>' + event.title + '</br><strong>Description :   </strong>' + event.description + '</br><strong>Date Debut : </strong>' + event.start.format('DD-MM-YYYY h:mm') + '</br><strong>Date Fin :   </strong>' + event.end.format('DD-MM-YYYY h:mm') + '')
+                        })                    }
+
+
+
                 },
                 eventOverlap: false,
                 select: selectComplete,

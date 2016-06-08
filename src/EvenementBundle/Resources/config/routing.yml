@@ -59,3 +59,19 @@ configuration_edit:
     defaults: { _controller: EvenementBundle:Configuration:edit }
     methods:  [GET, POST]
 
+cronJob_Test:
+    path:     /cronJobTest/
+    defaults: { _controller: EvenementBundle:Configuration:testJobQueue }
+
+dashboord_test:
+    path:     /dashboord
+    defaults: { _controller: EvenementBundle:Acueil:dashboord }
+
+test_mailler:
+    path:     /testMailler/{mail}
+    defaults: { _controller: EvenementBundle:Acueil:sendMailToPatient,mail: 1 }
+
+test_twilio:
+    path:     /testTwilio
+    defaults: { _controller: EvenementBundle:Acueil:sendSmsToPatient }
+

@@ -1,3 +1,7 @@
+patient_patient:
+    resource: "@PatientBundle/Resources/config/routing/patient.yml"
+    prefix:   /patient
+
 patient_homepage:
     path:     /
     defaults: { _controller: PatientBundle:Default:index }

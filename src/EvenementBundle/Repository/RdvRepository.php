@@ -2,6 +2,8 @@
 
 namespace EvenementBundle\Repository;
 
+use Symfony\Bridge\Doctrine\Security\User;
+
 /**
  * RdvRepository
  *
@@ -10,4 +12,20 @@ namespace EvenementBundle\Repository;
  */
 class RdvRepository extends \Doctrine\ORM\EntityRepository
 {
+
+    public function findRdvsByDate( User $user ){
+
+            $qb = $this->createQueryBuilder('r');
+
+            $query = $qb
+                ->where('r.user = :user')
+                ->andWhere('r.dateDebut ' )
+                ->setParameter('bloquer' ,'0');
+
+            $result  =$query->getQuery()->execute();
+            return  $result ;
+
+
+    }
+
 }

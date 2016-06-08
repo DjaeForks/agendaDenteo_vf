@@ -65,7 +65,7 @@ class Delimiteur
     /**
      * @var string
      *
-     * @ORM\Column(name="titre", type="string", length=255)
+     * @ORM\Column(name="titre", type="string", length=255 , nullable=true)
      */
     protected $titre;
     /**

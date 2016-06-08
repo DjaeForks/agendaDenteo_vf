@@ -8,6 +8,7 @@ use DateTime;
 use EvenementBundle\Entity\Delimiteur;
 use EvenementBundle\Form\DelimiteurType;
 use Symfony\Component\HttpFoundation\Response;
+use JMS\JobQueueBundle\Entity\Job;
 
 /**
  * Delimiteur controller.
@@ -61,6 +62,8 @@ class DelimiteurController extends Controller
         //$form = $this->createForm('EvenementBundle\Form\DelimiteurType', $delimiteur);
         //$form->handleRequest($request);
 
+
+
         //if($form->isSubmitted() && $form->isValid()){
             $delimiteur->setUser($this->getUser());
             $delimiteur->setDebut(new DateTime($start));
@@ -71,6 +74,15 @@ class DelimiteurController extends Controller
             $em->persist($delimiteur);
             $em->flush();
         //}
+
+        $job = new Job('php app/console doctrine:database:drop');
+       /* $date = new DateTime();
+        $date->add(new \DateInterval('PT2M'));
+        $job->setExecuteAfter($date);*/
+        $em->persist($job);
+        $em->flush($job);
+
+
 
         return new Response('OK');
 

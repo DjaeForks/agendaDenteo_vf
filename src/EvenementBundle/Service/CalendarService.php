@@ -12,6 +12,7 @@ namespace EvenementBundle\Service;
 use Doctrine\ORM\EntityManager;
 use EvenementBundle\Entity\Delimiteur;
 use EvenementBundle\Entity\Rdv;
+use Symfony\Component\Validator\Constraints\DateTime;
 use UsersBundle\Entity\User;
 
 class CalendarService
@@ -88,6 +89,7 @@ class CalendarService
                 'end'     => $rdv->getDateFin()->format(\DateTime::ISO8601),
                 'color'   => $rdv->getCouleur(),
                 'description' =>$rdv->getDescription(),
+                'className' =>$rdv->getClassName(),
             );
 
             }else{
@@ -98,6 +100,7 @@ class CalendarService
                 'end'     => $rdv->getDateFin()->format(\DateTime::ISO8601),
                 'color'   => $rdv->getCouleur(),
                 'description' =>$rdv->getDescription(),
+                'className' =>$rdv->getClassName(),
             );
         }
 
@@ -112,5 +115,18 @@ class CalendarService
                 'className' => $delimiteur->getClassName(),
                 'color'=> '#0a0a0a',
             );
+    }
+
+
+    //******************hamid************
+
+
+    private function findRdvsToDay(){
+
+
+        $date = new DateTime();
+
+
+
     }
 }

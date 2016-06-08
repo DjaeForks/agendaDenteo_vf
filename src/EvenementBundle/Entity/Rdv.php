@@ -49,7 +49,7 @@ class Rdv
     /**
      * @var int
      *
-     * @ORM\Column(name="etat", type="integer")
+     * @ORM\Column(name="etat", type="integer", nullable=true)
      */
     private $etat;
 
@@ -95,6 +95,29 @@ class Rdv
      */
     protected $couleur;
 
+
+    /**
+     * @var array
+     *
+     * @ORM\Column(name="alert", type="array", nullable=true)
+     */
+    protected $alert ;
+
+
+ /**
+     * @var array
+     *
+     * @ORM\Column(name="rappel", type="array", nullable=true)
+     */
+    protected $rappel ;
+
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="durreRappel", type="integer", nullable=true)
+     */
+    private $dureeRappel;
 
 
     /**
@@ -365,5 +388,77 @@ class Rdv
     public function getCouleur()
     {
         return $this->couleur;
+    }
+
+    /**
+     * Set alert
+     *
+     * @param array $alert
+     *
+     * @return Rdv
+     */
+    public function setAlert($alert)
+    {
+        $this->alert = $alert;
+
+        return $this;
+    }
+
+    /**
+     * Get alert
+     *
+     * @return array
+     */
+    public function getAlert()
+    {
+        return $this->alert;
+    }
+
+    /**
+     * Set rappel
+     *
+     * @param array $rappel
+     *
+     * @return Rdv
+     */
+    public function setRappel($rappel)
+    {
+        $this->rappel = $rappel;
+
+        return $this;
+    }
+
+    /**
+     * Get rappel
+     *
+     * @return array
+     */
+    public function getRappel()
+    {
+        return $this->rappel;
+    }
+
+    /**
+     * Set dureeRappel
+     *
+     * @param integer $dureeRappel
+     *
+     * @return Rdv
+     */
+    public function setDureeRappel($dureeRappel)
+    {
+        $this->dureeRappel = $dureeRappel;
+
+        return $this;
+    }
+
+    /**
+     * Get dureeRappel
+     *
+     * @return integer
+     */
+    public function getDureeRappel()
+    {
+        return $this->dureeRappel;
     }
 }

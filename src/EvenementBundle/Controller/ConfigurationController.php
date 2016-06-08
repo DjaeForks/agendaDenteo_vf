@@ -24,7 +24,7 @@ class ConfigurationController extends Controller
 
         $configurations = $em->getRepository('EvenementBundle:Configuration')->findAll();
 
-        return $this->render('EvenementBundle:configuration:index.html.twig', array(
+        return $this->render('EvenementBundle:configuration:dashboord.html.twig', array(
             'configurations' => $configurations,
         ));
     }
