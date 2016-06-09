@@ -47,13 +47,17 @@
             font-family: "Brush Script MT";
             font-size: 30px;
         }
-       /* #details{
-            color: red;
-            font-family: "Brush Script MT";
-            font-size: 20px;
-        }*/
-        .titreEvent{
-            color: red;
+
+        #details {
+            color: black;
+            font-family: "Rockwell";
+            font-size: 16px;
+        }
+
+        .titreEvent {
+            color: #3c8dbc;
+            font-family: 'Lucida Bright';
+            font-size: 18px;
         }
 
         .modal-header {
@@ -183,7 +187,8 @@
                     <h4 class="modal-title" id="myModalLabel">Attention</h4>
                 </div>
                 <div class="modal-body">
-                    <h4 class="font-family:'Times New Roman';">Attention la demande d'ajout de l'info concerne une date <strong>passée</strong></h4>
+                    <h4 style="font-family:'myModalAncienDate';">Attention la demande d'ajout de l'info concerne une
+                        date <strong>passée</strong></h4>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-warning pull-right" data-dismiss="modal">Fermer</button>
@@ -234,7 +239,7 @@
                                     <h5>Description </h5>
                                 </div>
                                 <div class="col-xs-5">
-                                    <texterea id="description"  editable="false" class="form-control" />
+                                    <texterea id="description" editable="false" class="form-control"/>
                                 </div>
                             </div>
                         </div>
@@ -253,91 +258,73 @@
 {% block rdvForm %}
 
     <div id="rootwizard" class="col-md-12">
-        <div class="form-wizard-steps">
-            <ul class="wizard-steps">
-                <li class="" data-target="#step1"><a href="#tab1" data-toggle="tab"> <span class="step">1</span>
-                        <span class="title">Basic information</span> </a></li>
-                <li data-target="#step2" class=""><a href="#tab2" data-toggle="tab"> <span class="step">2</span>
-                        <span class="title">Account information</span> </a></li>
 
-            </ul>
-            <div class="clearfix"></div>
-        </div>
         <div class="tab-content transparent">
-            <div class="tab-pane" id="tab1"><br>
-                <h4 class="semi-bold">Step 1 - <span class="light">Basic Information</span></h4>
-                {{ form_start(form,{'attr': {'id':'addRdv'} }) }}
-                <div class="row">
-                    <div class='col-sm-6 col-md-offset-3 form-group'>
-                        <label>Type de Rendez-Vous</label>
-                        <select id="mySelect" class="form-control input-sm" name="rdvTtpee">
-                            <option vlaue="#">--SELECT--</option>
-                            {% for rdv in rdvTypes %}
-                                <option value="{{ rdv.id }}" data-duree="{{ rdv.duree|date('H:i') }}">{{ rdv.titre }}
-                                    ({{ rdv.duree|date('H:i') }})
-                                </option>
-                            {% endfor %}
-                        </select>
+            <h3>Ajout Rendez-vous </h3>
+            <hr>
+            {{ form_start(form,{'attr': {'id':'addRdv'} }) }}
+            <div class="row">
+                <div class='col-sm-6 col-md-offset-3 form-group'>
+                    <label>Type de Rendez-Vous</label>
+                    <select id="mySelect" class="form-control input-sm" name="rdvTtpee">
+                        <option vlaue="#">--SELECT--</option>
+                        {% for rdv in rdvTypes %}
+                            <option value="{{ rdv.id }}" data-duree="{{ rdv.duree|date('H:i') }}">{{ rdv.titre }}
+                                ({{ rdv.duree|date('H:i') }})
+                            </option>
+                        {% endfor %}
+                    </select>
 
-                        <label>Patient</label>
-                        {{ form_widget(form.patient,{'attr': {'class':'form-control input-sm'} }) }}
-                        <label>Date et Heure de Debut</label>
-                        {{ form_widget(form.dateDebut,{'attr': {'class':'form-control input-sm'} }) }}
-
-
-                        <label>Heure de Fin</label>
-                        {{ form_widget(form.dateFin,{'attr': {'class':'form-control input-sm'} }) }}
+                    <label>Patient</label>
+                    {{ form_widget(form.patient,{'attr': {'class':'form-control input-sm'} }) }}
+                    <label>Date et Heure de Debut</label>
+                    {{ form_widget(form.dateDebut,{'attr': {'class':'form-control input-sm'} }) }}
 
 
-                        <label>Titre</label>
-                        {{ form_widget(form.titre,{'attr': {'class':'form-control input-sm'} }) }}
-
-                        <label>Description</label>
-                        {{ form_widget(form.description,{'attr': {'class':'form-control input-sm'} }) }}<br/>
-
-                        <input type="text" id="startMinutes" value="" hidden/>
+                    <label>Heure de Fin</label>
+                    {{ form_widget(form.dateFin,{'attr': {'class':'form-control input-sm'} }) }}
 
 
-                        <button type="submit" id="btnSubmit" class="btn btn-primary">Ajouter</button>
-                        <button type="button" id="close" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <label>Titre</label>
+                    {{ form_widget(form.titre,{'attr': {'class':'form-control input-sm'} }) }}
 
-                    </div>
+                    <label>Description</label>
+                    {{ form_widget(form.description,{'attr': {'class':'form-control input-sm'} }) }}<br/>
+
+                    <input type="text" id="startMinutes" value="" hidden/>
+
                 </div>
-
-
-                {{ form_end(form) }}
-
-                {{ form_start(editForm,{'attr': {'id':'editRdv'} }) }}
-                <div class="row">
-                    <div class='col-sm-6 col-md-offset-3 form-group'>
-
-
-                        <label>Titre</label>
-                        {{ form_widget(editForm.titre,{'attr': {'class':'form-control input-sm'} }) }}
-
-                        <label>Description</label>
-                        {{ form_widget(editForm.description,{'attr': {'class':'form-control input-sm'} }) }}<br/>
-
-                        <label>Patient</label>
-                        {{ form_widget(editForm.patient,{'attr': {'class':'form-control input-sm' } }) }}
-
-
-                        <button type="submit" id="btnModif" class="btn btn-warning">Modifier</button>
-                        <button type="button" id="close" class="btn btn-default" data-dismiss="modal">Close</button>
-
-                    </div>
-                </div>
-
-
-                {{ form_end(editForm) }}
             </div>
 
-            <div class="tab-pane" id="tab2"><br>
-                <h4 class="semi-bold">Step 2 - <span class="light">Account Information</span></h4>
-
-            </div>
         </div>
+
+        <hr>
+        <h4>Périodicite</h4>
+        <hr>
+
+        <label>Multiple</label>
+        <select name="jours" class="form-control select2" multiple="multiple" data-placeholder="Jours"
+                style="width: 100%;">
+            <option value="1">Lundi</option>
+            <option value="2">Mardi</option>
+            <option value="3">Mercredi</option>
+            <option value="4">Jeudi</option>
+            <option value="5">Vendredi</option>
+            <option value="6">Samedi</option>
+            <option value="7">Dimanche</option>
+        </select>
+        <hr>
+        <input type="text" name="occurence" class="form-control" placeholder="Nombre d'occurences">
+        <br>
+        <button type="submit" id="btnSubmit" class="btn btn-primary">Ajouter</button>
+        <button type="button" id="close" class="btn btn-default" data-dismiss="modal">Fermer</button>
+
+        <div id="bas"></div>
+        {# </form>#}
+
+        {{ form_end(form) }}
     </div>
+
 
 
 
@@ -353,8 +340,10 @@
 
 
 
-    <strong>
+    <script>
         $(function () {
+
+            $(".select2").select2();
 
             $('#couleurDel').colorpicker();
             $('#btnSubmit').click(function () {
@@ -411,6 +400,8 @@
 
             var selectComplete = function (start, end, jsEvent, view) {
 
+                var slot = moment.duration();
+                console.log(slot);
                 start = moment(start).format('DD-MM-YYYY HH:mm');
                 var startH = moment(start).format('HH:mm');
                 end = moment(end).format('DD-MM-YYYY HH:mm');
@@ -437,27 +428,27 @@
             }
 
             /* function ini_events(ele) {
-                ele.each(function () {
+             ele.each(function () {
 
-                    // create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
-                    // it doesn't need to have a start or end
-                    var eventObject = {
-                        title: $.trim($(this).text()), // use the element's text as the event title
+             // create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
+             // it doesn't need to have a start or end
+             var eventObject = {
+             title: $.trim($(this).text()), // use the element's text as the event title
 
-                    };
+             };
 
-                    // store the Event Object in the DOM element so we can get to it later
-                    $(this).data('eventObject', eventObject);
+             // store the Event Object in the DOM element so we can get to it later
+             $(this).data('eventObject', eventObject);
 
-                    // make the event draggable using jQuery UI
-                    $(this).draggable({
-                        zIndex: 1070,
-                        revert: true, // will cause the event to go back to its
-                        revertDuration: 0  //  original position after the drag
-                    });
+             // make the event draggable using jQuery UI
+             $(this).draggable({
+             zIndex: 1070,
+             revert: true, // will cause the event to go back to its
+             revertDuration: 0  //  original position after the drag
+             });
 
-                });
-            }*/
+             });
+             }*/
 
             //Sauvgarder les dates anciennes
             var saveOldDragInfo = function (event, jsEvent, ui, view) {
@@ -553,16 +544,16 @@
                 }
             }
 
-            var datailsEvent =function (calEvent, jsEvent, view) {
+            var datailsEvent = function (calEvent, jsEvent, view) {
                 $('#myModal').modal().show();
 
-                if(calEvent.className == 'Rdv'){
+                if (calEvent.className == 'Rdv') {
                     $('#myModalLabel').text('Infos Rendez-Vous ');
-                    $('#details').html('Titre Rdv :' + calEvent.title + '<br/>' + 'Date de Debut: ' + moment(calEvent.start).format('DD-MM-YYYY h:mm') + '<br/> Heure de Fin: ' + moment(calEvent.end).format('DD-MM-YYYY h:mm') +'<br/> Description Rdv : '+calEvent.description);
+                    $('#details').html('<strong class="titreEvent">Titre Rdv :</strong>' + calEvent.title + '<br/>' + '<strong class="titreEvent">Date de Debut: </strong>' + moment(calEvent.start).format('DD-MM-YYYY h:mm') + '<br/><strong class="titreEvent"> Heure de Fin:</strong> ' + moment(calEvent.end).format('DD-MM-YYYY h:mm') + '<br/> <strong class="titreEvent">Description Rdv : </strong>' + calEvent.description);
                 }
-                if(calEvent.className == 'Delimiteur'){
+                if (calEvent.className == 'Delimiteur') {
                     $('#myModalLabel').text('Infos Délimiteur ');
-                    $('#details').html('<strong class="titreEvent"> Titre Délimiteur :</strong>' + calEvent.title + '<br/>' + '<strong class="titreEvent">Date de Debut: </strong> ' + moment(calEvent.start).format('DD-MM-YYYY h:mm') + '<br/> Heure de Fin: ' + moment(calEvent.end).format('DD-MM-YYYY h:mm') +'<br/> Description Délimiteur : '+calEvent.description);
+                    $('#details').html('<strong class="titreEvent"> Titre Délimiteur :</strong>' + calEvent.title + '<br/>' + '<strong class="titreEvent">Date de Debut:</strong> ' + moment(calEvent.start).format('DD-MM-YYYY h:mm') + '<br/> <strong class="titreEvent">Heure de Fin:</strong> ' + moment(calEvent.end).format('DD-MM-YYYY h:mm') + '<br/><strong class="titreEvent"> Description Délimiteur :</strong> ' + calEvent.description);
                 }
 
                 $('#supprimerModal').click(function () {
@@ -624,7 +615,6 @@
 
                 })
             }
-
 
 
             //Get the object
@@ -691,14 +681,14 @@
                 {% endif %}
                 columnFormat: 'dddd D/M',
                 weekNumberTitle: 'week N°',
-                dayClick: addRdv ,
+                dayClick: addRdv,
                 eventClick: datailsEvent,
                 eventDrop: deplacerRdvAndMemo,
                 eventDragStop: saveOldDragInfo,
                 loading: calendarLoadingEvent,
                 eventRender: function (event, element) {
 
-                    if(event.className == 'Rdv'){
+                    if (event.className == 'Rdv') {
 
                         element.tooltipster({
                             contentAsHTML: true,
@@ -708,14 +698,14 @@
                         })
 
                     }
-                    else{
+                    else {
                         element.tooltipster({
                             contentAsHTML: true,
                             animation: 'fade',
                             delay: 200,
                             content: $('<strong>Titre Délimiteur:   </strong>' + event.title + '</br><strong>Description :   </strong>' + event.description + '</br><strong>Date Debut : </strong>' + event.start.format('DD-MM-YYYY h:mm') + '</br><strong>Date Fin :   </strong>' + event.end.format('DD-MM-YYYY h:mm') + '')
-                        })                    }
-
+                        })
+                    }
 
 
                 },
