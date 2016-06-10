@@ -69,11 +69,11 @@
             <!-- START Background Caption-->
             <div class="bg-caption pull-bottom sm-pull-bottom text-white p-l-20 m-b-20">
                 <div class="col-lg-2">
-                    <img src="{{asset('assetsE/img/demo/logoCarre.png')}}" style="height: 263px; width: 200px;margin-left: 16px;" data-src="{{asset('assets/img/demo/logoCarre.png')}}" data-src-retina="{{asset('assets/img/demo/logoCarre.png')}}" alt="" class="lazy">
+                    <img src="{{asset('assetsE/img/demo/logo_denteo.png')}}" style="height: 263px; width: 200px;margin-left: 16px;" data-src="{{asset('assets/img/demo/logo_denteo.png')}}" data-src-retina="{{asset('assets/img/demo/logo_denteo.png')}}" alt="" class="">
                 </div>
                 </br>
                 <h2 class="semi-bold text-white" style="margin-left: 37px;">
-                    E-Compta vous offre une meilleure gestion des clients de votre fiduciaire</h2>
+                    DENTEO vous offre une meilleure gestion pour votre cabinet dentaire</h2>
             </div>
             <!-- END Background Caption-->
         </div>
@@ -93,7 +93,7 @@
                     <div class="form-group form-group-default input-group">
                         <label>Nom d'utilisateur</label>
                         <input type="text" id="username" name="_username" value="{{ last_username }}" class="form-control" placeholder="Email" required="required" />
-                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <span  class="input-group-addon"><i class="fa fa-user"></i></span>
                     </div>
                     <!-- END Form Control-->
                     <!-- START Form Control-->
@@ -113,18 +113,18 @@
                     </div>
                     <input type="hidden" name="_csrf_token" class="" value="{{ csrf_token }}" />
                     <!-- END Form Control-->
-                    <button type="submit"  id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                    <button type="submit"  id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" class="btn btn-primary btn-cons m-t-10" >Se Connecter</button>
 
                 </form>
                 <!--END Login Form-->
-                <div class="social-auth-links text-center">
+              {# <div class="social-auth-links text-center">
                     <p>- OR -</p>
                     <a href="https://www.facebook.com" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using Facebook</a>
                     <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using Google+</a>
-                </div><!-- /.social-auth-links -->
+                </div><!-- /.social-auth-links -->#}
 
-                <a href="{{ path("fos_user_resetting_request") }}">I forgot my password</a><br>
-                <a href="{{ path('fos_user_registration_register') }}" class="text-center">Register a new membership</a>
+                <a href="{{ path("fos_user_resetting_request") }}">Mot de passe oublié</a><br>
+                <a href="{{ path('fos_user_registration_register') }}" class="text-center">S'inscrire</a>
 
             </div>
         </div>

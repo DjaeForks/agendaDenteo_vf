@@ -22,20 +22,20 @@ class __TwigTemplate_8b897b2a051abe6b6f77acca93ce94cfb7a8dae11ea82c54989a2d4d5a0
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_23db79b275385e6b435cf1c8ba7a32db1c6963d7d0238be7b469f8905aabd9ef = $this->env->getExtension("native_profiler");
-        $__internal_23db79b275385e6b435cf1c8ba7a32db1c6963d7d0238be7b469f8905aabd9ef->enter($__internal_23db79b275385e6b435cf1c8ba7a32db1c6963d7d0238be7b469f8905aabd9ef_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Security:login.html.twig"));
+        $__internal_5b90a88951d149d858ce7a43b3a37c1a34d6af78fa24f7e7c518fc7bca09d593 = $this->env->getExtension("native_profiler");
+        $__internal_5b90a88951d149d858ce7a43b3a37c1a34d6af78fa24f7e7c518fc7bca09d593->enter($__internal_5b90a88951d149d858ce7a43b3a37c1a34d6af78fa24f7e7c518fc7bca09d593_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Security:login.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_23db79b275385e6b435cf1c8ba7a32db1c6963d7d0238be7b469f8905aabd9ef->leave($__internal_23db79b275385e6b435cf1c8ba7a32db1c6963d7d0238be7b469f8905aabd9ef_prof);
+        $__internal_5b90a88951d149d858ce7a43b3a37c1a34d6af78fa24f7e7c518fc7bca09d593->leave($__internal_5b90a88951d149d858ce7a43b3a37c1a34d6af78fa24f7e7c518fc7bca09d593_prof);
 
     }
 
     // line 2
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_9726fce3bcf5fe1a92f0d1e81008bcb1f242914b1973c9ea57aafbf837e72bf0 = $this->env->getExtension("native_profiler");
-        $__internal_9726fce3bcf5fe1a92f0d1e81008bcb1f242914b1973c9ea57aafbf837e72bf0->enter($__internal_9726fce3bcf5fe1a92f0d1e81008bcb1f242914b1973c9ea57aafbf837e72bf0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_9b8a60fb23c8b97f5a59bf16711ba37912a28c4008ec16590df7caf1e17b7dad = $this->env->getExtension("native_profiler");
+        $__internal_9b8a60fb23c8b97f5a59bf16711ba37912a28c4008ec16590df7caf1e17b7dad->enter($__internal_9b8a60fb23c8b97f5a59bf16711ba37912a28c4008ec16590df7caf1e17b7dad_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 3
         echo "
@@ -50,15 +50,15 @@ class __TwigTemplate_8b897b2a051abe6b6f77acca93ce94cfb7a8dae11ea82c54989a2d4d5a0
     </style>
 ";
         
-        $__internal_9726fce3bcf5fe1a92f0d1e81008bcb1f242914b1973c9ea57aafbf837e72bf0->leave($__internal_9726fce3bcf5fe1a92f0d1e81008bcb1f242914b1973c9ea57aafbf837e72bf0_prof);
+        $__internal_9b8a60fb23c8b97f5a59bf16711ba37912a28c4008ec16590df7caf1e17b7dad->leave($__internal_9b8a60fb23c8b97f5a59bf16711ba37912a28c4008ec16590df7caf1e17b7dad_prof);
 
     }
 
     // line 15
     public function block_login($context, array $blocks = array())
     {
-        $__internal_a48cc44ad6bdf43db998814d1808cce1dbbbd1461b6611432910026744adea15 = $this->env->getExtension("native_profiler");
-        $__internal_a48cc44ad6bdf43db998814d1808cce1dbbbd1461b6611432910026744adea15->enter($__internal_a48cc44ad6bdf43db998814d1808cce1dbbbd1461b6611432910026744adea15_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "login"));
+        $__internal_b7cd26c6263a27c2af6922f7c3d0e9162515e8a15bc24e8cfb5b7e761cf155b4 = $this->env->getExtension("native_profiler");
+        $__internal_b7cd26c6263a27c2af6922f7c3d0e9162515e8a15bc24e8cfb5b7e761cf155b4->enter($__internal_b7cd26c6263a27c2af6922f7c3d0e9162515e8a15bc24e8cfb5b7e761cf155b4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "login"));
 
         // line 16
         echo "
@@ -85,16 +85,16 @@ class __TwigTemplate_8b897b2a051abe6b6f77acca93ce94cfb7a8dae11ea82c54989a2d4d5a0
                 <div class=\"col-lg-2\">
                     <img src=\"";
         // line 72
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assetsE/img/demo/logoCarre.png"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assetsE/img/demo/logo_denteo.png"), "html", null, true);
         echo "\" style=\"height: 263px; width: 200px;margin-left: 16px;\" data-src=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/img/demo/logoCarre.png"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/img/demo/logo_denteo.png"), "html", null, true);
         echo "\" data-src-retina=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/img/demo/logoCarre.png"), "html", null, true);
-        echo "\" alt=\"\" class=\"lazy\">
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/img/demo/logo_denteo.png"), "html", null, true);
+        echo "\" alt=\"\" class=\"\">
                 </div>
                 </br>
                 <h2 class=\"semi-bold text-white\" style=\"margin-left: 37px;\">
-                    E-Compta vous offre une meilleure gestion des clients de votre fiduciaire</h2>
+                    DENTEO vous offre une meilleure gestion pour votre cabinet dentaire</h2>
             </div>
             <!-- END Background Caption-->
         </div>
@@ -134,7 +134,7 @@ class __TwigTemplate_8b897b2a051abe6b6f77acca93ce94cfb7a8dae11ea82c54989a2d4d5a0
         // line 95
         echo twig_escape_filter($this->env, (isset($context["last_username"]) ? $context["last_username"] : $this->getContext($context, "last_username")), "html", null, true);
         echo "\" class=\"form-control\" placeholder=\"Email\" required=\"required\" />
-                        <span class=\"input-group-addon\"><i class=\"fa fa-user\"></i></span>
+                        <span  class=\"input-group-addon\"><i class=\"fa fa-user\"></i></span>
                     </div>
                     <!-- END Form Control-->
                     <!-- START Form Control-->
@@ -160,24 +160,21 @@ class __TwigTemplate_8b897b2a051abe6b6f77acca93ce94cfb7a8dae11ea82c54989a2d4d5a0
                     <button type=\"submit\"  id=\"_submit\" name=\"_submit\" value=\"";
         // line 116
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("security.login.submit", array(), "FOSUserBundle"), "html", null, true);
-        echo "\" class=\"btn btn-primary btn-block btn-flat\">Sign In</button>
+        echo "\" class=\"btn btn-primary btn-cons m-t-10\" >Se Connecter</button>
 
                 </form>
                 <!--END Login Form-->
-                <div class=\"social-auth-links text-center\">
-                    <p>- OR -</p>
-                    <a href=\"https://www.facebook.com\" class=\"btn btn-block btn-social btn-facebook btn-flat\"><i class=\"fa fa-facebook\"></i> Sign in using Facebook</a>
-                    <a href=\"#\" class=\"btn btn-block btn-social btn-google btn-flat\"><i class=\"fa fa-google-plus\"></i> Sign in using Google+</a>
-                </div><!-- /.social-auth-links -->
-
+              ";
+        // line 125
+        echo "
                 <a href=\"";
         // line 126
         echo $this->env->getExtension('routing')->getPath("fos_user_resetting_request");
-        echo "\">I forgot my password</a><br>
+        echo "\">Mot de passe oublié</a><br>
                 <a href=\"";
         // line 127
         echo $this->env->getExtension('routing')->getPath("fos_user_registration_register");
-        echo "\" class=\"text-center\">Register a new membership</a>
+        echo "\" class=\"text-center\">S'inscrire</a>
 
             </div>
         </div>
@@ -186,7 +183,7 @@ class __TwigTemplate_8b897b2a051abe6b6f77acca93ce94cfb7a8dae11ea82c54989a2d4d5a0
 
 ";
         
-        $__internal_a48cc44ad6bdf43db998814d1808cce1dbbbd1461b6611432910026744adea15->leave($__internal_a48cc44ad6bdf43db998814d1808cce1dbbbd1461b6611432910026744adea15_prof);
+        $__internal_b7cd26c6263a27c2af6922f7c3d0e9162515e8a15bc24e8cfb5b7e761cf155b4->leave($__internal_b7cd26c6263a27c2af6922f7c3d0e9162515e8a15bc24e8cfb5b7e761cf155b4_prof);
 
     }
 
@@ -202,7 +199,7 @@ class __TwigTemplate_8b897b2a051abe6b6f77acca93ce94cfb7a8dae11ea82c54989a2d4d5a0
 
     public function getDebugInfo()
     {
-        return array (  179 => 127,  175 => 126,  162 => 116,  157 => 114,  135 => 95,  127 => 90,  124 => 89,  118 => 87,  116 => 86,  107 => 84,  88 => 72,  76 => 67,  67 => 60,  64 => 16,  58 => 15,  46 => 6,  41 => 3,  35 => 2,  11 => 1,);
+        return array (  176 => 127,  172 => 126,  169 => 125,  162 => 116,  157 => 114,  135 => 95,  127 => 90,  124 => 89,  118 => 87,  116 => 86,  107 => 84,  88 => 72,  76 => 67,  67 => 60,  64 => 16,  58 => 15,  46 => 6,  41 => 3,  35 => 2,  11 => 1,);
     }
 }
 /* {% extends "::login_base.html.twig" %}*/
@@ -276,11 +273,11 @@ class __TwigTemplate_8b897b2a051abe6b6f77acca93ce94cfb7a8dae11ea82c54989a2d4d5a0
 /*             <!-- START Background Caption-->*/
 /*             <div class="bg-caption pull-bottom sm-pull-bottom text-white p-l-20 m-b-20">*/
 /*                 <div class="col-lg-2">*/
-/*                     <img src="{{asset('assetsE/img/demo/logoCarre.png')}}" style="height: 263px; width: 200px;margin-left: 16px;" data-src="{{asset('assets/img/demo/logoCarre.png')}}" data-src-retina="{{asset('assets/img/demo/logoCarre.png')}}" alt="" class="lazy">*/
+/*                     <img src="{{asset('assetsE/img/demo/logo_denteo.png')}}" style="height: 263px; width: 200px;margin-left: 16px;" data-src="{{asset('assets/img/demo/logo_denteo.png')}}" data-src-retina="{{asset('assets/img/demo/logo_denteo.png')}}" alt="" class="">*/
 /*                 </div>*/
 /*                 </br>*/
 /*                 <h2 class="semi-bold text-white" style="margin-left: 37px;">*/
-/*                     E-Compta vous offre une meilleure gestion des clients de votre fiduciaire</h2>*/
+/*                     DENTEO vous offre une meilleure gestion pour votre cabinet dentaire</h2>*/
 /*             </div>*/
 /*             <!-- END Background Caption-->*/
 /*         </div>*/
@@ -300,7 +297,7 @@ class __TwigTemplate_8b897b2a051abe6b6f77acca93ce94cfb7a8dae11ea82c54989a2d4d5a0
 /*                     <div class="form-group form-group-default input-group">*/
 /*                         <label>Nom d'utilisateur</label>*/
 /*                         <input type="text" id="username" name="_username" value="{{ last_username }}" class="form-control" placeholder="Email" required="required" />*/
-/*                         <span class="input-group-addon"><i class="fa fa-user"></i></span>*/
+/*                         <span  class="input-group-addon"><i class="fa fa-user"></i></span>*/
 /*                     </div>*/
 /*                     <!-- END Form Control-->*/
 /*                     <!-- START Form Control-->*/
@@ -320,18 +317,18 @@ class __TwigTemplate_8b897b2a051abe6b6f77acca93ce94cfb7a8dae11ea82c54989a2d4d5a0
 /*                     </div>*/
 /*                     <input type="hidden" name="_csrf_token" class="" value="{{ csrf_token }}" />*/
 /*                     <!-- END Form Control-->*/
-/*                     <button type="submit"  id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" class="btn btn-primary btn-block btn-flat">Sign In</button>*/
+/*                     <button type="submit"  id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" class="btn btn-primary btn-cons m-t-10" >Se Connecter</button>*/
 /* */
 /*                 </form>*/
 /*                 <!--END Login Form-->*/
-/*                 <div class="social-auth-links text-center">*/
+/*               {# <div class="social-auth-links text-center">*/
 /*                     <p>- OR -</p>*/
 /*                     <a href="https://www.facebook.com" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using Facebook</a>*/
 /*                     <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using Google+</a>*/
-/*                 </div><!-- /.social-auth-links -->*/
+/*                 </div><!-- /.social-auth-links -->#}*/
 /* */
-/*                 <a href="{{ path("fos_user_resetting_request") }}">I forgot my password</a><br>*/
-/*                 <a href="{{ path('fos_user_registration_register') }}" class="text-center">Register a new membership</a>*/
+/*                 <a href="{{ path("fos_user_resetting_request") }}">Mot de passe oublié</a><br>*/
+/*                 <a href="{{ path('fos_user_registration_register') }}" class="text-center">S'inscrire</a>*/
 /* */
 /*             </div>*/
 /*         </div>*/
