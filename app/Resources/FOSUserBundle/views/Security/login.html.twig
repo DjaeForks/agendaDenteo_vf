@@ -1,4 +1,4 @@
-{% extends "FOSUserBundle::layout.html.twig" %}
+{% extends "::login_base.html.twig" %}
 {% block stylesheets %}
 
     <style>
@@ -12,52 +12,126 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
 
-{% block fos_user_content %}
+{% block login %}
 
-<div class="login-box">
-    <div class="login-logo">
-        <a href="#"><b>Person</b>Task</a>
-    </div><!-- /.login-logo -->
-    <div class="login-box-body">
-        <p class="login-box-msg">Sign in to start your session</p>
-        <form action="{{ path("fos_user_security_check") }}" method="post">
-            <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
-            <div class="form-group has-feedback">
-                <input type="text" id="username" name="_username" value="{{ last_username }}" class="form-control" placeholder="Email" required="required" />
-                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-            </div>
-            <div class="form-group has-feedback">
-                <input type="password" id="password" name="_password" required="required" class="form-control" placeholder="Password" />
-                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-            </div>
-            <div class="row">
-                <div class="col-xs-8">
-                    <div class="checkbox icheck">
-                        <label>
-                            <input type="checkbox" id="remember_me" name="_remember_me" value="on" /> Remember Me
-                        </label>
+    {#    <div class="login-box">
+            <div class="login-logo">
+                <a href="#"><b>Person</b>Task</a>
+            </div><!-- /.login-logo -->
+            <div class="login-box-body">
+                <p class="login-box-msg">Sign in to start your session</p>
+                <form action="{{ path("fos_user_security_check") }}" method="post">
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                    <div class="form-group has-feedback">
+                        <input type="text" id="username" name="_username" value="{{ last_username }}" class="form-control" placeholder="Email" required="required" />
+                        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                     </div>
-                </div><!-- /.col -->
-                <div class="col-xs-4">
-                    <button type="submit"  id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" class="btn btn-primary btn-block btn-flat">Sign In</button>
-                </div><!-- /.col -->
+                    <div class="form-group has-feedback">
+                        <input type="password" id="password" name="_password" required="required" class="form-control" placeholder="Password" />
+                        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-8">
+                            <div class="checkbox icheck">
+                                <label>
+                                    <input type="checkbox" id="remember_me" name="_remember_me" value="on" /> Remember Me
+                                </label>
+                            </div>
+                        </div><!-- /.col -->
+                        <div class="col-xs-4">
+                            <button type="submit"  id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                        </div><!-- /.col -->
+                    </div>
+                </form>
+    
+                <div class="social-auth-links text-center">
+                    <p>- OR -</p>
+                    <a href="https://www.facebook.com" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using Facebook</a>
+                    <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using Google+</a>
+                </div><!-- /.social-auth-links -->
+    
+                <a href="{{ path("fos_user_resetting_request") }}">I forgot my password</a><br>
+                <a href="{{ path('fos_user_registration_register') }}" class="text-center">Register a new membership</a>
+    
+            </div><!-- /.login-box-body -->
+        </div><!-- /.login-box -->
+    
+    #}
+
+
+
+    <div class="login-wrapper ">
+        <!-- START Login Background Pic Wrapper-->
+        <div class="bg-pic">
+            <!-- START Background Pic-->
+            <img src="{{asset('assetsE/img/demo/5.jpg')}}" data-src="{{asset('assetsE/img/demo/5.jpg')}}" data-src-retina="{{asset('assets/img/demo/5.jpg')}}" alt="" class="lazy">
+            <!-- END Background Pic-->
+            <!-- START Background Caption-->
+            <div class="bg-caption pull-bottom sm-pull-bottom text-white p-l-20 m-b-20">
+                <div class="col-lg-2">
+                    <img src="{{asset('assetsE/img/demo/logoCarre.png')}}" style="height: 263px; width: 200px;margin-left: 16px;" data-src="{{asset('assets/img/demo/logoCarre.png')}}" data-src-retina="{{asset('assets/img/demo/logoCarre.png')}}" alt="" class="lazy">
+                </div>
+                </br>
+                <h2 class="semi-bold text-white" style="margin-left: 37px;">
+                    E-Compta vous offre une meilleure gestion des clients de votre fiduciaire</h2>
             </div>
-        </form>
+            <!-- END Background Caption-->
+        </div>
+        <!-- END Login Background Pic Wrapper-->
+        <!-- START Login Right Container-->
+        <div class="login-container bg-white">
+            <div class="p-l-50 m-l-20 p-r-50 m-r-20 p-t-50 m-t-30 sm-p-l-15 sm-p-r-15 sm-p-t-40">
+                <img src="{{asset('assetsE/img/demo/logo_denteo.png')}}" alt="logo" data-src="{{asset('assetsE/img/demo/logo_denteo.png')}}" data-src-retina="{{asset('assets/img/demo/logo_denteo.png')}}" width="350" height="109">
+                <p class="p-t-35">Se connecter à Votre application</p>
+                {% if error %}
+                    <div style="color: red">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
+                <!-- START Login Form -->
+                <form id="form-login" class="p-t-15" role="form"  action="{{ path("fos_user_security_check") }}" method="post">
 
-        <div class="social-auth-links text-center">
-            <p>- OR -</p>
-            <a href="https://www.facebook.com" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using Facebook</a>
-            <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using Google+</a>
-        </div><!-- /.social-auth-links -->
+                    <!-- START Form Control-->
+                    <div class="form-group form-group-default input-group">
+                        <label>Nom d'utilisateur</label>
+                        <input type="text" id="username" name="_username" value="{{ last_username }}" class="form-control" placeholder="Email" required="required" />
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    </div>
+                    <!-- END Form Control-->
+                    <!-- START Form Control-->
+                    <div class="form-group form-group-default input-group">
+                        <label>Mot de passe</label>
+                        <input type="password" id="password" name="_password" required="required" class="form-control" placeholder="Password" />
+                        <span class="input-group-addon"><i class="fa fa-unlock-alt"></i></span>
+                    </div>
+                    <!-- START Form Control-->
+                    <div class="row">
+                        <div class="col-md-6 no-padding">
+                            <div class="checkbox check-warning">
+                                <input type="checkbox" id="remember_me" name="_remember_me" value="on">
+                                <label for="remember_me">Se souvenir de moi.</label>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" name="_csrf_token" class="" value="{{ csrf_token }}" />
+                    <!-- END Form Control-->
+                    <button type="submit"  id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" class="btn btn-primary btn-block btn-flat">Sign In</button>
 
-        <a href="{{ path("fos_user_resetting_request") }}">I forgot my password</a><br>
-        <a href="{{ path('fos_user_registration_register') }}" class="text-center">Register a new membership</a>
+                </form>
+                <!--END Login Form-->
+                <div class="social-auth-links text-center">
+                    <p>- OR -</p>
+                    <a href="https://www.facebook.com" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using Facebook</a>
+                    <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using Google+</a>
+                </div><!-- /.social-auth-links -->
 
-    </div><!-- /.login-box-body -->
-</div><!-- /.login-box -->
+                <a href="{{ path("fos_user_resetting_request") }}">I forgot my password</a><br>
+                <a href="{{ path('fos_user_registration_register') }}" class="text-center">Register a new membership</a>
 
+            </div>
+        </div>
+        <!-- END Login Right Container-->
+    </div>
 
-{% endblock fos_user_content %}
+{% endblock login %}
 
 
 
