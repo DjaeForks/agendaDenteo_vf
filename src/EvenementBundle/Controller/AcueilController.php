@@ -23,14 +23,6 @@ class AcueilController extends Controller
 
         $em  = $this->getDoctrine()->getManager();
 
-        $query = $em->createQuery("SELECT r FROM EvenementBundle:Rdv r WHERE DATE(r.dateDebut) = :date");
-        $query->setParameters(array('date' => date("y-m-d")));
-
-        $rdvs =  $query->getResult();
-
-        var_dump(rdvs);
-        die();
-
         $patients = $em->getRepository('PatientBundle:Patient')->findAll();
 
         return $this->render('EvenementBundle:Default:dashboord.html.twig', array(
